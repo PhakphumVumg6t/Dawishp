@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Shopwt.iml" filepath="$PROJECT_DIR$/Shopwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopwt/shopwt.iml" filepath="$PROJECT_DIR$/shopwt/shopwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopwt/shopwt.iml" filepath="$PROJECT_DIR$/shopwt/shopwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopwt-android.iml" filepath="$PROJECT_DIR$/shopwt-android.iml" />
     </modules>
   </component>
 </project>

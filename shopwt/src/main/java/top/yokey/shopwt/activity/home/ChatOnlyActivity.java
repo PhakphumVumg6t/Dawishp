@@ -1,6 +1,7 @@
 package top.yokey.shopwt.activity.home;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
@@ -38,6 +39,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -134,12 +136,12 @@ public class ChatOnlyActivity extends BaseActivity {
 
         mainPullRefreshView.getRecyclerView().addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 bottomBoolean = false;
                 LinearLayoutManager manager = (LinearLayoutManager) recyclerView.getLayoutManager();
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    int lastVisibleItem = manager.findLastCompletelyVisibleItemPosition();
+                    int lastVisibleItem = Objects.requireNonNull(manager).findLastCompletelyVisibleItemPosition();
                     int totalItemCount = manager.getItemCount();
                     if (lastVisibleItem == (totalItemCount - 1)) {
                         bottomBoolean = true;
@@ -173,12 +175,8 @@ public class ChatOnlyActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_ALBUM:
-                    updateImage(Matisse.obtainPathResult(intent).get(0));
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_ALBUM) {
+                updateImage(Matisse.obtainPathResult(intent).get(0));
             }
         }
     }
@@ -258,7 +256,7 @@ public class ChatOnlyActivity extends BaseActivity {
 
     private void sendMessage() {
 
-        String message = contentEditText.getText().toString();
+        String message = Objects.requireNonNull(contentEditText.getText()).toString();
 
         if (TextUtils.isEmpty(message)) {
             BaseToast.get().show("请输入消息！");

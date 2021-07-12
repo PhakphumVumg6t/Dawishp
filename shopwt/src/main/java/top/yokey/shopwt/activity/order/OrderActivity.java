@@ -25,6 +25,7 @@ import top.yokey.base.util.JsonUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -121,7 +122,7 @@ public class OrderActivity extends BaseActivity {
 
         toolbarImageView.setOnClickListener(view -> {
             BaseApplication.get().hideKeyboard(getActivity());
-            keyword = searchEditText.getText().toString();
+            keyword = Objects.requireNonNull(searchEditText.getText()).toString();
             pageInt[positionInt] = 1;
             getOrder();
         });

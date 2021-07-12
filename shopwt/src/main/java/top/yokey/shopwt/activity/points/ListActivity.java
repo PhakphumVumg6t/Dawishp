@@ -14,6 +14,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.bean.BaseBean;
@@ -123,7 +124,7 @@ public class ListActivity extends BaseActivity {
             if (i == EditorInfo.IME_ACTION_SEARCH) {
                 pageInt = 1;
                 BaseApplication.get().hideKeyboard(getActivity());
-                keywordString = searchEditText.getText().toString();
+                keywordString = Objects.requireNonNull(searchEditText.getText()).toString();
                 getGoods();
             }
             return false;
@@ -213,16 +214,12 @@ public class ListActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_CLASS:
-                    pageInt = 1;
-                    mainArrayList.clear();
-                    mainAdapter.notifyDataSetChanged();
-                    gcIdString = intent.getStringExtra(BaseConstant.DATA_GCID);
-                    getGoods();
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_CLASS) {
+                pageInt = 1;
+                mainArrayList.clear();
+                mainAdapter.notifyDataSetChanged();
+                gcIdString = intent.getStringExtra(BaseConstant.DATA_GCID);
+                getGoods();
             }
         }
     }
@@ -294,8 +291,8 @@ public class ListActivity extends BaseActivity {
         pageInt = 1;
         isAbleString = isAble;
         orderString = order;
-        pointsMaxString = priceToEditText.getText().toString();
-        pointsMinString = priceFromEditText.getText().toString();
+        pointsMaxString = Objects.requireNonNull(priceToEditText.getText()).toString();
+        pointsMinString = Objects.requireNonNull(priceFromEditText.getText()).toString();
 
         orderLinearLayout.setVisibility(View.GONE);
         screenRelativeLayout.setVisibility(View.GONE);

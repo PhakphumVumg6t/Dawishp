@@ -5,6 +5,8 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.base.SellerHttpClient;
 import top.yokey.base.util.JsonUtil;
@@ -77,8 +79,8 @@ public class LoginActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String username = Objects.requireNonNull(usernameEditText.getText()).toString();
+        String password = Objects.requireNonNull(passwordEditText.getText()).toString();
 
         if (TextUtils.isEmpty(username) || TextUtil.isEmail(password)) {
             BaseToast.get().show("请输入所有的信息！");

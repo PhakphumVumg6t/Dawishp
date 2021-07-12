@@ -5,6 +5,8 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseShared;
@@ -86,7 +88,7 @@ public class FindPassActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String mobile = mobileEditText.getText().toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
 
         if (!TextUtil.isMobile(mobile)) {
             BaseToast.get().show("手机号码格式不正确！");
@@ -138,8 +140,8 @@ public class FindPassActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String captcha = codeEditText.getText().toString();
-        String mobile = mobileEditText.getText().toString();
+        String captcha = Objects.requireNonNull(codeEditText.getText()).toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
 
         if (TextUtils.isEmpty(captcha)) {
             BaseToast.get().show("请输入验证码！");
@@ -173,9 +175,9 @@ public class FindPassActivity extends BaseActivity {
 
     private void findPassword() {
 
-        String captcha = codeEditText.getText().toString();
-        String mobile = mobileEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String captcha = Objects.requireNonNull(codeEditText.getText()).toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
+        String password = Objects.requireNonNull(passwordEditText.getText()).toString();
 
         if (TextUtils.isEmpty(password)) {
             BaseToast.get().show("请输入账户密码！");

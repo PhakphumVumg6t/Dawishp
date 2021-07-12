@@ -10,6 +10,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -114,7 +115,7 @@ public class GoodsActivity extends BaseActivity {
 
         toolbarImageView.setOnClickListener(view -> {
             BaseApplication.get().hideKeyboard(getActivity());
-            keywordString = searchEditText.getText().toString();
+            keywordString = Objects.requireNonNull(searchEditText.getText()).toString();
             pageInt[positionInt] = 1;
             getGoods();
         });

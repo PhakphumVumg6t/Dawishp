@@ -7,6 +7,8 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.activity.main.MainActivity;
 import top.yokey.shopwt.base.BaseActivity;
@@ -107,17 +109,13 @@ public class LoginActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent data) {
         super.onActivityResult(req, res, data);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_LOGIN:
-                    BaseToast.get().show("登录成功！");
-                    String key = data.getStringExtra(BaseConstant.DATA_KEY);
-                    MemberHttpClient.get().updateKey(key);
-                    BaseShared.get().putString(BaseConstant.SHARED_KEY, key);
-                    BaseApplication.get().start(getActivity(), MainActivity.class);
-                    BaseApplication.get().finish(getActivity());
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_LOGIN) {
+                BaseToast.get().show("登录成功！");
+                String key = data.getStringExtra(BaseConstant.DATA_KEY);
+                MemberHttpClient.get().updateKey(key);
+                BaseShared.get().putString(BaseConstant.SHARED_KEY, key);
+                BaseApplication.get().start(getActivity(), MainActivity.class);
+                BaseApplication.get().finish(getActivity());
             }
         }
     }
@@ -128,8 +126,8 @@ public class LoginActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String username = Objects.requireNonNull(usernameEditText.getText()).toString();
+        String password = Objects.requireNonNull(passwordEditText.getText()).toString();
 
         if (TextUtils.isEmpty(username) || TextUtil.isEmail(password)) {
             BaseToast.get().show("请输入所有的信息！");

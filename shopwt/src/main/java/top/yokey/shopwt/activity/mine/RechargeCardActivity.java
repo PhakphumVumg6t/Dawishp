@@ -28,6 +28,7 @@ import top.yokey.base.util.JsonUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -188,8 +189,8 @@ public class RechargeCardActivity extends BaseActivity {
 
     private void submit() {
 
-        String sn = codeEditText.getText().toString();
-        String captcha = captchaEditText.getText().toString();
+        String sn = Objects.requireNonNull(codeEditText.getText()).toString();
+        String captcha = Objects.requireNonNull(captchaEditText.getText()).toString();
 
         if (TextUtils.isEmpty(sn) || TextUtils.isEmpty(captcha)) {
             BaseToast.get().show("请输入所有的内容！");

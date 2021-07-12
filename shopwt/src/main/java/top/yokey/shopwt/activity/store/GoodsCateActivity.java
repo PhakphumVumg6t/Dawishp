@@ -93,7 +93,6 @@ public class GoodsCateActivity extends BaseActivity {
             public void onSuccess(BaseBean baseBean) {
                 ArrayList<ClassStoreBean> level2ArrayList = new ArrayList<>();
                 String data = JsonUtil.getDatasString(baseBean.getDatas(), "store_goods_class");
-                //noinspection ConstantConditions
                 ArrayList<ClassStoreBean> arrayList = new ArrayList<>(JsonUtil.json2ArrayList(data, ClassStoreBean.class));
                 //遍历第一级
                 for (int i = 0; i < arrayList.size(); i++) {

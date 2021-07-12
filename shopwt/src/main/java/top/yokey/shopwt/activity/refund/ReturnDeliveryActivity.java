@@ -22,6 +22,7 @@ import top.yokey.base.model.MemberReturnModel;
 import top.yokey.base.util.JsonUtil;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Vector;
 
 /**
@@ -93,7 +94,7 @@ public class ReturnDeliveryActivity extends BaseActivity {
 
     private void submit() {
 
-        String no = noEditText.getText().toString();
+        String no = Objects.requireNonNull(noEditText.getText()).toString();
         if (TextUtils.isEmpty(no)) {
             BaseToast.get().show("请输入运单号码");
             return;
@@ -127,7 +128,6 @@ public class ReturnDeliveryActivity extends BaseActivity {
                 idVector.clear();
                 nameVector.clear();
                 String data = JsonUtil.getDatasString(baseBean.getDatas(), "express_list");
-                //noinspection ConstantConditions
                 ArrayList<ExpressBean> arrayList = new ArrayList<>(JsonUtil.json2ArrayList(data, ExpressBean.class));
                 for (int i = 0; i < arrayList.size(); i++) {
                     idVector.add(arrayList.get(i).getExpressId());

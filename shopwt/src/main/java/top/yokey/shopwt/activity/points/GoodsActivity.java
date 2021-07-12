@@ -13,6 +13,8 @@ import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 
+import java.util.Objects;
+
 import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -120,7 +122,7 @@ public class GoodsActivity extends BaseActivity {
         });
 
         chooseAddTextView.setOnClickListener(view -> {
-            String number = (Integer.parseInt(chooseNumberEditText.getText().toString()) + 1) + "";
+            String number = (Integer.parseInt(Objects.requireNonNull(chooseNumberEditText.getText()).toString()) + 1) + "";
             chooseNumberEditText.setText(number);
             changeNumber();
         });
@@ -133,7 +135,7 @@ public class GoodsActivity extends BaseActivity {
         });
 
         chooseSubTextView.setOnClickListener(view -> {
-            String number = (Integer.parseInt(chooseNumberEditText.getText().toString()) - 1) + "";
+            String number = (Integer.parseInt(Objects.requireNonNull(chooseNumberEditText.getText()).toString()) - 1) + "";
             chooseNumberEditText.setText(number);
             changeNumber();
         });
@@ -208,7 +210,7 @@ public class GoodsActivity extends BaseActivity {
 
         goneChooseLayout();
         BaseDialog.get().progress(getActivity());
-        PointcartModel.get().add(idString, chooseNumberEditText.getText().toString(), new BaseHttpListener() {
+        PointcartModel.get().add(idString, Objects.requireNonNull(chooseNumberEditText.getText()).toString(), new BaseHttpListener() {
             @Override
             public void onSuccess(BaseBean baseBean) {
                 BaseDialog.get().cancel();
@@ -226,7 +228,7 @@ public class GoodsActivity extends BaseActivity {
 
     private void changeNumber() {
 
-        if (TextUtils.isEmpty(chooseNumberEditText.getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(chooseNumberEditText.getText()).toString())) {
             BaseToast.get().show("数量不能为空！");
             chooseNumberEditText.setText("1");
             chooseNumberEditText.setSelection(1);

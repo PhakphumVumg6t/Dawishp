@@ -5,6 +5,8 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
@@ -116,9 +118,9 @@ public class PasswordActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String code = codeEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
-        String confirm = confirmEditText.getText().toString();
+        String code = Objects.requireNonNull(codeEditText.getText()).toString();
+        String password = Objects.requireNonNull(passwordEditText.getText()).toString();
+        String confirm = Objects.requireNonNull(confirmEditText.getText()).toString();
 
         if (TextUtils.isEmpty(code)) {
             BaseToast.get().show("请输入验证码！");
@@ -186,7 +188,7 @@ public class PasswordActivity extends BaseActivity {
 
     private void modifyPasswordSetup5() {
 
-        MemberAccountModel.get().modifyPasswordSetup5(passwordEditText.getText().toString(), new BaseHttpListener() {
+        MemberAccountModel.get().modifyPasswordSetup5(Objects.requireNonNull(passwordEditText.getText()).toString(), new BaseHttpListener() {
             @Override
             public void onSuccess(BaseBean baseBean) {
                 modifyTextView.setEnabled(true);

@@ -1,5 +1,6 @@
 package top.yokey.shopwt.activity.home;
 
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
@@ -113,7 +114,8 @@ public class SpecialActivity extends BaseActivity {
                     mainArrayList.clear();
                     JSONObject jsonObject = new JSONObject(baseBean.getDatas());
                     if (baseBean.getDatas().equals("{\"list\":[]}")) {
-                        BaseDialog.get().query(getActivity(), "数据出错啦~", "此专题无任何数据...", (dialog, which) -> BaseApplication.get().finish(getActivity()), (dialog, which) -> BaseApplication.get().finish(getActivity()));
+                        final DialogInterface.OnClickListener onClickListener = (dialog, which) -> BaseApplication.get().finish(getActivity());
+                        BaseDialog.get().query(getActivity(), "数据出错啦~", "此专题无任何数据...", onClickListener, onClickListener);
                         return;
                     }
                     setToolbar(mainToolbar, jsonObject.getString("special_desc"));

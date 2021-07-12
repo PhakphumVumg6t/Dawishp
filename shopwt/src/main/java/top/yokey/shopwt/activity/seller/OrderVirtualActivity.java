@@ -12,6 +12,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -116,7 +117,7 @@ public class OrderVirtualActivity extends BaseActivity {
 
         toolbarImageView.setOnClickListener(view -> {
             BaseApplication.get().hideKeyboard(getActivity());
-            keyword = searchEditText.getText().toString();
+            keyword = Objects.requireNonNull(searchEditText.getText()).toString();
             pageInt[positionInt] = 1;
             getOrder();
         });
@@ -160,15 +161,13 @@ public class OrderVirtualActivity extends BaseActivity {
             orderSellerListAdapter.setOnItemClickListener(new OrderSellerListAdapter.OnItemClickListener() {
                 @Override
                 public void onOption(final int position, final OrderSellerBean bean) {
-                    switch (bean.getOrderState()) {
-                        case "10":
-                            Intent intent = new Intent(getActivity(), OrderCancelActivity.class);
-                            intent.putExtra(BaseConstant.DATA_ID, bean.getOrderId());
-                            intent.putExtra(BaseConstant.DATA_SN, bean.getOrderSn());
-                            intent.putExtra(BaseConstant.DATA_CONTENT, bean.getOrderAmount());
-                            BaseApplication.get().startCheckSellerLogin(getActivity(), intent);
-                            refreshBoolean = true;
-                            break;
+                    if ("10".equals(bean.getOrderState())) {
+                        Intent intent = new Intent(getActivity(), OrderCancelActivity.class);
+                        intent.putExtra(BaseConstant.DATA_ID, bean.getOrderId());
+                        intent.putExtra(BaseConstant.DATA_SN, bean.getOrderSn());
+                        intent.putExtra(BaseConstant.DATA_CONTENT, bean.getOrderAmount());
+                        BaseApplication.get().startCheckSellerLogin(getActivity(), intent);
+                        refreshBoolean = true;
                     }
                 }
 
@@ -186,7 +185,7 @@ public class OrderVirtualActivity extends BaseActivity {
                             new AlertDialog.Builder(getActivity())
                                     .setTitle("请输入金额~")
                                     .setView(appCompatEditText)
-                                    .setPositiveButton("确认", (dialog, which) -> orderSpayPrice(position, bean.getOrderId(), appCompatEditText.getText().toString()))
+                                    .setPositiveButton("确认", (dialog, which) -> orderSpayPrice(position, bean.getOrderId(), Objects.requireNonNull(appCompatEditText.getText()).toString()))
                                     .setNegativeButton("取消", null)
                                     .show();
                             break;

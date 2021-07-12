@@ -29,6 +29,7 @@ import top.yokey.base.util.JsonUtil;
 
 import com.zhihu.matisse.Matisse;
 
+import java.util.Objects;
 import java.util.Vector;
 
 /**
@@ -167,7 +168,7 @@ public class ReturnApplyActivity extends BaseActivity {
 
     private void submit() {
 
-        String remark = remarkEditText.getText().toString();
+        String remark = Objects.requireNonNull(remarkEditText.getText()).toString();
 
         if (TextUtils.isEmpty(remark)) {
             BaseToast.get().show("请输入原因！");

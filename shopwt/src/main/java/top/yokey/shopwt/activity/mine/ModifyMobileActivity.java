@@ -7,6 +7,8 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
@@ -146,7 +148,7 @@ public class ModifyMobileActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String password = payPassEditText.getText().toString();
+        String password = Objects.requireNonNull(payPassEditText.getText()).toString();
 
         if (TextUtils.isEmpty(password)) {
             BaseToast.get().show("请输入支付密码");
@@ -225,7 +227,7 @@ public class ModifyMobileActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String code = codeEditText.getText().toString();
+        String code = Objects.requireNonNull(codeEditText.getText()).toString();
 
         if (TextUtils.isEmpty(code)) {
             BaseToast.get().show("请输入验证码！");

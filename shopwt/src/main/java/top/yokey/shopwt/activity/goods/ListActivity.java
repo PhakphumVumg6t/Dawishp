@@ -29,6 +29,7 @@ import top.yokey.base.model.MemberCartModel;
 import top.yokey.base.util.JsonUtil;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -132,7 +133,7 @@ public class ListActivity extends BaseActivity {
             if (i == EditorInfo.IME_ACTION_SEARCH) {
                 pageInt = 1;
                 BaseApplication.get().hideKeyboard(getActivity());
-                keywordString = searchEditText.getText().toString();
+                keywordString = Objects.requireNonNull(searchEditText.getText()).toString();
                 getGoods();
             }
             return false;
@@ -222,17 +223,13 @@ public class ListActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_CLASS:
-                    pageInt = 1;
-                    mainArrayList.clear();
-                    mainAdapter.notifyDataSetChanged();
-                    bIdString = intent.getStringExtra(BaseConstant.DATA_BID);
-                    gcIdString = intent.getStringExtra(BaseConstant.DATA_GCID);
-                    getGoods();
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_CLASS) {
+                pageInt = 1;
+                mainArrayList.clear();
+                mainAdapter.notifyDataSetChanged();
+                bIdString = intent.getStringExtra(BaseConstant.DATA_BID);
+                gcIdString = intent.getStringExtra(BaseConstant.DATA_GCID);
+                getGoods();
             }
         }
     }
@@ -332,8 +329,8 @@ public class ListActivity extends BaseActivity {
         pageInt = 1;
         keyString = key;
         orderString = order;
-        priceToString = priceToEditText.getText().toString();
-        priceFromString = priceFromEditText.getText().toString();
+        priceToString = Objects.requireNonNull(priceToEditText.getText()).toString();
+        priceFromString = Objects.requireNonNull(priceFromEditText.getText()).toString();
 
         orderLinearLayout.setVisibility(View.GONE);
         screenRelativeLayout.setVisibility(View.GONE);

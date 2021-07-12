@@ -5,6 +5,8 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.base.base.BaseCountTime;
@@ -57,7 +59,7 @@ public class InviteActivity extends BaseActivity {
     public void initEven() {
 
         copyTextView.setOnClickListener(view -> {
-            BaseApplication.get().setText2Clipboard(linkEditText.getText().toString());
+            BaseApplication.get().setText2Clipboard(Objects.requireNonNull(linkEditText.getText()).toString());
             BaseToast.get().show("链接已复制到剪切板~");
         });
 
@@ -74,7 +76,7 @@ public class InviteActivity extends BaseActivity {
                 inviteIndexBean = JsonUtil.json2Bean(data, InviteIndexBean.class);
                 BaseImageLoader.get().display(inviteIndexBean.getMyurlSrc(), qrCodeImageView);
                 linkEditText.setText(inviteIndexBean.getMyurl());
-                linkEditText.setSelection(linkEditText.getText().length());
+                linkEditText.setSelection(Objects.requireNonNull(linkEditText.getText()).length());
             }
 
             @Override

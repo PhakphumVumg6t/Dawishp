@@ -38,6 +38,7 @@ import top.yokey.base.util.JsonUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -145,7 +146,7 @@ public class StoreActivity extends BaseActivity {
     @Override
     public void initEven() {
 
-        toolbarImageView.setOnClickListener(view -> BaseApplication.get().startStoreGoodsList(getActivity(), storeIdString, searchEditText.getText().toString(), ""));
+        toolbarImageView.setOnClickListener(view -> BaseApplication.get().startStoreGoodsList(getActivity(), storeIdString, Objects.requireNonNull(searchEditText.getText()).toString(), ""));
 
         for (int i = 0; i < navigationTextView.length; i++) {
             final int position = i;

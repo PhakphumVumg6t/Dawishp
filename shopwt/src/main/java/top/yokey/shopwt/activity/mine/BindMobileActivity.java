@@ -5,6 +5,8 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
@@ -65,7 +67,7 @@ public class BindMobileActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String mobile = mobileEditText.getText().toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
 
         if (!TextUtil.isMobile(mobile)) {
             BaseToast.get().show("手机号码格式不正确！");
@@ -117,7 +119,7 @@ public class BindMobileActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String code = codeEditText.getText().toString();
+        String code = Objects.requireNonNull(codeEditText.getText()).toString();
 
         if (TextUtils.isEmpty(code)) {
             BaseToast.get().show("请输入验证码！");
@@ -132,7 +134,7 @@ public class BindMobileActivity extends BaseActivity {
             public void onSuccess(BaseBean baseBean) {
                 BaseToast.get().showSuccess();
                 BaseApplication.get().getMemberBean().setMobielState(true);
-                BaseApplication.get().getMemberBean().setUserMobile(mobileEditText.getText().toString());
+                BaseApplication.get().getMemberBean().setUserMobile(Objects.requireNonNull(mobileEditText.getText()).toString());
                 BaseApplication.get().finish(getActivity());
             }
 

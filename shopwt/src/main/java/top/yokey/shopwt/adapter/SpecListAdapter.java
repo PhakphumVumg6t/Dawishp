@@ -17,6 +17,7 @@ import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 /**
  * 适配器
@@ -51,7 +52,7 @@ public class SpecListAdapter extends RecyclerView.Adapter<SpecListAdapter.ViewHo
 
         holder.mainTextView.setText(hashMap.get("value"));
 
-        if (hashMap.get("default").equals("1")) {
+        if (Objects.requireNonNull(hashMap.get("default")).equals("1")) {
             holder.mainTextView.setTextColor(Color.WHITE);
             holder.mainTextView.setBackgroundResource(R.drawable.selector_border_primary);
         } else {

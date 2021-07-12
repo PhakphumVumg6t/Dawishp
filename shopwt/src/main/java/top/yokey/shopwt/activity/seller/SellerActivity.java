@@ -91,9 +91,11 @@ public class SellerActivity extends BaseActivity {
     @Override
     public void initEven() {
 
-        orderRelativeLayout.setOnClickListener(view -> BaseApplication.get().startOrderSeller(getActivity(), 0));
+        View.OnClickListener onClickListener = view -> BaseApplication.get().startOrderSeller(getActivity(), 0);
 
-        orderNewRelativeLayout.setOnClickListener(view -> BaseApplication.get().startOrderSeller(getActivity(), 0));
+        orderRelativeLayout.setOnClickListener(onClickListener);
+
+        orderNewRelativeLayout.setOnClickListener(onClickListener);
 
         orderPayRelativeLayout.setOnClickListener(view -> BaseApplication.get().startOrderSeller(getActivity(), 1));
 
@@ -101,9 +103,11 @@ public class SellerActivity extends BaseActivity {
 
         orderSuccessRelativeLayout.setOnClickListener(view -> BaseApplication.get().startOrderSeller(getActivity(), 3));
 
-        goodsRelativeLayout.setOnClickListener(view -> BaseApplication.get().startGoodsSeller(getActivity(), 0));
+        View.OnClickListener onClickListener1 = view -> BaseApplication.get().startGoodsSeller(getActivity(), 0);
 
-        goodsIngTextView.setOnClickListener(view -> BaseApplication.get().startGoodsSeller(getActivity(), 0));
+        goodsRelativeLayout.setOnClickListener(onClickListener1);
+
+        goodsIngTextView.setOnClickListener(onClickListener1);
 
         goodsWareTextView.setOnClickListener(view -> BaseApplication.get().startGoodsSeller(getActivity(), 1));
 

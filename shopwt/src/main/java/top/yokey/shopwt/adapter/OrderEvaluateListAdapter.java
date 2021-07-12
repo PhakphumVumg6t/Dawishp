@@ -22,6 +22,7 @@ import top.yokey.base.bean.OrderEvaluateBean;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * 适配器
@@ -93,7 +94,7 @@ public class OrderEvaluateListAdapter extends RecyclerView.Adapter<OrderEvaluate
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                arrayList.get(positionInt).setEvaluateContent(holder.evaluateEditText.getText().toString());
+                arrayList.get(positionInt).setEvaluateContent(Objects.requireNonNull(holder.evaluateEditText.getText()).toString());
             }
 
             @Override

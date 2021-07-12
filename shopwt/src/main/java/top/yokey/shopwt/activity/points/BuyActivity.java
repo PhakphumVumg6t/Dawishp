@@ -14,6 +14,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -93,23 +95,15 @@ public class BuyActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_ADDRESS:
-                    addressId = intent.getStringExtra(BaseConstant.DATA_ID);
-                    getData();
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_ADDRESS) {
+                addressId = intent.getStringExtra(BaseConstant.DATA_ID);
+                getData();
             }
         } else {
-            switch (req) {
-                case BaseConstant.CODE_ADDRESS:
-                    if (TextUtils.isEmpty(addressId)) {
-                        tipsAddress();
-                    }
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_ADDRESS) {
+                if (TextUtils.isEmpty(addressId)) {
+                    tipsAddress();
+                }
             }
         }
     }
@@ -181,7 +175,7 @@ public class BuyActivity extends BaseActivity {
 
         BaseDialog.get().progress(getActivity());
 
-        message = messageEditText.getText().toString();
+        message = Objects.requireNonNull(messageEditText.getText()).toString();
 
         PointcartModel.get().step2(addressId, message, new BaseHttpListener() {
             @Override

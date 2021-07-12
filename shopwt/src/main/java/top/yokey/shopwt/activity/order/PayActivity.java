@@ -18,6 +18,8 @@ import com.tencent.mm.sdk.modelpay.PayReq;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseLogger;
 import top.yokey.base.base.BaseToast;
@@ -70,27 +72,21 @@ public class PayActivity extends BaseActivity {
     private Handler mHandler = new Handler() {
         @SuppressWarnings("unused")
         public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case 1: {
-                    PayResult payResult = new PayResult((String) msg.obj);
-                    @SuppressWarnings("UnusedAssignment")
-                    String resultInfo = payResult.getResult();
-                    String resultStatus = payResult.getResultStatus();
-                    if (TextUtils.equals(resultStatus, "9000")) {
-                        payTextView.setText("订单支付");
-                        BaseToast.get().show("支付成功");
-                        BaseApplication.get().finish(getActivity());
+            if (msg.what == 1) {
+                PayResult payResult = new PayResult((String) msg.obj);
+                String resultInfo = payResult.getResult();
+                String resultStatus = payResult.getResultStatus();
+                if (TextUtils.equals(resultStatus, "9000")) {
+                    payTextView.setText("订单支付");
+                    BaseToast.get().show("支付成功");
+                    BaseApplication.get().finish(getActivity());
+                } else {
+                    if (TextUtils.equals(resultStatus, "8000")) {
+                        BaseToast.get().show("支付结果确认中");
                     } else {
-                        if (TextUtils.equals(resultStatus, "8000")) {
-                            BaseToast.get().show("支付结果确认中");
-                        } else {
-                            BaseToast.get().show("支付失败");
-                        }
+                        BaseToast.get().show("支付失败");
                     }
-                    break;
                 }
-                default:
-                    break;
             }
         }
     };
@@ -238,7 +234,7 @@ public class PayActivity extends BaseActivity {
 
         if (pdPayString.equals("1") || rcbPayString.equals("1")) {
 
-            passwordString = passwordEditText.getText().toString();
+            passwordString = Objects.requireNonNull(passwordEditText.getText()).toString();
             if (TextUtils.isEmpty(passwordString)) {
                 BaseToast.get().show("请输入支付密码！");
                 return;

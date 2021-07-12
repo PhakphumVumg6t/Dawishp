@@ -149,19 +149,15 @@ public class GoodsActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_AREA:
-                    final GoodsAreaEvent goodsAreaEvent = new GoodsAreaEvent(intent.getStringExtra("area_id"), intent.getStringExtra("area_info"));
-                    new BaseCountTime(500, 250) {
-                        @Override
-                        public void onFinish() {
-                            super.onFinish();
-                            BaseBusClient.get().post(goodsAreaEvent);
-                        }
-                    }.start();
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_AREA) {
+                final GoodsAreaEvent goodsAreaEvent = new GoodsAreaEvent(intent.getStringExtra("area_id"), intent.getStringExtra("area_info"));
+                new BaseCountTime(500, 250) {
+                    @Override
+                    public void onFinish() {
+                        super.onFinish();
+                        BaseBusClient.get().post(goodsAreaEvent);
+                    }
+                }.start();
             }
         }
     }

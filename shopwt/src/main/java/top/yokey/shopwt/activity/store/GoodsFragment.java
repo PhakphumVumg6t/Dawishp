@@ -31,6 +31,7 @@ import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -273,8 +274,8 @@ public class GoodsFragment extends BaseFragment {
         pageInt = 1;
         keyString = key;
         orderString = order;
-        priceToString = priceToEditText.getText().toString();
-        priceFromString = priceFromEditText.getText().toString();
+        priceToString = Objects.requireNonNull(priceToEditText.getText()).toString();
+        priceFromString = Objects.requireNonNull(priceFromEditText.getText()).toString();
 
         orderLinearLayout.setVisibility(View.GONE);
         screenRelativeLayout.setVisibility(View.GONE);

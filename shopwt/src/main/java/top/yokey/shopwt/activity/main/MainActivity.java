@@ -258,13 +258,13 @@ public class MainActivity extends BaseActivity {
         if (result.contains(BaseConstant.URL)) {
             //商品
             if (result.contains("goods_id")) {
-                String goodsId = result.substring(result.lastIndexOf("=") + 1, result.length());
+                String goodsId = result.substring(result.lastIndexOf("=") + 1);
                 BaseApplication.get().startGoods(getActivity(), goodsId);
                 return;
             }
             //店铺
             if (result.contains("store_id")) {
-                String storeId = result.substring(result.lastIndexOf("=") + 1, result.length());
+                String storeId = result.substring(result.lastIndexOf("=") + 1);
                 BaseApplication.get().startStore(getActivity(), storeId);
                 return;
             }

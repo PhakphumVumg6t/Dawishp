@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import top.yokey.shopwt.R;
 import top.yokey.base.base.BaseViewHolder;
@@ -51,7 +52,7 @@ public class ExpressSellerSendListAdapter extends RecyclerView.Adapter<ExpressSe
         holder.nameTextView.setText(bean.geteName());
 
         holder.confirmTextView.setOnClickListener(view -> {
-            bean.setCode(holder.codeEditText.getText().toString());
+            bean.setCode(Objects.requireNonNull(holder.codeEditText.getText()).toString());
             arrayList.get(positionInt).setCode(holder.codeEditText.getText().toString());
             if (onItemClickListener != null) {
                 onItemClickListener.onConfirm(positionInt, bean);

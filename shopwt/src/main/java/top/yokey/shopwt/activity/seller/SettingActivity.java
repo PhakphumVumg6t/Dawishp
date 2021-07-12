@@ -4,6 +4,8 @@ import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
@@ -70,12 +72,12 @@ public class SettingActivity extends BaseActivity {
 
     private void save() {
 
-        String zy = goodsEditText.getText().toString();
-        String qq = qqEditText.getText().toString();
-        String ww = wwEditText.getText().toString();
-        String seo = seoEditText.getText().toString();
-        String desc = descEditText.getText().toString();
-        String phone = phoneEditText.getText().toString();
+        String zy = Objects.requireNonNull(goodsEditText.getText()).toString();
+        String qq = Objects.requireNonNull(qqEditText.getText()).toString();
+        String ww = Objects.requireNonNull(wwEditText.getText()).toString();
+        String seo = Objects.requireNonNull(seoEditText.getText()).toString();
+        String desc = Objects.requireNonNull(descEditText.getText()).toString();
+        String phone = Objects.requireNonNull(phoneEditText.getText()).toString();
 
         saveTextView.setEnabled(false);
         saveTextView.setText("保存中...");
@@ -116,7 +118,7 @@ public class SettingActivity extends BaseActivity {
                 seoEditText.setText(sellerStoreInfoBean.getStoreKeywords());
                 descEditText.setText(sellerStoreInfoBean.getStoreDescription());
                 phoneEditText.setText(sellerStoreInfoBean.getStorePhone());
-                goodsEditText.setSelection(goodsEditText.getText().length());
+                goodsEditText.setSelection(Objects.requireNonNull(goodsEditText.getText()).length());
             }
 
             @Override

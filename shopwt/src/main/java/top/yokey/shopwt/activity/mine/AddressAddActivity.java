@@ -7,6 +7,8 @@ import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.activity.choose.AreaActivity;
 import top.yokey.shopwt.base.BaseActivity;
@@ -76,15 +78,11 @@ public class AddressAddActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
-            switch (req) {
-                case BaseConstant.CODE_AREA:
-                    cityId = intent.getStringExtra("city_id");
-                    areaId = intent.getStringExtra("area_id");
-                    areaInfo = intent.getStringExtra("area_info");
-                    areaEditText.setText(areaInfo);
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_AREA) {
+                cityId = intent.getStringExtra("city_id");
+                areaId = intent.getStringExtra("area_id");
+                areaInfo = intent.getStringExtra("area_info");
+                areaEditText.setText(areaInfo);
             }
         }
     }
@@ -95,9 +93,9 @@ public class AddressAddActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String name = nameEditText.getText().toString();
-        String phone = mobileEditText.getText().toString();
-        String address = addressEditText.getText().toString();
+        String name = Objects.requireNonNull(nameEditText.getText()).toString();
+        String phone = Objects.requireNonNull(mobileEditText.getText()).toString();
+        String address = Objects.requireNonNull(addressEditText.getText()).toString();
         String isDefault = defaultSwitch.isChecked() ? "1" : "0";
 
         if (TextUtils.isEmpty(name) || TextUtils.isEmpty(phone) || TextUtils.isEmpty(address)) {

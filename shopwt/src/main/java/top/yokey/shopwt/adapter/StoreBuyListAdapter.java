@@ -22,6 +22,7 @@ import top.yokey.base.bean.StoreBuyBean;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * 适配器
@@ -92,7 +93,7 @@ public class StoreBuyListAdapter extends RecyclerView.Adapter<StoreBuyListAdapte
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                arrayList.get(positionInt).setMessage(holder.messageEditText.getText().toString());
+                arrayList.get(positionInt).setMessage(Objects.requireNonNull(holder.messageEditText.getText()).toString());
             }
 
             @Override

@@ -19,6 +19,7 @@ import top.yokey.base.model.StoreModel;
 import top.yokey.base.util.JsonUtil;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -84,7 +85,7 @@ public class StreetActivity extends BaseActivity {
 
         searchImageView.setOnClickListener(view -> {
             gcIdString = "";
-            keywordString = searchEditText.getText().toString();
+            keywordString = Objects.requireNonNull(searchEditText.getText()).toString();
             pageInt = 1;
             streetList();
         });
@@ -169,7 +170,7 @@ public class StreetActivity extends BaseActivity {
             return;
         }
 
-        if (searchEditText.getText().length() != 0) {
+        if (Objects.requireNonNull(searchEditText.getText()).length() != 0) {
             searchEditText.setText("");
             keywordString = "";
             pageInt = 1;

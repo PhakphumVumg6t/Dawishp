@@ -63,6 +63,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -349,7 +350,7 @@ public class GoodsFragment extends BaseFragment {
         commendAdapter.setOnItemClickListener((position, goodsCommendBean) -> BaseBusClient.get().post(new GoodsIdEvent(goodsCommendBean.getGoodsId())));
 
         chooseAddTextView.setOnClickListener(view -> {
-            String number = (Integer.parseInt(chooseNumberEditText.getText().toString()) + 1) + "";
+            String number = (Integer.parseInt(Objects.requireNonNull(chooseNumberEditText.getText()).toString()) + 1) + "";
             chooseNumberEditText.setText(number);
             changeNumber();
         });
@@ -362,7 +363,7 @@ public class GoodsFragment extends BaseFragment {
         });
 
         chooseSubTextView.setOnClickListener(view -> {
-            String number = (Integer.parseInt(chooseNumberEditText.getText().toString()) - 1) + "";
+            String number = (Integer.parseInt(Objects.requireNonNull(chooseNumberEditText.getText()).toString()) - 1) + "";
             chooseNumberEditText.setText(number);
             changeNumber();
         });
@@ -428,7 +429,7 @@ public class GoodsFragment extends BaseFragment {
         }
 
         goneChooseLayout();
-        String cartId = goodsId + "|" + chooseNumberEditText.getText().toString();
+        String cartId = goodsId + "|" + Objects.requireNonNull(chooseNumberEditText.getText()).toString();
         BaseApplication.get().startGoodsBuy(getActivity(), cartId, "");
 
     }
@@ -454,7 +455,7 @@ public class GoodsFragment extends BaseFragment {
             return;
         }
 
-        MemberCartModel.get().cartAdd(goodsId, chooseNumberEditText.getText().toString(), new BaseHttpListener() {
+        MemberCartModel.get().cartAdd(goodsId, Objects.requireNonNull(chooseNumberEditText.getText()).toString(), new BaseHttpListener() {
             @Override
             public void onSuccess(BaseBean baseBean) {
                 goneChooseLayout();
@@ -779,7 +780,7 @@ public class GoodsFragment extends BaseFragment {
 
     private void changeNumber() {
 
-        if (TextUtils.isEmpty(chooseNumberEditText.getText().toString())) {
+        if (TextUtils.isEmpty(Objects.requireNonNull(chooseNumberEditText.getText()).toString())) {
             BaseToast.get().show("数量不能为空！");
             chooseNumberEditText.setText("1");
             chooseNumberEditText.setSelection(1);
@@ -864,7 +865,7 @@ public class GoodsFragment extends BaseFragment {
 
         for (int i = 0; i < specListArrayList.size(); i++) {
             String key = specListArrayList.get(i).get("key");
-            if (key.contains(specString[0]) && key.contains(specString[1])) {
+            if (Objects.requireNonNull(key).contains(specString[0]) && key.contains(specString[1])) {
                 goodsId = specListArrayList.get(i).get("value");
                 break;
             }

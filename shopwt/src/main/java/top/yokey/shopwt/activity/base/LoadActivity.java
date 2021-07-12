@@ -136,7 +136,7 @@ public class LoadActivity extends BaseActivity implements ActivityCompat.OnReque
         List<String> list = findPermissions(strings);
 
         if (null != list && list.size() > 0) {
-            ActivityCompat.requestPermissions(this, list.toArray(new String[list.size()]), 0);
+            ActivityCompat.requestPermissions(this, list.toArray(new String[0]), 0);
         } else {
             startMain();
         }

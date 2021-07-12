@@ -22,6 +22,7 @@ import top.yokey.base.util.JsonUtil;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.util.Objects;
 import java.util.Vector;
 
 /**
@@ -113,7 +114,7 @@ public class InvoiceAddActivity extends BaseActivity {
         if (selectString.equals("person")) {
             titleString = "个人";
         } else {
-            titleString = headerEditText.getText().toString();
+            titleString = Objects.requireNonNull(headerEditText.getText()).toString();
         }
 
         if (TextUtils.isEmpty(selectString) || TextUtils.isEmpty(titleString) || TextUtils.isEmpty(contentString)) {

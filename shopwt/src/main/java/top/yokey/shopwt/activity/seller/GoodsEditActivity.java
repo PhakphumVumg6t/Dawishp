@@ -17,6 +17,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseFileClient;
@@ -146,8 +148,8 @@ public class GoodsEditActivity extends BaseActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String money = moneyEditText.getText().toString();
-                String price = priceEditText.getText().toString();
+                String money = Objects.requireNonNull(moneyEditText.getText()).toString();
+                String price = Objects.requireNonNull(priceEditText.getText()).toString();
                 if (!TextUtils.isEmpty(money) && !TextUtils.isEmpty(price)) {
                     float m = Float.parseFloat(money);
                     float p = Float.parseFloat(price);
@@ -193,13 +195,13 @@ public class GoodsEditActivity extends BaseActivity {
 
     private void save() {
 
-        String name = nameEditText.getText().toString();
-        String money = moneyEditText.getText().toString();
-        String price = priceEditText.getText().toString();
-        String storage = stockEditText.getText().toString();
-        String serial = numberEditText.getText().toString();
-        String freight = logisticsEditText.getText().toString();
-        String desc = descEditText.getText().toString();
+        String name = Objects.requireNonNull(nameEditText.getText()).toString();
+        String money = Objects.requireNonNull(moneyEditText.getText()).toString();
+        String price = Objects.requireNonNull(priceEditText.getText()).toString();
+        String storage = Objects.requireNonNull(stockEditText.getText()).toString();
+        String serial = Objects.requireNonNull(numberEditText.getText()).toString();
+        String freight = Objects.requireNonNull(logisticsEditText.getText()).toString();
+        String desc = Objects.requireNonNull(descEditText.getText()).toString();
         String state = nowRadioButton.isChecked() ? "1" : "0";
         String discount = discountTextView.getText().toString();
         StringBuilder imageAllBuilder = new StringBuilder();
@@ -257,7 +259,7 @@ public class GoodsEditActivity extends BaseActivity {
                     numberEditText.setText(jsonObject.getString("goods_serial"));
                     logisticsEditText.setText(jsonObject.getString("goods_freight"));
                     descEditText.setText(jsonObject.getString("goods_body"));
-                    nameEditText.setSelection(nameEditText.getText().length());
+                    nameEditText.setSelection(Objects.requireNonNull(nameEditText.getText()).length());
                     if (jsonObject.getString("goods_state").equals("1")) {
                         nowRadioButton.setChecked(true);
                         wareRadioButton.setChecked(false);

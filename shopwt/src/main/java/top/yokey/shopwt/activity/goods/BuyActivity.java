@@ -174,14 +174,10 @@ public class BuyActivity extends BaseActivity {
                     break;
             }
         } else {
-            switch (req) {
-                case BaseConstant.CODE_ADDRESS:
-                    if (TextUtils.isEmpty(goodsBuyBean.getAddressId())) {
-                        tipsAddress();
-                    }
-                    break;
-                default:
-                    break;
+            if (req == BaseConstant.CODE_ADDRESS) {
+                if (TextUtils.isEmpty(goodsBuyBean.getAddressId())) {
+                    tipsAddress();
+                }
             }
         }
     }

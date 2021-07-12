@@ -33,6 +33,7 @@ import top.yokey.base.util.JsonUtil;
 import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Vector;
 
 /**
@@ -194,7 +195,7 @@ public class RefundApplyActivity extends BaseActivity {
 
     private void submit() {
 
-        String remark = remarkEditText.getText().toString();
+        String remark = Objects.requireNonNull(remarkEditText.getText()).toString();
 
         if (TextUtils.isEmpty(remark)) {
             BaseToast.get().show("请输入原因！");
@@ -281,7 +282,7 @@ public class RefundApplyActivity extends BaseActivity {
         submitTextView.setEnabled(false);
         submitTextView.setText("提交中...");
 
-        MemberRefundModel.get().refundAllPost(orderIdString, remarkEditText.getText().toString(), refundPic0String, refundPic1String, refundPic2String, new BaseHttpListener() {
+        MemberRefundModel.get().refundAllPost(orderIdString, Objects.requireNonNull(remarkEditText.getText()).toString(), refundPic0String, refundPic1String, refundPic2String, new BaseHttpListener() {
             @Override
             public void onSuccess(BaseBean baseBean) {
                 if (JsonUtil.isSuccess(baseBean.getDatas())) {

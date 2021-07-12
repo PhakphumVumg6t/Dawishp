@@ -73,7 +73,7 @@ public class LoginWebActivity extends BaseActivity {
                 String cookie = BaseApplication.get().getCookieManager().getCookie(url);
                 if (cookie != null) {
                     if (cookie.contains("key=")) {
-                        cookie = cookie.substring(cookie.indexOf("key=") + 4, cookie.length());
+                        cookie = cookie.substring(cookie.indexOf("key=") + 4);
                         String key = cookie.substring(0, cookie.indexOf(";"));
                         Intent intent = new Intent();
                         intent.putExtra(BaseConstant.DATA_KEY, key);

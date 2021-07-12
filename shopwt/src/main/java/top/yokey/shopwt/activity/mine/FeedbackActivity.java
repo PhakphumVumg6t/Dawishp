@@ -5,6 +5,8 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
@@ -56,7 +58,7 @@ public class FeedbackActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String feedback = contentEditText.getText().toString();
+        String feedback = Objects.requireNonNull(contentEditText.getText()).toString();
         if (TextUtils.isEmpty(feedback)) {
             BaseToast.get().show("请输入内容...");
             return;

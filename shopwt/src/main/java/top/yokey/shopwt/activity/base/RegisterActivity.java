@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 
+import java.util.Objects;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.activity.main.MainActivity;
 import top.yokey.shopwt.base.BaseActivity;
@@ -166,10 +168,10 @@ public class RegisterActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String username = usernameEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
-        String confirm = confirmEditText.getText().toString();
-        String email = emailEditText.getText().toString();
+        String username = Objects.requireNonNull(usernameEditText.getText()).toString();
+        String password = Objects.requireNonNull(passwordEditText.getText()).toString();
+        String confirm = Objects.requireNonNull(confirmEditText.getText()).toString();
+        String email = Objects.requireNonNull(emailEditText.getText()).toString();
 
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confirm) || TextUtils.isEmpty(email)) {
             BaseToast.get().show("请填写完所有的信息...");
@@ -215,7 +217,7 @@ public class RegisterActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String mobile = mobileEditText.getText().toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
 
         if (!TextUtil.isMobile(mobile)) {
             BaseToast.get().show("手机号码格式不正确！");
@@ -267,8 +269,8 @@ public class RegisterActivity extends BaseActivity {
 
         BaseApplication.get().hideKeyboard(getActivity());
 
-        String captcha = codeEditText.getText().toString();
-        String mobile = mobileEditText.getText().toString();
+        String captcha = Objects.requireNonNull(codeEditText.getText()).toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
 
         if (TextUtils.isEmpty(captcha)) {
             BaseToast.get().show("请输入验证码！");
@@ -302,9 +304,9 @@ public class RegisterActivity extends BaseActivity {
 
     private void smsRegister() {
 
-        String captcha = codeEditText.getText().toString();
-        String mobile = mobileEditText.getText().toString();
-        String password = passwordSmsEditText.getText().toString();
+        String captcha = Objects.requireNonNull(codeEditText.getText()).toString();
+        String mobile = Objects.requireNonNull(mobileEditText.getText()).toString();
+        String password = Objects.requireNonNull(passwordSmsEditText.getText()).toString();
 
         if (TextUtils.isEmpty(password)) {
             BaseToast.get().show("请输入账户密码！");

@@ -24,6 +24,7 @@ import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * @author MapleStory
@@ -75,12 +76,12 @@ public class SearchFragment extends BaseFragment {
 
         searchEditText.setOnEditorActionListener((textView, i, keyEvent) -> {
             if (i == EditorInfo.IME_ACTION_SEARCH) {
-                BaseApplication.get().startGoodsList(getActivity(), searchEditText.getText().toString(), "", "");
+                BaseApplication.get().startGoodsList(getActivity(), Objects.requireNonNull(searchEditText.getText()).toString(), "", "");
             }
             return false;
         });
 
-        searchImageView.setOnClickListener(view -> BaseApplication.get().startGoodsList(getActivity(), searchEditText.getText().toString(), "", ""));
+        searchImageView.setOnClickListener(view -> BaseApplication.get().startGoodsList(getActivity(), Objects.requireNonNull(searchEditText.getText()).toString(), "", ""));
 
         keyAdapter.setOnItemClickListener((position, key) -> BaseApplication.get().startGoodsList(getActivity(), key, "", ""));
 

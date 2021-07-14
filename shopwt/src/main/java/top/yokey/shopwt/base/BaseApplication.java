@@ -8,7 +8,6 @@ import android.content.ClipboardManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -70,13 +69,12 @@ import top.yokey.shopwt.activity.store.StreetActivity;
 import top.yokey.shopwt.adapter.BaseViewPagerAdapter;
 
 import com.jiagu.sdk.BaseProtected;
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.ui.ImageGridActivity;
+import com.lzy.imagepicker.view.CropImageView;
 import com.mob.MobSDK;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
-import com.zhihu.matisse.Matisse;
-import com.zhihu.matisse.MimeType;
-import com.zhihu.matisse.engine.impl.GlideEngine;
-import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
 import org.xutils.x;
 
@@ -790,26 +788,34 @@ public class BaseApplication extends Application {
 
     }
 
-    public void startMatisse(Activity activity, int number, int code) {
-
-        Matisse.from(activity)
-                .choose(MimeType.ofImage(), false)
-                .countable(true)
-                .capture(true)
-                .captureStrategy(new CaptureStrategy(true, "top.yokey.shopwt.fileprovider"))
-                .maxSelectable(number)
-                .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
-                .thumbnailScale(0.85f)
-                .imageEngine(new GlideEngine())
-                .forResult(code);
-
-    }
-
     public void startApplicationSetting(Activity activity, String packageName) {
 
         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
         intent.setData(Uri.fromParts("package", packageName, null));
         start(activity, intent);
+
+    }
+
+    public void startImagePicker(Activity activity, int number, int code, boolean crop) {
+
+        ImagePicker imagePicker = ImagePicker.getInstance();
+        imagePicker.setImageLoader(new GlideImageLoader());
+        imagePicker.setMultiMode(number != 1);
+        imagePicker.setSelectLimit(number);
+        imagePicker.setShowCamera(true);
+        if (crop) {
+            imagePicker.setCrop(true);
+            imagePicker.setSaveRectangle(true);
+            imagePicker.setStyle(CropImageView.Style.RECTANGLE);
+            imagePicker.setFocusHeight(800);
+            imagePicker.setFocusWidth(800);
+            imagePicker.setOutPutX(800);
+            imagePicker.setOutPutY(800);
+        } else {
+            imagePicker.setCrop(false);
+        }
+        Intent intent = new Intent(this, ImageGridActivity.class);
+        start(activity, intent, code);
 
     }
 

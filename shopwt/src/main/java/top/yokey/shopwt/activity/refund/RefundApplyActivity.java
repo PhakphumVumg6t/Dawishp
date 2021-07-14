@@ -14,6 +14,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.bean.ImageItem;
+
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.adapter.GoodsRefundApplyListAdapter;
 import top.yokey.shopwt.base.BaseActivity;
@@ -29,8 +32,6 @@ import top.yokey.base.bean.FileUploadBean;
 import top.yokey.base.bean.RefundApplyBean;
 import top.yokey.base.model.MemberRefundModel;
 import top.yokey.base.util.JsonUtil;
-
-import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -160,17 +161,17 @@ public class RefundApplyActivity extends BaseActivity {
 
         zeroImageView.setOnClickListener(view -> {
             positionInt = 0;
-            BaseApplication.get().startMatisse(getActivity(), 1, BaseConstant.CODE_ALBUM);
+            BaseApplication.get().startImagePicker(getActivity(), 1, BaseConstant.CODE_ALBUM, false);
         });
 
         oneImageView.setOnClickListener(view -> {
             positionInt = 1;
-            BaseApplication.get().startMatisse(getActivity(), 1, BaseConstant.CODE_ALBUM);
+            BaseApplication.get().startImagePicker(getActivity(), 1, BaseConstant.CODE_ALBUM, false);
         });
 
         twoImageView.setOnClickListener(view -> {
             positionInt = 2;
-            BaseApplication.get().startMatisse(getActivity(), 1, BaseConstant.CODE_ALBUM);
+            BaseApplication.get().startImagePicker(getActivity(), 1, BaseConstant.CODE_ALBUM, false);
         });
 
         submitTextView.setOnClickListener(view -> {
@@ -187,7 +188,9 @@ public class RefundApplyActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK && req == BaseConstant.CODE_ALBUM) {
-            updateImage(Matisse.obtainPathResult(intent).get(0));
+            @SuppressWarnings("unchecked")
+            ArrayList<ImageItem> arrayList = (ArrayList<ImageItem>) intent.getSerializableExtra(ImagePicker.EXTRA_RESULT_ITEMS);
+            updateImage(arrayList.get(0).path);
         }
     }
 

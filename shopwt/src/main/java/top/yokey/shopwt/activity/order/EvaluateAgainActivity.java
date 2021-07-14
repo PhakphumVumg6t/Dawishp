@@ -6,6 +6,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.bean.ImageItem;
+
 import top.yokey.shopwt.base.BaseImageLoader;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.adapter.OrderEvaluateAgainListAdapter;
@@ -22,8 +25,6 @@ import top.yokey.base.bean.OrderEvaluateAgainBean;
 import top.yokey.base.model.MemberEvaluateModel;
 import top.yokey.base.model.SnsAlbumModel;
 import top.yokey.base.util.JsonUtil;
-
-import com.zhihu.matisse.Matisse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -95,7 +96,7 @@ public class EvaluateAgainActivity extends BaseActivity {
             public void onClickImage(int position, int positionImage, OrderEvaluateAgainBean.EvaluateGoodsBean evaluateGoodsBean) {
                 positionInt = position;
                 positionImageInt = positionImage;
-                BaseApplication.get().startMatisse(getActivity(), 1, BaseConstant.CODE_ALBUM);
+                BaseApplication.get().startImagePicker(getActivity(), 1, BaseConstant.CODE_ALBUM, false);
             }
         });
 
@@ -107,7 +108,9 @@ public class EvaluateAgainActivity extends BaseActivity {
     public void onActivityResult(int req, int res, Intent intent) {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK && req == BaseConstant.CODE_ALBUM) {
-            updateImage(Matisse.obtainPathResult(intent).get(0));
+            @SuppressWarnings("unchecked")
+            ArrayList<ImageItem> arrayList = (ArrayList<ImageItem>) intent.getSerializableExtra(ImagePicker.EXTRA_RESULT_ITEMS);
+            updateImage(arrayList.get(0).path);
         }
     }
 

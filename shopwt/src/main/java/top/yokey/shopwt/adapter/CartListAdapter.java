@@ -58,7 +58,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         goodsCartListAdapter = new GoodsCartListAdapter(bean.getGoods());
         BaseApplication.get().setRecyclerView(BaseApplication.get(), holder.mainRecyclerView, goodsCartListAdapter);
 
-        if (bean.getMansong() == null) {
+        if (bean.getMansong() == null || bean.getMansong().size() == 0) {
             holder.mansongLineView.setVisibility(View.GONE);
             holder.manSongLinearLayout.setVisibility(View.GONE);
         } else {

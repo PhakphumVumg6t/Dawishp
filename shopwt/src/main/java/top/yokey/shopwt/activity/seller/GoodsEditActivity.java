@@ -11,12 +11,14 @@ import android.text.Html;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 
-import com.zhihu.matisse.Matisse;
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.bean.ImageItem;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import top.yokey.shopwt.base.BaseActivity;
@@ -131,7 +133,7 @@ public class GoodsEditActivity extends BaseActivity {
             final int pos = i;
             imageImageView[i].setOnClickListener(view -> {
                 positionInt = pos;
-                BaseApplication.get().startMatisse(getActivity(), 1, BaseConstant.CODE_ALBUM);
+                BaseApplication.get().startImagePicker(getActivity(), 1, BaseConstant.CODE_ALBUM, false);
             });
         }
 
@@ -183,7 +185,9 @@ public class GoodsEditActivity extends BaseActivity {
                     cateTextView.setText(intent.getStringExtra(BaseConstant.DATA_CONTENT));
                     break;
                 case BaseConstant.CODE_ALBUM:
-                    updateImage(Matisse.obtainPathResult(intent).get(0));
+                    @SuppressWarnings("unchecked")
+                    ArrayList<ImageItem> arrayList = (ArrayList<ImageItem>) intent.getSerializableExtra(ImagePicker.EXTRA_RESULT_ITEMS);
+                    updateImage(arrayList.get(0).path);
                     break;
                 default:
                     break;

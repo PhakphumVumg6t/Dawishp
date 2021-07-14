@@ -12,8 +12,9 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.bean.ImageItem;
 import com.squareup.otto.Subscribe;
-import com.zhihu.matisse.Matisse;
 
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.base.base.BaseAnimClient;
@@ -130,7 +131,7 @@ public class ChatOnlyActivity extends BaseActivity {
             }
         });
 
-        imageImageView.setOnClickListener(view -> BaseApplication.get().startMatisse(getActivity(), 1, BaseConstant.CODE_ALBUM));
+        imageImageView.setOnClickListener(view -> BaseApplication.get().startImagePicker(getActivity(), 1, BaseConstant.CODE_ALBUM, false));
 
         sendTextView.setOnClickListener(view -> sendMessage());
 
@@ -176,7 +177,9 @@ public class ChatOnlyActivity extends BaseActivity {
         super.onActivityResult(req, res, intent);
         if (res == RESULT_OK) {
             if (req == BaseConstant.CODE_ALBUM) {
-                updateImage(Matisse.obtainPathResult(intent).get(0));
+                @SuppressWarnings("unchecked")
+                ArrayList<ImageItem> arrayList = (ArrayList<ImageItem>) intent.getSerializableExtra(ImagePicker.EXTRA_RESULT_ITEMS);
+                updateImage(arrayList.get(0).path);
             }
         }
     }

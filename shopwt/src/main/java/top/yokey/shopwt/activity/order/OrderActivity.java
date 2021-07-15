@@ -8,24 +8,24 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.base.base.BaseToast;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.activity.refund.RefundApplyActivity;
-import top.yokey.shopwt.adapter.BaseViewPagerAdapter;
-import top.yokey.shopwt.adapter.OrderListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.OrderBean;
 import top.yokey.base.model.MemberOrderModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.activity.refund.RefundApplyActivity;
+import top.yokey.shopwt.adapter.BaseViewPagerAdapter;
+import top.yokey.shopwt.adapter.OrderListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory
@@ -68,7 +68,7 @@ public class OrderActivity extends BaseActivity {
 
         positionInt = getIntent().getIntExtra(BaseConstant.DATA_POSITION, 0);
 
-        setToolbar(mainToolbar, "");
+        setToolbar(mainToolbar);
         toolbarImageView.setImageResource(R.drawable.ic_action_search);
 
         stateTypeString = new String[5];
@@ -301,17 +301,8 @@ public class OrderActivity extends BaseActivity {
                 }
                 if (pageInt[positionInt] <= baseBean.getPageTotal()) {
                     String data = JsonUtil.getDatasString(baseBean.getDatas(), "order_group_list");
-                    mainArrayList[positionInt].addAll(JsonUtil.json2ArrayList(data, OrderBean.class));
+                    mainArrayList[positionInt].addAll(Objects.requireNonNull(JsonUtil.json2ArrayList(data, OrderBean.class)));
                     pageInt[positionInt]++;
-                }
-                for (int i = 0; i < mainArrayList[positionInt].size(); i++) {
-                    for (int j = 0; j < mainArrayList[positionInt].get(i).getOrderList().size(); i++) {
-                        if (mainArrayList[positionInt].get(i).getOrderList().get(j).getExtendOrderGoods() == null) {
-                            mainArrayList[positionInt].remove(i);
-                            i--;
-                            break;
-                        }
-                    }
                 }
                 mainPullRefreshView[positionInt].setComplete();
             }

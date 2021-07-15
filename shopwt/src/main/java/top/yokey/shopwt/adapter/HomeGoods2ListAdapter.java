@@ -57,7 +57,7 @@ public class HomeGoods2ListAdapter extends RecyclerView.Adapter<HomeGoods2ListAd
         holder.mainImageView.setLayoutParams(layoutParams);
         holder.nameTextView.setText(bean.getGoodsName());
         holder.moneyTextView.setText("￥");
-        holder.moneyTextView.append(bean.getGoodsPromotionPrice());
+        //holder.moneyTextView.append(bean.getGoodsPromotionPrice());
 
         holder.mainRelativeLayout.setOnClickListener(view -> BaseApplication.get().startGoods(activity, bean.getGoodsId()));
 

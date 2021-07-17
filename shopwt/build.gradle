@@ -3,8 +3,7 @@ apply plugin: "com.mob.sdk"
 
 android {
 
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
     repositories { flatDir { dirs "libs" } }
     sourceSets { main { jniLibs.srcDirs = ["libs"] } }
     externalNativeBuild { cmake { path "CMakeLists.txt" } }
@@ -12,7 +11,7 @@ android {
     defaultConfig {
         applicationId "top.yokey.shopwt"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1"
         externalNativeBuild { cmake { cppFlags "-std=c++11" } }
@@ -87,9 +86,9 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "org.xutils:xutils:+"
     //noinspection GradleDynamicVersion
-    implementation "cn.jiguang.sdk:jpush:+"
+    implementation "cn.jiguang.sdk:jpush:3.2.0"
     //noinspection GradleDynamicVersion
-    implementation "cn.jiguang.sdk:jcore:+"
+    implementation "cn.jiguang.sdk:jcore:1.2.7"
     //noinspection GradleDynamicVersion
     implementation "com.youth.banner:banner:+"
     //noinspection GradleDynamicVersion

@@ -14,7 +14,7 @@
         android:layout_marginEnd="56dip"
         android:layout_marginRight="56dip">
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/friendImageView"
             android:layout_width="48dip"
             android:layout_height="48dip"
@@ -23,14 +23,14 @@
             android:scaleType="fitXY"
             android:src="@mipmap/ic_default_avatar" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/friendContentTextView"
             style="@style/TextView.Chat"
             android:layout_toEndOf="@+id/friendImageView"
             android:layout_toRightOf="@+id/friendImageView"
             android:background="@drawable/bg_chat_friend" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/friendContentImageView"
             android:layout_width="128dip"
             android:layout_height="128dip"
@@ -47,7 +47,7 @@
         android:layout_marginLeft="56dip"
         android:layout_marginStart="56dip">
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/mineImageView"
             android:layout_width="48dip"
             android:layout_height="48dip"
@@ -58,14 +58,14 @@
             android:scaleType="fitXY"
             android:src="@mipmap/ic_default_avatar" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/mineContentTextView"
             style="@style/TextView.Chat"
             android:layout_toLeftOf="@+id/mineImageView"
             android:layout_toStartOf="@+id/mineImageView"
             android:background="@drawable/bg_chat_mine" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/mineContentImageView"
             android:layout_width="128dip"
             android:layout_height="128dip"

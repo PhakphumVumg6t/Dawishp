@@ -6,14 +6,14 @@
     style="@style/Layout.Item"
     android:layout_height="56dip">
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Normal"
         android:layout_centerVertical="true"
         android:text="顺丰快递"
         tools:ignore="HardcodedText" />
 
-    <android.support.v7.widget.AppCompatEditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/codeEditText"
         style="@style/EditText.Line"
         android:layout_height="32dip"
@@ -28,7 +28,7 @@
         android:hint="请输入快递单号"
         tools:ignore="HardcodedText" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/confirmTextView"
         style="@style/TextView.Small"
         android:layout_alignBottom="@+id/codeEditText"

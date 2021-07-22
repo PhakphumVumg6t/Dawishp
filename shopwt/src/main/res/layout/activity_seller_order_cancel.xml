@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/contentLinearLayout"
         style="@style/Layout.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moneyTextView"
             style="@style/TextView.Money"
             android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:textColor="@color/blackSub"
             android:textSize="24sp" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/snTextView"
             style="@style/TextView.Small"
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             android:paddingBottom="24dip"
             android:paddingTop="8dip" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.Tool"
             android:layout_height="48dip"
             android:layout_marginTop="16dip"
@@ -52,7 +52,7 @@
             android:text="取消原因"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Wrap"
             android:layout_marginTop="1px"
             android:background="@drawable/selector_color_white"
@@ -61,7 +61,7 @@
             android:paddingRight="10dip"
             android:paddingTop="8dip">
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/oneRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
@@ -70,7 +70,7 @@
                 android:text="无法备齐货物"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/twoRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
@@ -78,7 +78,7 @@
                 android:text="不是有效的订单"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/thrRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
@@ -86,7 +86,7 @@
                 android:text="卖家主动要求"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatRadioButton
+            <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/fouRadioButton"
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
@@ -94,14 +94,14 @@
                 android:text="其他原因"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/submitTextView"
             style="@style/TextView.Button"
             android:text="提交"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

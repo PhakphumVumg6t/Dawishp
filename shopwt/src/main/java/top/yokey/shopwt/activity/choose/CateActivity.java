@@ -1,8 +1,8 @@
 package top.yokey.shopwt.activity.choose;
 
 import android.content.Intent;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
 import top.yokey.shopwt.base.BaseActivity;

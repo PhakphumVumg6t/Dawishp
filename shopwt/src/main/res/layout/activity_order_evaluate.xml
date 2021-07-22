@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/mainScrollView"
         style="@style/Layout.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+        <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mainRecyclerView"
                 style="@style/Layout.Main"
                 android:layout_marginTop="16dip" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/storeLinearLayout"
                 style="@style/Layout.Wrap">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/storeNameTextView"
                     style="@style/TextView.Tool"
                     android:layout_height="40dip"
@@ -50,12 +50,12 @@
                     style="@style/Layout.Tool"
                     android:layout_marginTop="1px">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         style="@style/TextView.ToolTitle"
                         android:text="描述相符"
                         tools:ignore="HardcodedText" />
 
-                    <android.support.v7.widget.AppCompatRatingBar
+                    <androidx.appcompat.widget.AppCompatRatingBar
                         android:id="@+id/descRatingBar"
                         style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
@@ -73,12 +73,12 @@
                     style="@style/Layout.Tool"
                     android:layout_marginTop="1px">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         style="@style/TextView.ToolTitle"
                         android:text="服务态度"
                         tools:ignore="HardcodedText" />
 
-                    <android.support.v7.widget.AppCompatRatingBar
+                    <androidx.appcompat.widget.AppCompatRatingBar
                         android:id="@+id/serviceRatingBar"
                         style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
@@ -96,12 +96,12 @@
                     style="@style/Layout.Tool"
                     android:layout_marginTop="1px">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <androidx.appcompat.widget.AppCompatTextView
                         style="@style/TextView.ToolTitle"
                         android:text="发货速度"
                         tools:ignore="HardcodedText" />
 
-                    <android.support.v7.widget.AppCompatRatingBar
+                    <androidx.appcompat.widget.AppCompatRatingBar
                         android:id="@+id/logisticsRatingBar"
                         style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
                         android:layout_width="wrap_content"
@@ -115,16 +115,16 @@
 
                 </RelativeLayout>
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/saveTextView"
                 style="@style/TextView.Button"
                 android:text="评 价"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

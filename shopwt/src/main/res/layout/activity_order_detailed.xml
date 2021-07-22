@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/mainScrollView"
         style="@style/Layout.Main"
         android:layout_weight="1">
 
-        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+        <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
             <RelativeLayout style="@style/Layout.Tool">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:drawableLeft="@mipmap/ic_mine_order"
                     android:drawableStart="@mipmap/ic_mine_order"
                     android:text="交易状态"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/stateTextView"
                     style="@style/TextView.ToolValue"
                     android:text="待收货"
@@ -49,7 +49,7 @@
                 android:paddingBottom="12dip"
                 android:paddingTop="12dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressNameTextView"
                     style="@style/TextView.Max"
                     android:drawableLeft="@mipmap/ic_mine_address"
@@ -57,7 +57,7 @@
                     android:textColor="@color/blackSub"
                     android:textSize="14sp" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressMobileTextView"
                     style="@style/TextView.Normal"
                     android:layout_alignBottom="@+id/addressNameTextView"
@@ -67,7 +67,7 @@
                     android:paddingLeft="8dip"
                     android:paddingRight="8dip" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressAreaTextView"
                     style="@style/TextView.Normal"
                     android:layout_below="@+id/addressNameTextView"
@@ -85,7 +85,7 @@
                 android:paddingBottom="12dip"
                 android:paddingTop="12dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/invoiceNameTextView"
                     style="@style/TextView.Max"
                     android:drawableLeft="@mipmap/ic_mine_property"
@@ -95,7 +95,7 @@
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/invoiceContentTextView"
                     style="@style/TextView.Normal"
                     android:layout_below="@+id/invoiceNameTextView"
@@ -113,7 +113,7 @@
                 android:paddingBottom="12dip"
                 android:paddingTop="12dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/messageNameTextView"
                     style="@style/TextView.Max"
                     android:drawableLeft="@mipmap/ic_mine_setting"
@@ -123,7 +123,7 @@
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/messageContentTextView"
                     style="@style/TextView.Normal"
                     android:layout_below="@+id/messageNameTextView"
@@ -140,7 +140,7 @@
                 android:paddingBottom="12dip"
                 android:paddingTop="12dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/paymentNameTextView"
                     style="@style/TextView.Max"
                     android:drawableLeft="@mipmap/ic_mine_invite"
@@ -150,7 +150,7 @@
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/paymentContentTextView"
                     style="@style/TextView.Normal"
                     android:layout_below="@+id/paymentNameTextView"
@@ -160,7 +160,7 @@
 
             </RelativeLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/storeNameTextView"
                 style="@style/TextView.ToolValueDot"
                 android:layout_width="match_parent"
@@ -176,11 +176,11 @@
 
             <View style="@style/View.Line" />
 
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/mainRecyclerView"
                 style="@style/Layout.Main" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/zengPinLinearLayout"
                 style="@style/Layout.Horizontal"
                 android:layout_height="40dip"
@@ -191,7 +191,7 @@
                 android:paddingRight="16dip"
                 android:paddingTop="8dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.GoodsActivity"
                     android:layout_height="match_parent"
                     android:layout_alignBottom="@+id/specChooseTextView"
@@ -201,7 +201,7 @@
                     android:text="赠品"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/zengPinDescTextView"
                     style="@style/TextView.Small"
                     android:layout_height="match_parent"
@@ -210,7 +210,7 @@
                     android:paddingRight="4dip"
                     android:singleLine="true" />
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <RelativeLayout
                 android:id="@+id/promotionRelativeLayout"
@@ -220,14 +220,14 @@
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:layout_height="40dip"
                     android:text="优惠"
                     android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/promotionContentTextView"
                     style="@style/TextView.ToolValue"
                     android:layout_height="40dip"
@@ -243,14 +243,14 @@
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:layout_height="40dip"
                     android:text="运费"
                     android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/logisticsMoneyTextView"
                     style="@style/TextView.ToolValue"
                     android:layout_height="40dip"
@@ -266,14 +266,14 @@
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:layout_height="40dip"
                     android:text="实付（含运费）"
                     android:textSize="12sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/totalMoneyTextView"
                     style="@style/TextView.ToolValue"
                     android:layout_height="40dip"
@@ -282,34 +282,34 @@
 
             </RelativeLayout>
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.LinearLayoutCompat
                 style="@style/Layout.Item"
                 android:layout_marginBottom="16dip"
                 android:layout_marginTop="16dip"
                 android:paddingBottom="12dip"
                 android:paddingTop="12dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/snTextView"
                     style="@style/TextView.Small" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/createTimeTextView"
                     style="@style/TextView.Small"
                     android:layout_marginTop="4dip" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/payTimeTextView"
                     style="@style/TextView.Small"
                     android:layout_marginTop="4dip" />
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         style="@style/Layout.Horizontal"
         android:layout_height="48dip"
         android:layout_alignParentBottom="true">
@@ -340,7 +340,7 @@
             android:text="电话"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/operaTextView"
             style="@style/TextView.Normal"
             android:layout_height="48dip"
@@ -351,6 +351,6 @@
             android:textColor="@color/white"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Layout.Wrap">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         style="@style/Layout.Horizontal"
         android:layout_height="48dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/orderTextView"
             style="@style/TextView.Small"
             android:layout_height="48dip"
@@ -22,7 +22,7 @@
             android:text="最新发布"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/saleTextView"
             style="@style/TextView.Small"
             android:layout_height="48dip"
@@ -32,7 +32,7 @@
             android:text="我能兑换"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/screenTextView"
             style="@style/TextView.Small"
             android:layout_height="48dip"
@@ -48,22 +48,22 @@
 
         <View style="@style/View.Horizontal" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/orientationImageView"
             style="@style/ImageView.Toolbar"
             android:background="@color/white"
             android:src="@mipmap/ic_orientation_grid" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/orderLinearLayout"
         style="@style/Layout.Wrap"
         android:visibility="gone">
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/orderCompTextView"
             style="@style/TextView.Small"
             android:layout_width="match_parent"
@@ -76,7 +76,7 @@
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/orderHighTextView"
             style="@style/TextView.Small"
             android:layout_width="match_parent"
@@ -89,7 +89,7 @@
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/orderLowTextView"
             style="@style/TextView.Small"
             android:layout_width="match_parent"
@@ -102,7 +102,7 @@
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/orderHotTextView"
             style="@style/TextView.Small"
             android:layout_width="match_parent"
@@ -113,7 +113,7 @@
             android:text="最新发布"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <RelativeLayout
         android:id="@+id/screenRelativeLayout"
@@ -123,7 +123,7 @@
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moneyTextView"
             style="@style/TextView.Line"
             android:layout_marginBottom="8dip"
@@ -133,7 +133,7 @@
             android:text="积分区间"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/priceFromEditText"
             style="@style/EditText.Number"
             android:layout_below="@+id/moneyTextView"
@@ -142,7 +142,7 @@
             android:hint="最低价"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lineTextView"
             style="@style/TextView.Normal"
             android:layout_alignBottom="@+id/priceFromEditText"
@@ -152,7 +152,7 @@
             android:text="-"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/priceToEditText"
             style="@style/EditText.Number"
             android:layout_below="@+id/moneyTextView"
@@ -163,7 +163,7 @@
             android:hint="最高价"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/confirmTextView"
             style="@style/TextView.Button"
             android:layout_below="@+id/priceFromEditText"
@@ -174,4 +174,4 @@
 
     <View style="@style/View.Line" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

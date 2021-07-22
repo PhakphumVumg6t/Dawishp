@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Wrap"
     android:background="@drawable/selector_color_white">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/storeLinearLayout"
         style="@style/Layout.Horizontal"
         android:layout_height="40dip"
         android:paddingLeft="16dip"
         android:paddingRight="16dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/storeNameTextView"
             style="@style/TextView.ToolTitle"
             android:layout_height="40dip"
@@ -22,16 +22,16 @@
             android:drawablePadding="4dip"
             android:drawableStart="@mipmap/ic_store_goods" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/storeDescTextView"
             style="@style/TextView.ToolValueDot"
             android:layout_height="40dip" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainRecyclerView"
         style="@style/Layout.Main" />
 
@@ -42,14 +42,14 @@
         android:paddingLeft="16dip"
         android:paddingRight="16dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.ToolTitle"
             android:layout_height="40dip"
             android:text="申请时间"
             android:textSize="12sp"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/timeTextView"
             style="@style/TextView.ToolValue"
             android:layout_height="40dip"
@@ -65,14 +65,14 @@
         android:paddingLeft="16dip"
         android:paddingRight="16dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.ToolTitle"
             android:layout_height="40dip"
             android:text="退款金额"
             android:textSize="12sp"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moneyTextView"
             style="@style/TextView.ToolValue"
             android:layout_height="40dip"
@@ -85,4 +85,4 @@
         style="@style/View.Line"
         android:layout_height="8dip" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

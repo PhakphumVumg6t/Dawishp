@@ -4,15 +4,15 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View
         android:id="@+id/lineView"
@@ -24,7 +24,7 @@
         style="@style/Layout.Main"
         android:layout_below="@id/lineView" />
 
-    <android.support.v4.widget.ContentLoadingProgressBar
+    <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/mainProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"

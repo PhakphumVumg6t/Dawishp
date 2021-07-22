@@ -1,6 +1,6 @@
 package top.yokey.shopwt.activity.store;
 
-import android.support.v7.widget.GridLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.squareup.otto.Subscribe;
 

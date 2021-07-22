@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
@@ -23,7 +23,7 @@
         android:background="@mipmap/bg_mine"
         android:padding="16dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/preDepositTextView"
             style="@style/TextView.Normal"
             android:layout_alignParentEnd="true"
@@ -32,7 +32,7 @@
             android:textColor="@color/white"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/preDepositValueTextView"
             style="@style/TextView.Normal"
             android:layout_alignParentEnd="true"
@@ -45,14 +45,14 @@
 
     <View style="@style/View.Line" />
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/mainTabLayout"
         style="@style/Layout.Tab" />
 
     <View style="@style/View.Line" />
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/mainViewPager"
         style="@style/Layout.Main" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

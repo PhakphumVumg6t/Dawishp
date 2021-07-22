@@ -1,9 +1,9 @@
 package top.yokey.shopwt.activity.main;
 
-import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.inputmethod.EditorInfo;
 
 import io.github.xudaojie.qrcodelib.CaptureActivity;

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/mainScrollView"
         style="@style/Layout.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+        <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
             <RelativeLayout
                 style="@style/Layout.Tool"
                 android:layout_marginTop="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="物流公司"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatSpinner
+                <androidx.appcompat.widget.AppCompatSpinner
                     android:id="@+id/expressSpinner"
                     style="@style/TextView.ToolValue" />
 
@@ -42,12 +42,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="运单号码"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatEditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/noEditText"
                     style="@style/EditText.Line"
                     android:layout_width="wrap_content"
@@ -58,14 +58,14 @@
 
             </RelativeLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/submitTextView"
                 style="@style/TextView.Button"
                 android:text="提 交"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,6 +1,6 @@
 package top.yokey.shopwt.activity.goods;
 
-import android.support.v7.widget.AppCompatTextView;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.squareup.otto.Subscribe;
 

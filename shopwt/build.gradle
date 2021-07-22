@@ -73,13 +73,13 @@ dependencies {
     implementation fileTree(include: ["*.jar"], dir: "libs")
     //谷歌官方拓展
     //noinspection GradleDynamicVersion
-    implementation "com.android.support:design:+"
+    implementation 'com.google.android.material:material:+'
     //noinspection GradleDynamicVersion
-    implementation "com.android.support:support-v4:+"
+    implementation 'androidx.legacy:legacy-support-v4:+'
     //noinspection GradleDynamicVersion
-    implementation "com.android.support:appcompat-v7:+"
+    implementation 'androidx.appcompat:appcompat:+'
     //noinspection GradleDynamicVersion
-    implementation "com.android.support:exifinterface:+"
+    implementation 'androidx.exifinterface:exifinterface:+'
     //常用第三方库
     //noinspection GradleDynamicVersion
     implementation "com.squareup:otto:+"

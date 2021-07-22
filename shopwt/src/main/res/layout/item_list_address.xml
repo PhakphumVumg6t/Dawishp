@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Wrap">
@@ -9,14 +9,14 @@
         android:id="@+id/mainRelativeLayout"
         style="@style/Layout.Item">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/nameTextView"
             style="@style/TextView.Max"
             android:text="刘龙锦"
             android:textColor="@color/blackSub"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/mobileTextView"
             style="@style/TextView.Normal"
             android:layout_alignBottom="@+id/nameTextView"
@@ -28,7 +28,7 @@
             android:text="10086"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/areaTextView"
             style="@style/TextView.Normal"
             android:layout_below="@+id/nameTextView"
@@ -43,7 +43,7 @@
             android:layout_marginBottom="8dip"
             android:layout_marginTop="8dip" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/defaultTextView"
             style="@style/TextView.Normal"
             android:layout_alignBottom="@+id/deleteTextView"
@@ -54,7 +54,7 @@
             android:textColor="@color/primary"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/editTextView"
             style="@style/TextView.Normal"
             android:layout_below="@+id/lineView"
@@ -68,7 +68,7 @@
             android:text="编辑"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/deleteTextView"
             style="@style/TextView.Normal"
             android:layout_alignParentEnd="true"
@@ -86,4 +86,4 @@
         style="@style/View.Line"
         android:layout_height="8dip" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

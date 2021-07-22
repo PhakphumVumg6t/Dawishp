@@ -12,7 +12,7 @@
     android:paddingLeft="4dip"
     android:paddingRight="4dip">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.GoodsVer"
         android:layout_width="64dip"
@@ -20,7 +20,7 @@
         android:layout_centerVertical="true"
         android:layout_margin="8dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"
         style="@style/TextView.Normal"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timeTextView"
         style="@style/TextView.Smalls"
         android:layout_below="@+id/moneyTextView"
@@ -45,7 +45,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/progressTextView"
         style="@style/TextView.Small"
         android:layout_alignParentEnd="true"
@@ -54,7 +54,7 @@
         android:padding="8dip"
         android:textColor="@color/white" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         style="@style/TextView.Smalls"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"

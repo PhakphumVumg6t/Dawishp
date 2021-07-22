@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+    <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Wrap"
             android:background="@mipmap/bg_mine"
             android:padding="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_gravity="end"
                 android:text="成功邀请一位好友，可获积分奖励"
                 android:textColor="@color/white"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_gravity="end"
                 android:text="当好友产生消费时，再获得返利积分及现金"
                 android:textColor="@color/white"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_gravity="end"
                 android:text="最高可获得“三级返利”，月收入上万不是梦"
                 android:textColor="@color/white"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.Max"
             android:layout_gravity="center"
             android:padding="16dip"
             android:text="您的邀请二维码"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/qrCodeImageView"
             android:layout_width="160dip"
             android:layout_height="160dip"
             android:layout_gravity="center" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.Max"
             android:layout_gravity="center"
             android:padding="16dip"
             android:text="您的邀请链接"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/linkEditText"
             style="@style/TextView.Area"
             android:layout_marginLeft="16dip"
@@ -76,12 +76,12 @@
             android:enabled="false"
             android:padding="16dip" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/copyTextView"
             style="@style/TextView.Button"
             android:text="复制您的邀请链接"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

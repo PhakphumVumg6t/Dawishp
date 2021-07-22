@@ -8,7 +8,7 @@
         android:id="@+id/mainWebView"
         style="@style/Layout.Main" />
 
-    <android.support.v4.widget.ContentLoadingProgressBar
+    <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/mainProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"

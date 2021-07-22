@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Goods">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.Goods" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:paddingBottom="4dip"
@@ -19,13 +19,13 @@
 
     <RelativeLayout style="@style/Layout.Wrap">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moneyTextView"
             style="@style/TextView.Money"
             android:layout_marginTop="4dip"
             android:textSize="14sp" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/deleteImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,4 +37,4 @@
 
     </RelativeLayout>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

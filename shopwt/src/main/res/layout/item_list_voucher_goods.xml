@@ -5,23 +5,23 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Wrap">
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"
         style="@style/TextView.Money"
         android:textSize="14sp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/limitTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/titleTextView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timeTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/limitTextView"
         android:layout_marginTop="2dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/getTextView"
         style="@style/TextView.GoodsActivity"
         android:layout_alignParentEnd="true"

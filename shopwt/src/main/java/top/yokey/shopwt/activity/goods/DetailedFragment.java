@@ -1,6 +1,6 @@
 package top.yokey.shopwt.activity.goods;
 
-import android.support.v4.widget.ContentLoadingProgressBar;
+import androidx.core.widget.ContentLoadingProgressBar;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;

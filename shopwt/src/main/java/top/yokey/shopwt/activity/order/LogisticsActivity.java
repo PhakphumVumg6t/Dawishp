@@ -1,8 +1,8 @@
 package top.yokey.shopwt.activity.order;
 
 import android.annotation.SuppressLint;
-import android.support.v4.widget.ContentLoadingProgressBar;
-import android.support.v7.widget.Toolbar;
+import androidx.core.widget.ContentLoadingProgressBar;
+import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebChromeClient;

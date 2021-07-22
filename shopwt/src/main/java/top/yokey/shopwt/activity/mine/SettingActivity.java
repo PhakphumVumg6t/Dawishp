@@ -1,10 +1,10 @@
 package top.yokey.shopwt.activity.mine;
 
 import android.app.ProgressDialog;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.SwitchCompat;
-import android.support.v7.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
 import android.widget.RelativeLayout;
 
 import org.xutils.common.Callback;

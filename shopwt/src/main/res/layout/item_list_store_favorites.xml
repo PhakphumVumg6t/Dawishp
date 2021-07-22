@@ -4,17 +4,17 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Item">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.Store" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/favoritesTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/nameTextView"
@@ -22,7 +22,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/goodsTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/favoritesTextView"
@@ -30,7 +30,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/deleteImageView"
         android:layout_width="24dip"
         android:layout_height="24dip"

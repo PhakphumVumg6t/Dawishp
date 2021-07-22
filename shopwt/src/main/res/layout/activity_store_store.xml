@@ -5,71 +5,71 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/searchEditText"
             style="@style/EditText.Search"
             android:layout_marginEnd="48dip"
             android:layout_marginRight="48dip"
             android:background="@drawable/border_white" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/toolbarImageView"
             style="@style/ImageView.Toolbar"
             android:layout_gravity="end" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View
         android:id="@+id/lineView"
         style="@style/View.Line"
         android:layout_below="@+id/mainToolbar" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/navigationLinearLayout"
         style="@style/Layout.Horizontal"
         android:layout_height="56dip"
         android:layout_below="@id/lineView">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/homeTextView"
             style="@style/TextView.NavigationStore"
             android:drawableTop="@mipmap/ic_navigation_store_home"
             android:text="店铺首页"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/goodsTextView"
             style="@style/TextView.NavigationStore"
             android:drawableTop="@mipmap/ic_navigation_store_goods"
             android:text="全部商品"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/newTextView"
             style="@style/TextView.NavigationStore"
             android:drawableTop="@mipmap/ic_navigation_store_new"
             android:text="商品上新"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/activityTextView"
             style="@style/TextView.NavigationStore"
             android:drawableTop="@mipmap/ic_navigation_store_activity"
             android:text="店铺活动"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:id="@+id/navigationLineView"
         style="@style/View.Line"
         android:layout_below="@+id/navigationLinearLayout" />
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/mainViewPager"
         style="@style/Layout.Main"
         android:layout_above="@+id/bottomLineView"
@@ -80,13 +80,13 @@
         style="@style/View.Line"
         android:layout_above="@+id/bottomLinearLayout" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/bottomLinearLayout"
         style="@style/Layout.Horizontal"
         android:layout_height="40dip"
         android:layout_alignParentBottom="true">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/detailedTextView"
             style="@style/TextView.Small"
             android:layout_height="40dip"
@@ -98,7 +98,7 @@
 
         <View style="@style/View.Horizontal" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/voucherTextView"
             style="@style/TextView.Small"
             android:layout_height="40dip"
@@ -110,7 +110,7 @@
 
         <View style="@style/View.Horizontal" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/customerTextView"
             style="@style/TextView.Small"
             android:layout_height="40dip"
@@ -120,9 +120,9 @@
             android:text="联系客服"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nightTextView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -130,7 +130,7 @@
         android:background="@color/backgroundStore"
         android:visibility="gone" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/voucherLinearLayout"
         style="@style/Layout.Wrap"
         android:layout_alignParentBottom="true"
@@ -138,7 +138,7 @@
         android:padding="16dip"
         android:visibility="gone">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/voucherStoreNameTextView"
             style="@style/TextView.ToolTitle"
             android:layout_height="wrap_content"
@@ -154,10 +154,10 @@
             android:layout_marginBottom="8dip"
             android:layout_marginTop="12dip" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/voucherRecyclerView"
             style="@style/Layout.Main" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>

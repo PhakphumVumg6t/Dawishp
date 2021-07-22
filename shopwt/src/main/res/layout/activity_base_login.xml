@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/mainScrollView"
         style="@style/Layout.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/contentLinearLayout"
             style="@style/Layout.Main">
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.LinearLayoutCompat
                 style="@style/Layout.Tool"
                 android:layout_marginTop="16dip"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.Title"
                     android:text="账 户"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatEditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/usernameEditText"
                     style="@style/EditText.Username" />
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.LinearLayoutCompat
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.Title"
                     android:text="密 码"
                     android:textSize="14sp"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatEditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/passwordEditText"
                     style="@style/EditText.Password" />
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <RelativeLayout
                 style="@style/Layout.Wrap"
@@ -68,7 +68,7 @@
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/registerTextView"
                     style="@style/TextView.Normal"
                     android:layout_height="24dip"
@@ -76,7 +76,7 @@
                     android:textColor="@color/primary"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/findPassTextView"
                     style="@style/TextView.Normal"
                     android:layout_height="24dip"
@@ -88,7 +88,7 @@
 
             </RelativeLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/loginTextView"
                 style="@style/TextView.Button"
                 android:text="登 录"
@@ -99,7 +99,7 @@
                 style="@style/Layout.Wrap"
                 android:layout_marginTop="96dip">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/thirdTextView"
                     style="@style/TextView.Small"
                     android:layout_centerHorizontal="true"
@@ -107,7 +107,7 @@
                     android:text="------------ 使用第三方登录 ------------"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/wxImageView"
                     android:layout_width="56dip"
                     android:layout_height="56dip"
@@ -119,7 +119,7 @@
                     android:scaleType="center"
                     android:src="@mipmap/ic_classic_wechat" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/qqImageView"
                     android:layout_width="56dip"
                     android:layout_height="56dip"
@@ -130,7 +130,7 @@
                     android:scaleType="center"
                     android:src="@mipmap/ic_classic_qq" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/wbImageView"
                     android:layout_width="56dip"
                     android:layout_height="56dip"
@@ -143,8 +143,8 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

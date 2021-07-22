@@ -5,11 +5,11 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Goods">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.Goods" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_below="@+id/mainImageView"
@@ -22,7 +22,7 @@
         style="@style/View.Line"
         android:layout_below="@+id/nameTextView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_below="@+id/lineView"
@@ -31,7 +31,7 @@
         android:layout_marginTop="4dip"
         android:textSize="14sp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mobileTextView"
         style="@style/TextView.ItemMobileHave"
         android:layout_alignBottom="@id/moneyTextView"
@@ -39,7 +39,7 @@
         android:layout_toEndOf="@+id/moneyTextView"
         android:layout_toRightOf="@+id/moneyTextView" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/cartImageView"
         style="@style/ImageView.Item"
         android:layout_alignParentEnd="true"
@@ -54,13 +54,13 @@
         android:layout_below="@+id/moneyTextView"
         android:layout_marginTop="4dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/saleTextView"
         style="@style/TextView.Small"
         android:layout_alignBottom="@+id/moreImageView"
         android:layout_alignTop="@+id/moreImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/ownShopTextView"
         style="@style/TextView.Small"
         android:layout_alignBottom="@+id/moreImageView"
@@ -73,7 +73,7 @@
         android:textColor="@color/primary"
         tools:ignore="HardcodedText" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/moreImageView"
         style="@style/ImageView.Item"
         android:layout_alignParentEnd="true"
@@ -82,13 +82,13 @@
         android:layout_marginTop="4dip"
         android:src="@drawable/ic_more_horiz" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/favoritesTextView"
         style="@style/TextView.ItemFavorites"
         android:layout_alignBottom="@+id/line1View"
         android:layout_alignTop="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/descTextView"
         style="@style/TextView.Small"
         android:visibility="gone" />

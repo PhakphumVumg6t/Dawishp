@@ -4,19 +4,19 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Item">
 
-    <android.support.v7.widget.AppCompatRatingBar
+    <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/mainRatingBar"
         style="@android:style/Widget.DeviceDefault.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/contentTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/mainRatingBar"
         android:layout_marginTop="4dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timeTextView"
         style="@style/TextView.Time"
         android:textSize="12sp" />

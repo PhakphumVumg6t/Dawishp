@@ -5,7 +5,7 @@
     style="@style/Layout.Item"
     android:padding="0dip">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.GoodsVer"
         android:layout_marginBottom="8dip"
@@ -15,7 +15,7 @@
         android:layout_marginStart="16dip"
         android:layout_marginTop="8dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_alignTop="@+id/mainImageView"
@@ -24,7 +24,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_below="@+id/nameTextView"
@@ -33,7 +33,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/stockTextView"
         style="@style/TextView.Small"
         android:layout_alignBottom="@+id/mainImageView"

@@ -5,19 +5,19 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Item">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.GoodsVer"
         android:layout_marginEnd="8dip"
         android:layout_marginRight="8dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_below="@+id/nameTextView"
@@ -25,7 +25,7 @@
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/priceTextView"
         style="@style/TextView.Normal"
         android:layout_alignBottom="@+id/moneyTextView"
@@ -42,7 +42,7 @@
         android:layout_alignTop="@+id/moneyTextView"
         android:gravity="center" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/numberTextView"
         style="@style/TextView.Smalls"
         android:layout_height="24dip"
@@ -55,7 +55,7 @@
         android:paddingRight="12dip"
         android:textColor="@color/primary" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         style="@style/TextView.Button"
         android:layout_width="64dip"
         android:layout_height="24dip"

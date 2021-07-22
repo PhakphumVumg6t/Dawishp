@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+    <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moneyTextView"
             style="@style/TextView.Money"
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             android:textColor="@color/blackSub"
             android:textSize="24sp" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/snTextView"
             style="@style/TextView.Small"
             android:layout_width="match_parent"
@@ -40,13 +40,13 @@
             android:paddingBottom="24dip"
             android:paddingTop="8dip" />
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/ownLinearLayout"
             style="@style/Layout.Wrap"
             android:paddingTop="16dip"
             android:visibility="gone">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Tool"
                 android:layout_height="48dip"
                 android:background="@color/white"
@@ -61,13 +61,13 @@
                 android:layout_marginTop="1px"
                 android:visibility="gone">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/preDepositTextView"
                     style="@style/TextView.ToolTitle"
                     android:text="预存款"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatRadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/preDepositRadioButton"
                     style="@style/TextView.ToolValue"
                     android:focusable="false" />
@@ -80,13 +80,13 @@
                 android:layout_marginTop="1px"
                 android:visibility="gone">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/rechargeCardTextView"
                     style="@style/TextView.ToolTitle"
                     android:text="充值卡"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatRadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/rechargeCardRadioButton"
                     style="@style/TextView.ToolValue"
                     android:focusable="false" />
@@ -99,13 +99,13 @@
                 android:layout_marginTop="1px"
                 android:visibility="gone">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/passwordTextView"
                     style="@style/TextView.ToolTitle"
                     android:text="支付密码"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatEditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/passwordEditText"
                     style="@style/EditText.Password"
                     android:layout_marginLeft="4dip"
@@ -118,15 +118,15 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/thrLinearLayout"
             style="@style/Layout.Wrap"
             android:paddingTop="16dip"
             android:visibility="gone">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Tool"
                 android:layout_height="48dip"
                 android:background="@color/white"
@@ -141,14 +141,14 @@
                 android:layout_marginTop="1px"
                 android:visibility="gone">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:drawableLeft="@mipmap/ic_classic_alipay"
                     android:drawableStart="@mipmap/ic_classic_alipay"
                     android:text="支付宝"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatRadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/aliPayRadioButton"
                     style="@style/TextView.ToolValue"
                     android:focusable="false" />
@@ -161,26 +161,26 @@
                 android:layout_marginTop="1px"
                 android:visibility="gone">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:drawableLeft="@mipmap/ic_classic_wechat"
                     android:drawableStart="@mipmap/ic_classic_wechat"
                     android:text="微信支付"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatRadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:id="@+id/wxPayRadioButton"
                     style="@style/TextView.ToolValue"
                     android:focusable="false" />
 
             </RelativeLayout>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/payTextView"
             style="@style/TextView.Button" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

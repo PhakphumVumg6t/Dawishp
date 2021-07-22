@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/contentLinearLayout"
         style="@style/Layout.Main">
 
@@ -26,12 +26,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="接收推送消息"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/pushSwitch"
                 style="@style/Layout.Main"
                 android:layout_width="wrap_content"
@@ -45,12 +45,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="有图模式"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.SwitchCompat
+            <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/imageSwitch"
                 style="@style/Layout.Main"
                 android:layout_width="wrap_content"
@@ -64,12 +64,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="检查更新"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/updateTextView"
                 style="@style/TextView.ToolValueDot"
                 android:text="有新版本！"
@@ -82,17 +82,17 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="关于我们"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/aboutTextView"
                 style="@style/TextView.ToolValueDot" />
 
         </RelativeLayout>
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

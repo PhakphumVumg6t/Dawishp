@@ -4,11 +4,11 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Goods">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.Goods" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_below="@+id/mainImageView"
@@ -21,7 +21,7 @@
         style="@style/View.Line"
         android:layout_below="@+id/nameTextView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_below="@+id/lineView"

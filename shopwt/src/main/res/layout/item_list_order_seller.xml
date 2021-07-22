@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Wrap"
     android:background="@drawable/selector_color_white">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         style="@style/Layout.Horizontal"
         android:layout_height="40dip"
         android:paddingLeft="16dip"
         android:paddingRight="16dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/snTextView"
             style="@style/TextView.ToolTitle"
             android:layout_height="40dip"
@@ -21,7 +21,7 @@
             android:text="单号：1234567890123"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/timeTextView"
             style="@style/TextView.ToolValueDot"
             android:layout_height="40dip"
@@ -30,11 +30,11 @@
             android:textSize="12sp"
             tools:ignore="HardcodedText" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainRecyclerView"
         style="@style/Layout.Main"
         android:paddingBottom="4dip"
@@ -46,7 +46,7 @@
         android:id="@+id/zengPinView"
         style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/zengPinLinearLayout"
         style="@style/Layout.Horizontal"
         android:layout_height="40dip"
@@ -55,7 +55,7 @@
         android:paddingRight="16dip"
         android:paddingTop="8dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.GoodsActivity"
             android:layout_height="match_parent"
             android:layout_alignBottom="@+id/specChooseTextView"
@@ -65,7 +65,7 @@
             android:text="赠品"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/zengPinDescTextView"
             style="@style/TextView.Small"
             android:layout_height="match_parent"
@@ -74,18 +74,18 @@
             android:paddingRight="4dip"
             android:singleLine="true" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/zengPinGoodsImageView"
             android:layout_width="20dip"
             android:layout_height="20dip"
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/totalTextView"
         style="@style/TextView.Small"
         android:layout_width="match_parent"
@@ -104,7 +104,7 @@
         android:paddingLeft="16dip"
         android:paddingRight="16dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/optionTextView"
             style="@style/TextView.Small"
             android:layout_centerVertical="true"
@@ -120,7 +120,7 @@
             android:text="option"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/operaTextView"
             style="@style/TextView.Small"
             android:layout_alignParentEnd="true"
@@ -141,4 +141,4 @@
         style="@style/View.Line"
         android:layout_height="8dip" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,7 +1,7 @@
 package top.yokey.shopwt.activity.store;
 
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.CardView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.cardview.widget.CardView;
 import android.view.View;
 
 import com.squareup.otto.Subscribe;

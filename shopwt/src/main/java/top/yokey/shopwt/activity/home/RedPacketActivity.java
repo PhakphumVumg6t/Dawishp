@@ -1,6 +1,6 @@
 package top.yokey.shopwt.activity.home;
 
-import android.support.v7.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import android.text.TextUtils;
 import android.widget.RelativeLayout;
 

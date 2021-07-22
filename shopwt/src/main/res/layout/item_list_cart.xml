@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Wrap"
     android:layout_marginBottom="16dip"
     android:background="@drawable/selector_color_white">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/storeLinearLayout"
         style="@style/Layout.Horizontal"
         android:layout_height="40dip">
 
-        <android.support.v7.widget.AppCompatCheckBox
+        <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/mainCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="40dip"
@@ -20,7 +20,7 @@
             android:layout_marginRight="8dip"
             android:checked="true" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/storeNameTextView"
             style="@style/TextView.ToolTitle"
             android:layout_height="40dip"
@@ -31,19 +31,19 @@
             android:text="店铺名字"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="36dip"
             android:layout_height="40dip"
             android:scaleType="center"
             android:src="@mipmap/ic_dot_right" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:id="@+id/mansongLineView"
         style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/manSongLinearLayout"
         style="@style/Layout.Horizontal"
         android:layout_height="40dip"
@@ -52,7 +52,7 @@
         android:paddingRight="16dip"
         android:paddingTop="8dip">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.GoodsActivity"
             android:layout_height="match_parent"
             android:layout_alignBottom="@+id/specChooseTextView"
@@ -62,26 +62,26 @@
             android:text="满即送"
             tools:ignore="HardcodedText" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/manSongDescTextView"
             style="@style/TextView.Small"
             android:layout_height="match_parent"
             android:paddingLeft="8dip"
             android:paddingRight="8dip" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/manSongGoodsImageView"
             android:layout_width="20dip"
             android:layout_height="20dip"
             android:layout_gravity="center"
             android:src="@mipmap/ic_launcher" />
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainRecyclerView"
         style="@style/Layout.Main" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

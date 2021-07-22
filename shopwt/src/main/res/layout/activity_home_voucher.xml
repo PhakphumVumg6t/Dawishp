@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Wrap"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/platformTextView"
                 style="@style/TextView.ToolNav"
                 android:background="@drawable/border_toolbar_left_press"
                 android:text="平台优惠券"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/storeTextView"
                 style="@style/TextView.ToolNav"
                 android:background="@drawable/border_toolbar_right"
@@ -30,9 +30,9 @@
                 android:textColor="@color/greyAdd"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
@@ -40,4 +40,4 @@
         android:id="@+id/mainPullRefreshView"
         style="@style/Layout.Main" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

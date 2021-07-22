@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+    <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
         <RelativeLayout style="@style/Layout.Tool">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="申请单号"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/snTextView"
                 style="@style/TextView.ToolValue" />
 
@@ -36,12 +36,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="提款金额"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/moneyTextView"
                 style="@style/TextView.ToolValue" />
 
@@ -51,12 +51,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="收款银行"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/bankTextView"
                 style="@style/TextView.ToolValue" />
 
@@ -66,12 +66,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="收款账号"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/noTextView"
                 style="@style/TextView.ToolValue" />
 
@@ -81,12 +81,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="收款姓名"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/nameTextView"
                 style="@style/TextView.ToolValue" />
 
@@ -96,12 +96,12 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="创建时间"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/timeTextView"
                 style="@style/TextView.ToolValue" />
 
@@ -111,17 +111,17 @@
             style="@style/Layout.Tool"
             android:layout_marginTop="1px">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:text="提现状态"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/stateTextView"
                 style="@style/TextView.ToolValue" />
 
         </RelativeLayout>
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

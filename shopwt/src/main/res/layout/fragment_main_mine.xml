@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainScrollView"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/mainLinearLayout"
         style="@style/Layout.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/mineLinearLayout"
             style="@style/Layout.Wrap"
             android:background="@mipmap/bg_mine"
             android:paddingTop="24dip">
 
-            <android.support.v7.widget.AppCompatImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/avatarImageView"
                 style="@style/ImageView.Avatar"
                 android:layout_marginTop="16dip"
                 android:src="@mipmap/ic_default_avatar_circle" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/nicknameTextView"
                 style="@style/TextView.Title"
                 android:layout_gravity="center"
@@ -29,55 +29,55 @@
                 android:textColor="@color/white"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.LinearLayoutCompat
+            <androidx.appcompat.widget.LinearLayoutCompat
                 style="@style/Layout.Horizontal"
                 android:background="@color/backgroundMine">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/goodsTextView"
                     style="@style/TextView.NavigationMine"
                     android:drawableTop="@mipmap/ic_mine_header_goods"
                     android:text="商品"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/storeTextView"
                     style="@style/TextView.NavigationMine"
                     android:drawableTop="@mipmap/ic_mine_header_store"
                     android:text="店铺"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/footprintTextView"
                     style="@style/TextView.NavigationMine"
                     android:drawableTop="@mipmap/ic_mine_header_footprint"
                     android:text="我的足迹"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/signTextView"
                     style="@style/TextView.NavigationMine"
                     android:drawableTop="@mipmap/ic_mine_header_sign"
                     android:text="每日签到"
                     tools:ignore="HardcodedText" />
 
-            </android.support.v7.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <RelativeLayout
             android:id="@+id/orderRelativeLayout"
             style="@style/Layout.Tool"
             android:layout_marginTop="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:drawableLeft="@mipmap/ic_mine_order"
                 android:drawableStart="@mipmap/ic_mine_order"
                 android:text="我的订单"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolValueDot"
                 android:text="查看全部订单"
                 android:textSize="12sp"
@@ -87,7 +87,7 @@
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Horizontal"
             android:layout_height="wrap_content">
 
@@ -97,14 +97,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitPaymentTextView"
                     style="@style/TextView.NavigationOrder"
                     android:drawableTop="@mipmap/ic_mine_order_wait_pay"
                     android:text="待付款"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitPaymentDotTextView"
                     style="@style/TextView.PrimaryDot"
                     android:layout_marginTop="8dip"
@@ -120,14 +120,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitReceiptTextView"
                     style="@style/TextView.NavigationOrder"
                     android:drawableTop="@mipmap/ic_mine_order_wait_drive"
                     android:text="待收货"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitReceiptDotTextView"
                     style="@style/TextView.PrimaryDot"
                     android:layout_marginTop="8dip"
@@ -143,14 +143,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitTakesTextView"
                     style="@style/TextView.NavigationOrder"
                     android:drawableTop="@mipmap/ic_mine_order_wait_receipt"
                     android:text="待自提"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitTakesDotTextView"
                     style="@style/TextView.PrimaryDot"
                     android:layout_marginTop="8dip"
@@ -166,14 +166,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitEvaluateTextView"
                     style="@style/TextView.NavigationOrder"
                     android:drawableTop="@mipmap/ic_mine_order_wait_evaluate"
                     android:text="待评价"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitEvaluateDotTextView"
                     style="@style/TextView.PrimaryDot"
                     android:layout_marginTop="8dip"
@@ -189,14 +189,14 @@
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitReturnTextView"
                     style="@style/TextView.NavigationOrder"
                     android:drawableTop="@mipmap/ic_mine_order_wait_refund"
                     android:text="退货/款"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/waitReturnDotTextView"
                     style="@style/TextView.PrimaryDot"
                     android:layout_marginTop="8dip"
@@ -206,21 +206,21 @@
 
             </RelativeLayout>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <RelativeLayout
             android:id="@+id/propertyRelativeLayout"
             style="@style/Layout.Tool"
             android:layout_marginTop="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:drawableLeft="@mipmap/ic_mine_property"
                 android:drawableStart="@mipmap/ic_mine_property"
                 android:text="我的财产"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolValueDot"
                 android:text="查看全部财产"
                 android:textSize="12sp"
@@ -230,11 +230,11 @@
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Horizontal"
             android:layout_height="wrap_content">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/preDepositTextView"
                 style="@style/TextView.NavigationOrder"
                 android:background="@drawable/selector_color_white"
@@ -242,7 +242,7 @@
                 android:text="预存款"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/rechargeCardTextView"
                 style="@style/TextView.NavigationOrder"
                 android:background="@drawable/selector_color_white"
@@ -250,7 +250,7 @@
                 android:text="充值卡"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/voucherTextView"
                 style="@style/TextView.NavigationOrder"
                 android:background="@drawable/selector_color_white"
@@ -258,7 +258,7 @@
                 android:text="代金券"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/redPacketTextView"
                 style="@style/TextView.NavigationOrder"
                 android:background="@drawable/selector_color_white"
@@ -266,7 +266,7 @@
                 android:text="红包"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pointsTextView"
                 style="@style/TextView.NavigationOrder"
                 android:background="@drawable/selector_color_white"
@@ -274,13 +274,13 @@
                 android:text="积分"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Horizontal"
             android:layout_marginTop="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/inviteTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -295,7 +295,7 @@
 
             <View style="@style/View.Horizontal" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/distributionTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -310,7 +310,7 @@
 
             <View style="@style/View.Horizontal" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/addressTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -325,7 +325,7 @@
 
             <View style="@style/View.Horizontal" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/sellerTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -338,16 +338,16 @@
                 android:text="商家中心"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <View style="@style/View.Line" />
 
-        <android.support.v7.widget.LinearLayoutCompat
+        <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Horizontal"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/exchangeTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -362,7 +362,7 @@
 
             <View style="@style/View.Horizontal" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/feedbackTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -377,7 +377,7 @@
 
             <View style="@style/View.Horizontal" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/settingTextView"
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
@@ -392,7 +392,7 @@
 
             <View style="@style/View.Horizontal" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
@@ -405,8 +405,8 @@
                 android:visibility="invisible"
                 tools:ignore="HardcodedText" />
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

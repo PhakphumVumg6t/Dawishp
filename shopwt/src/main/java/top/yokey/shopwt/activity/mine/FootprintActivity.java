@@ -1,7 +1,7 @@
 package top.yokey.shopwt.activity.mine;
 
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.Toolbar;
 
 import top.yokey.base.base.BaseToast;
 import top.yokey.shopwt.base.BaseActivity;

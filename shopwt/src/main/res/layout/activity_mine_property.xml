@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+    <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
         <RelativeLayout
             android:id="@+id/preDepositRelativeLayout"
@@ -26,7 +26,7 @@
             android:paddingBottom="12dip"
             android:paddingTop="12dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/preDepositTextView"
                 style="@style/TextView.Normal"
                 android:drawableLeft="@mipmap/ic_mine_property_pre_deposit"
@@ -35,14 +35,14 @@
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_below="@+id/preDepositTextView"
                 android:layout_marginTop="6dip"
                 android:text="预存款账户余额，充值及提现明细"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/preDepositValueTextView"
                 style="@style/TextView.ToolValueDot"
                 android:layout_height="40dip"
@@ -58,7 +58,7 @@
             android:paddingBottom="12dip"
             android:paddingTop="12dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/rechargeCardTextView"
                 style="@style/TextView.Normal"
                 android:drawableLeft="@mipmap/ic_mine_property_recharge_card"
@@ -67,14 +67,14 @@
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_below="@+id/rechargeCardTextView"
                 android:layout_marginTop="6dip"
                 android:text="充值卡账户余额以及卡密充值操作"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/rechargeCardValueTextView"
                 style="@style/TextView.ToolValueDot"
                 android:layout_height="40dip"
@@ -90,7 +90,7 @@
             android:paddingBottom="12dip"
             android:paddingTop="12dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/voucherTextView"
                 style="@style/TextView.Normal"
                 android:drawableLeft="@mipmap/ic_mine_property_voucher"
@@ -99,14 +99,14 @@
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_below="@+id/voucherTextView"
                 android:layout_marginTop="6dip"
                 android:text="店铺代金券以及卡密兑换代金券"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/voucherValueTextView"
                 style="@style/TextView.ToolValueDot"
                 android:layout_height="40dip"
@@ -122,7 +122,7 @@
             android:paddingBottom="12dip"
             android:paddingTop="12dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/redPacketTextView"
                 style="@style/TextView.Normal"
                 android:drawableLeft="@mipmap/ic_mine_property_red_packet"
@@ -131,14 +131,14 @@
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_below="@+id/redPacketTextView"
                 android:layout_marginTop="6dip"
                 android:text="平台红包以及卡密兑换红包"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/redPacketValueTextView"
                 style="@style/TextView.ToolValueDot"
                 android:layout_height="40dip"
@@ -154,7 +154,7 @@
             android:paddingBottom="12dip"
             android:paddingTop="12dip">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pointsTextView"
                 style="@style/TextView.Normal"
                 android:drawableLeft="@mipmap/ic_mine_property_points"
@@ -163,14 +163,14 @@
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.Small"
                 android:layout_below="@+id/pointsTextView"
                 android:layout_marginTop="6dip"
                 android:text="会员积分获取及消费日记"
                 tools:ignore="HardcodedText" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pointsValueTextView"
                 style="@style/TextView.ToolValueDot"
                 android:layout_height="40dip"
@@ -178,6 +178,6 @@
 
         </RelativeLayout>
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

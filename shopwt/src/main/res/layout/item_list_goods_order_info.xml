@@ -5,7 +5,7 @@
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Item">
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.GoodsVer"
         android:layout_width="56dip"
@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dip"
         android:layout_marginRight="8dip" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_toEndOf="@+id/mainImageView"
@@ -22,14 +22,14 @@
         android:layout_toStartOf="@+id/moneyTextView"
         android:textSize="12sp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/specTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/nameTextView"
         android:layout_toEndOf="@+id/mainImageView"
         android:layout_toRightOf="@+id/mainImageView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_height="wrap_content"
@@ -37,14 +37,14 @@
         android:layout_alignParentRight="true"
         android:textSize="12sp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/numberTextView"
         style="@style/TextView.Small"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/moneyTextView" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/refundTextView"
         style="@style/TextView.Small"
         android:layout_below="@+id/mainImageView"
@@ -61,7 +61,7 @@
         android:visibility="gone"
         tools:ignore="HardcodedText" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/returnTextView"
         style="@style/TextView.Small"
         android:layout_alignParentEnd="true"

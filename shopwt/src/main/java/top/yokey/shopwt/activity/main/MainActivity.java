@@ -5,9 +5,9 @@ import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.AppCompatTextView;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.AppCompatTextView;
 import android.view.KeyEvent;
 
 import com.squareup.otto.Subscribe;

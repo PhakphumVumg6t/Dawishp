@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Main">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/mainToolbar"
         style="@style/Toolbar.Main">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/titleTextView"
             style="@style/TextView.Title" />
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <View style="@style/View.Line" />
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/mainScrollView"
         style="@style/Layout.Main">
 
-        <android.support.v7.widget.LinearLayoutCompat style="@style/Layout.Main">
+        <androidx.appcompat.widget.LinearLayoutCompat style="@style/Layout.Main">
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
@@ -32,12 +32,12 @@
 
             <RelativeLayout style="@style/Layout.Tool">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="退款编号"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/snTextView"
                     style="@style/TextView.ToolValue"
                     android:text="" />
@@ -48,12 +48,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="退款原因"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/reasonTextView"
                     style="@style/TextView.ToolValue"
                     android:text="取消订单，全部退款"
@@ -65,12 +65,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="退款金额"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/moneyTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -80,12 +80,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="退款说明"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/remarkTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -96,13 +96,13 @@
                 android:layout_height="64dip"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/refundTextView"
                     style="@style/TextView.ToolTitle"
                     android:text="退款凭证"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/zeroImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
@@ -114,7 +114,7 @@
                     android:scaleType="fitXY"
                     android:src="@mipmap/ic_add_img" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/oneImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
@@ -126,7 +126,7 @@
                     android:scaleType="fitXY"
                     android:src="@mipmap/ic_add_img" />
 
-                <android.support.v7.widget.AppCompatImageView
+                <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/twoImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
@@ -140,7 +140,7 @@
 
             </RelativeLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
@@ -151,12 +151,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="审核状态"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/storeStateTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -166,18 +166,18 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="商家备注"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/storeRemarkTextView"
                     style="@style/TextView.ToolValue" />
 
             </RelativeLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
@@ -188,12 +188,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="平台确认"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/adminStateTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -203,18 +203,18 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="平台备注"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/adminRemarkTextView"
                     style="@style/TextView.ToolValue" />
 
             </RelativeLayout>
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
@@ -225,12 +225,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="支付方式"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/paymentTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -240,12 +240,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="在线退款金额"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/onlineMoneyTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -255,12 +255,12 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="预存款返还金额"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/preDepositMoneyTextView"
                     style="@style/TextView.ToolValue" />
 
@@ -270,19 +270,19 @@
                 style="@style/Layout.Tool"
                 android:layout_marginTop="1px">
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
                     android:text="充值卡返还金额"
                     tools:ignore="HardcodedText" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/rechargeCardMoneyTextView"
                     style="@style/TextView.ToolValue" />
 
             </RelativeLayout>
 
-        </android.support.v7.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.v7.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

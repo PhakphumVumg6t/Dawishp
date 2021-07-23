@@ -1,3 +1,4 @@
+build
 .gradle
 .idea
 /build
@@ -7,3 +8,4 @@
 .externalNativeBuild
 local.properties
 /release
+.cxx

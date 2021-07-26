@@ -84,7 +84,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.squareup:otto:+"
     //noinspection GradleDynamicVersion
-    implementation "org.xutils:xutils:+"
+    implementation "org.xutils:xutils:3.7.6"
     //noinspection GradleDynamicVersion
     implementation "cn.jiguang.sdk:jpush:3.2.0"
     //noinspection GradleDynamicVersion

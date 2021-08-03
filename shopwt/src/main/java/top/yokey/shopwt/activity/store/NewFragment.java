@@ -4,11 +4,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.squareup.otto.Subscribe;
 
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.GoodsListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseFragment;
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+
+import java.util.ArrayList;
+
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
@@ -18,11 +18,11 @@ import top.yokey.base.event.StoreBeanEvent;
 import top.yokey.base.model.MemberCartModel;
 import top.yokey.base.model.StoreModel;
 import top.yokey.base.util.JsonUtil;
-
-import org.xutils.view.annotation.ContentView;
-import org.xutils.view.annotation.ViewInject;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.GoodsListAdapter;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseFragment;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

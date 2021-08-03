@@ -15,10 +15,10 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
-        android:layout_toEndOf="@+id/mainImageView"
-        android:layout_toLeftOf="@+id/moneyTextView"
-        android:layout_toRightOf="@+id/mainImageView"
         android:layout_toStartOf="@+id/moneyTextView"
+        android:layout_toLeftOf="@+id/moneyTextView"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView"
         android:textSize="12sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -39,8 +39,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/numberTextView"
         style="@style/TextView.Small"
+        android:layout_below="@+id/moneyTextView"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/moneyTextView" />
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

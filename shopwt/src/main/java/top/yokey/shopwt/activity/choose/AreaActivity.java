@@ -1,16 +1,14 @@
 package top.yokey.shopwt.activity.choose;
 
 import android.content.Intent;
+
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.AreaListAdapter;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import java.util.ArrayList;
+
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -18,8 +16,11 @@ import top.yokey.base.bean.AreaBean;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.model.AreaModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.AreaListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
 
 /**
  * @author MapleStory

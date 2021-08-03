@@ -8,10 +8,10 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         style="@style/Layout.Horizontal"
         android:background="@color/white"
-        android:paddingBottom="8dip"
         android:paddingLeft="16dip"
+        android:paddingTop="16dip"
         android:paddingRight="16dip"
-        android:paddingTop="16dip">
+        android:paddingBottom="8dip">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/allTextView"
@@ -83,8 +83,7 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <View
-        style="@style/View.Line" />
+    <View style="@style/View.Line" />
 
     <top.yokey.shopwt.view.PullRefreshView
         android:id="@+id/mainPullRefreshView"

@@ -2,11 +2,12 @@ package top.yokey.shopwt.view;
 
 import android.content.Context;
 import android.os.Handler;
+import android.util.AttributeSet;
+import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.util.AttributeSet;
-import android.view.ViewGroup;
 
 import com.jwenfeng.library.pulltorefresh.BaseRefreshListener;
 import com.jwenfeng.library.pulltorefresh.PullToRefreshLayout;
@@ -159,17 +160,17 @@ public class PullRefreshView extends PullToRefreshLayout {
 
     //外部接口
 
+    public void setOnRefreshListener(OnRefreshListener listener) {
+
+        this.onRefreshListener = listener;
+
+    }
+
     public interface OnRefreshListener {
 
         void onRefresh();
 
         void onLoadMore();
-
-    }
-
-    public void setOnRefreshListener(OnRefreshListener listener) {
-
-        this.onRefreshListener = listener;
 
     }
 

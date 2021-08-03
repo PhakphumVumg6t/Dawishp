@@ -28,8 +28,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/selector_color_white"
-            android:drawableLeft="@mipmap/ic_register_normal"
             android:drawableStart="@mipmap/ic_register_normal"
+            android:drawableLeft="@mipmap/ic_register_normal"
             android:text="普通注册"
             tools:ignore="HardcodedText" />
 
@@ -39,8 +39,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/selector_color_white"
-            android:drawableLeft="@mipmap/ic_register_mobile"
             android:drawableStart="@mipmap/ic_register_mobile"
+            android:drawableLeft="@mipmap/ic_register_mobile"
             android:text="手机注册"
             tools:ignore="HardcodedText" />
 

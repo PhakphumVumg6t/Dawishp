@@ -1,23 +1,24 @@
 package top.yokey.shopwt.adapter;
 
 import android.graphics.Paint;
-import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseImageLoader;
 import top.yokey.base.base.BaseViewHolder;
 import top.yokey.base.bean.GoodsDaZheBean;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseImageLoader;
 import top.yokey.shopwt.view.CountdownTextView;
 
 /**

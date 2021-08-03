@@ -5,12 +5,18 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.TaskStackBuilder;
 import androidx.core.content.ContextCompat;
-import android.text.TextUtils;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import top.yokey.base.base.BaseCountTime;
+import top.yokey.base.base.BaseToast;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.activity.goods.GoodsActivity;
 import top.yokey.shopwt.activity.main.MainActivity;
@@ -18,11 +24,6 @@ import top.yokey.shopwt.activity.store.StoreActivity;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.base.BaseCountTime;
-import top.yokey.base.base.BaseToast;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author MapleStory

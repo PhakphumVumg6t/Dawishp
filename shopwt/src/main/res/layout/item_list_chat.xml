@@ -11,8 +11,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/deleteTextView"
             style="@style/TextView.Delete"
-            android:layout_alignBottom="@+id/contentRelativeLayout"
             android:layout_alignTop="@+id/contentRelativeLayout"
+            android:layout_alignBottom="@+id/contentRelativeLayout"
             android:layout_toEndOf="@+id/contentRelativeLayout"
             android:layout_toRightOf="@+id/contentRelativeLayout" />
 
@@ -34,8 +34,8 @@
                 style="@style/TextView.Name"
                 android:layout_toEndOf="@+id/mainImageView"
                 android:layout_toRightOf="@+id/mainImageView"
-                android:paddingBottom="2dip"
-                android:paddingTop="4dip" />
+                android:paddingTop="4dip"
+                android:paddingBottom="2dip" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/contentTextView"
@@ -47,10 +47,10 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/timeTextView"
                 style="@style/TextView.Time"
+                android:layout_alignTop="@+id/nameTextView"
                 android:layout_alignBottom="@+id/nameTextView"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/nameTextView" />
+                android:layout_alignParentRight="true" />
 
         </RelativeLayout>
 

@@ -39,8 +39,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:gravity="center"
-            android:paddingBottom="24dip"
-            android:paddingTop="8dip" />
+            android:paddingTop="8dip"
+            android:paddingBottom="24dip" />
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.Tool"
@@ -56,10 +56,10 @@
             style="@style/Layout.Wrap"
             android:layout_marginTop="1px"
             android:background="@drawable/selector_color_white"
-            android:paddingBottom="8dip"
             android:paddingLeft="10dip"
+            android:paddingTop="8dip"
             android:paddingRight="10dip"
-            android:paddingTop="8dip">
+            android:paddingBottom="8dip">
 
             <androidx.appcompat.widget.AppCompatRadioButton
                 android:id="@+id/oneRadioButton"

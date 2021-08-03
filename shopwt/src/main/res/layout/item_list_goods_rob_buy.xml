@@ -28,8 +28,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/priceTextView"
         style="@style/TextView.Normal"
-        android:layout_alignBottom="@+id/moneyTextView"
         android:layout_alignTop="@+id/moneyTextView"
+        android:layout_alignBottom="@+id/moneyTextView"
         android:layout_toEndOf="@+id/moneyTextView"
         android:layout_toRightOf="@+id/moneyTextView"
         android:paddingLeft="8dip"
@@ -38,8 +38,8 @@
     <top.yokey.shopwt.view.CountdownTextView
         android:id="@+id/timeTextView"
         style="@style/TextView.Time"
-        android:layout_alignBottom="@+id/moneyTextView"
         android:layout_alignTop="@+id/moneyTextView"
+        android:layout_alignBottom="@+id/moneyTextView"
         android:gravity="center" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -59,10 +59,10 @@
         style="@style/TextView.Button"
         android:layout_width="64dip"
         android:layout_height="24dip"
+        android:layout_alignTop="@+id/numberTextView"
         android:layout_alignBottom="@+id/numberTextView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/numberTextView"
         android:layout_margin="0dip"
         android:text="马上抢"
         android:textSize="12sp"

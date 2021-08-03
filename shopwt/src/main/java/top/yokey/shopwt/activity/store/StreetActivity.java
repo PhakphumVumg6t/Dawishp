@@ -1,25 +1,26 @@
 package top.yokey.shopwt.activity.store;
 
+import android.view.View;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
-import android.view.View;
 
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.StoreStreetClassListAdapter;
-import top.yokey.shopwt.adapter.StoreStreetListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
+import java.util.ArrayList;
+import java.util.Objects;
+
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.StoreStreetBean;
 import top.yokey.base.bean.StoreStreetClassBean;
 import top.yokey.base.model.StoreModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
-import java.util.Objects;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.StoreStreetClassListAdapter;
+import top.yokey.shopwt.adapter.StoreStreetListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

@@ -7,20 +7,20 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mainTextView"
         style="@style/TextView.Normal"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/moneyTextView"
+        android:layout_alignParentLeft="true"
         android:layout_toStartOf="@+id/moneyTextView"
+        android:layout_toLeftOf="@+id/moneyTextView"
         android:textColor="@color/blackSub" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timeTextView"
         style="@style/TextView.Time"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/mainTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
         android:layout_marginTop="2dip"
         android:textSize="12sp" />
 

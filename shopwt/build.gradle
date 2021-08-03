@@ -90,7 +90,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation "cn.jiguang.sdk:jcore:1.2.7"
     //noinspection GradleDynamicVersion
-    implementation "com.youth.banner:banner:+"
+    implementation "com.youth.banner:banner:1.4.10"
     //noinspection GradleDynamicVersion
     implementation "com.google.code.gson:gson:+"
     //noinspection GradleDynamicVersion

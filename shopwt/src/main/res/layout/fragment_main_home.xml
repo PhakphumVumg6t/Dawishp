@@ -53,8 +53,8 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         style="@style/Layout.Wrap"
                         android:orientation="horizontal"
-                        android:paddingBottom="8dip"
-                        android:paddingTop="16dip">
+                        android:paddingTop="16dip"
+                        android:paddingBottom="8dip">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:id="@+id/oneLinearLayout"
@@ -171,8 +171,8 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         style="@style/Layout.Wrap"
                         android:orientation="horizontal"
-                        android:paddingBottom="16dip"
-                        android:paddingTop="8dip">
+                        android:paddingTop="8dip"
+                        android:paddingBottom="16dip">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:id="@+id/sixLinearLayout"
@@ -304,10 +304,10 @@
 
                     <View
                         style="@style/View.Horizontal"
-                        android:layout_marginBottom="8dip"
                         android:layout_marginLeft="4dip"
+                        android:layout_marginTop="8dip"
                         android:layout_marginRight="4dip"
-                        android:layout_marginTop="8dip" />
+                        android:layout_marginBottom="8dip" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:layout_width="wrap_content"

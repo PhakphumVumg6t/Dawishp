@@ -3,18 +3,18 @@ package top.yokey.shopwt.activity.mine;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.PointsLogListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
+import java.util.ArrayList;
+
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.PointsLogBean;
 import top.yokey.base.model.MemberPointsModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.PointsLogListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

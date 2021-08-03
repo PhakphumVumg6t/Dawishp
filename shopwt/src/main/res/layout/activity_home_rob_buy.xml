@@ -16,15 +16,15 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextView.ToolNav"
                 android:id="@+id/daZheTextView"
+                style="@style/TextView.ToolNav"
                 android:background="@drawable/border_toolbar_left_press"
                 android:text="即时打折"
                 tools:ignore="HardcodedText" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/TextView.ToolNav"
                 android:id="@+id/robBuyTextView"
+                style="@style/TextView.ToolNav"
                 android:background="@drawable/border_toolbar_right"
                 android:text="抢购团购"
                 android:textColor="@color/greyAdd"

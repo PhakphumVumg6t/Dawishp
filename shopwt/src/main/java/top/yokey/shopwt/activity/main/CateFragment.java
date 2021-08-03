@@ -1,21 +1,17 @@
 package top.yokey.shopwt.activity.main;
 
+import android.view.View;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.GridLayoutManager;
-import android.view.View;
+
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+
+import java.util.ArrayList;
 
 import io.github.xudaojie.qrcodelib.CaptureActivity;
-import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.activity.home.ChatListActivity;
-import top.yokey.shopwt.adapter.BrandRecommendListAdapter;
-import top.yokey.shopwt.adapter.ClassChildListAdapter;
-import top.yokey.shopwt.adapter.ClassListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseBusClient;
-import top.yokey.shopwt.base.BaseFragment;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.BrandRecommendBean;
@@ -25,11 +21,16 @@ import top.yokey.base.event.MainPositionEvent;
 import top.yokey.base.model.BrandModel;
 import top.yokey.base.model.ClassModel;
 import top.yokey.base.util.JsonUtil;
-
-import org.xutils.view.annotation.ContentView;
-import org.xutils.view.annotation.ViewInject;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.activity.home.ChatListActivity;
+import top.yokey.shopwt.adapter.BrandRecommendListAdapter;
+import top.yokey.shopwt.adapter.ClassChildListAdapter;
+import top.yokey.shopwt.adapter.ClassListAdapter;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseBusClient;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseFragment;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

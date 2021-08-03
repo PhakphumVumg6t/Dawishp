@@ -1,13 +1,10 @@
 package top.yokey.shopwt.activity.home;
 
-import androidx.appcompat.widget.LinearLayoutCompat;
 import android.text.TextUtils;
 import android.widget.RelativeLayout;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import androidx.appcompat.widget.LinearLayoutCompat;
+
 import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -16,6 +13,10 @@ import top.yokey.base.bean.RedPacketDetailedBean;
 import top.yokey.base.model.MemberRedPackerModel;
 import top.yokey.base.model.RedPacketModel;
 import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
 
 /**
  * @author MapleStory

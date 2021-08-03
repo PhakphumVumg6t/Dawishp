@@ -72,8 +72,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_order"
                 android:drawableStart="@mipmap/ic_mine_order"
+                android:drawableLeft="@mipmap/ic_mine_order"
                 android:text="我的订单"
                 tools:ignore="HardcodedText" />
 
@@ -215,8 +215,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_property"
                 android:drawableStart="@mipmap/ic_mine_property"
+                android:drawableLeft="@mipmap/ic_mine_property"
                 android:text="我的财产"
                 tools:ignore="HardcodedText" />
 
@@ -285,11 +285,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_invite"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="邀请返利"
                 tools:ignore="HardcodedText" />
 
@@ -300,11 +300,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_distribution"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="分销收入"
                 tools:ignore="HardcodedText" />
 
@@ -315,11 +315,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_address"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="收货地址"
                 tools:ignore="HardcodedText" />
 
@@ -330,11 +330,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_store"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="商家中心"
                 tools:ignore="HardcodedText" />
 
@@ -352,11 +352,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_points"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="积分兑换"
                 tools:ignore="HardcodedText" />
 
@@ -367,11 +367,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_feedback"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="意见反馈"
                 tools:ignore="HardcodedText" />
 
@@ -382,11 +382,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_setting"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="系统设置"
                 tools:ignore="HardcodedText" />
 
@@ -396,11 +396,11 @@
                 style="@style/TextView.Smalls"
                 android:layout_weight="1"
                 android:background="@drawable/selector_color_white"
-                android:drawablePadding="4dip"
                 android:drawableTop="@mipmap/ic_mine_block_store"
+                android:drawablePadding="4dip"
                 android:gravity="center"
-                android:paddingBottom="16dip"
                 android:paddingTop="16dip"
+                android:paddingBottom="16dip"
                 android:text="商家中心"
                 android:visibility="invisible"
                 tools:ignore="HardcodedText" />

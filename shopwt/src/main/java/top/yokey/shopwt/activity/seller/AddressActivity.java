@@ -1,6 +1,7 @@
 package top.yokey.shopwt.activity.seller;
 
 import android.content.Intent;
+
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 
@@ -8,16 +9,16 @@ import java.util.ArrayList;
 
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
+import top.yokey.base.bean.AddressSellerBean;
 import top.yokey.base.bean.BaseBean;
+import top.yokey.base.model.SellerAddressModel;
 import top.yokey.base.util.JsonUtil;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.adapter.AddressSellerListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.bean.AddressSellerBean;
-import top.yokey.base.model.SellerAddressModel;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

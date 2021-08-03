@@ -1,20 +1,15 @@
 package top.yokey.shopwt.activity.choose;
 
 import android.content.Intent;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.base.base.BaseToast;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.BrandRecommendListAdapter;
-import top.yokey.shopwt.adapter.ClassChildListAdapter;
-import top.yokey.shopwt.adapter.ClassListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+
+import java.util.ArrayList;
+
 import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.BrandRecommendBean;
 import top.yokey.base.bean.ClassBean;
@@ -22,8 +17,14 @@ import top.yokey.base.bean.ClassChildBean;
 import top.yokey.base.model.BrandModel;
 import top.yokey.base.model.ClassModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.BrandRecommendListAdapter;
+import top.yokey.shopwt.adapter.ClassChildListAdapter;
+import top.yokey.shopwt.adapter.ClassListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

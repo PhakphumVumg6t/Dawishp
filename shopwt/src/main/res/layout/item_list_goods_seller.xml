@@ -54,13 +54,13 @@
             style="@style/TextView.Small"
             android:layout_marginEnd="8dip"
             android:layout_marginRight="8dip"
-            android:layout_toLeftOf="@+id/optionTextView"
             android:layout_toStartOf="@+id/optionTextView"
+            android:layout_toLeftOf="@+id/optionTextView"
             android:background="@drawable/selector_border_selector"
-            android:paddingBottom="4dip"
             android:paddingLeft="8dip"
-            android:paddingRight="8dip"
             android:paddingTop="4dip"
+            android:paddingRight="8dip"
+            android:paddingBottom="4dip"
             android:text=" 编辑 "
             tools:ignore="HardcodedText" />
 
@@ -69,13 +69,13 @@
             style="@style/TextView.Small"
             android:layout_marginEnd="8dip"
             android:layout_marginRight="8dip"
-            android:layout_toLeftOf="@+id/deleteTextView"
             android:layout_toStartOf="@+id/deleteTextView"
+            android:layout_toLeftOf="@+id/deleteTextView"
             android:background="@drawable/selector_border_selector"
-            android:paddingBottom="4dip"
             android:paddingLeft="8dip"
-            android:paddingRight="8dip"
             android:paddingTop="4dip"
+            android:paddingRight="8dip"
+            android:paddingBottom="4dip"
             android:text=" Option "
             tools:ignore="HardcodedText" />
 
@@ -85,10 +85,10 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:background="@drawable/selector_border_selector"
-            android:paddingBottom="4dip"
             android:paddingLeft="8dip"
-            android:paddingRight="8dip"
             android:paddingTop="4dip"
+            android:paddingRight="8dip"
+            android:paddingBottom="4dip"
             android:text=" 删除 "
             tools:ignore="HardcodedText" />
 

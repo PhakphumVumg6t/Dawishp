@@ -23,9 +23,9 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.Small"
+            android:layout_below="@+id/tipsTextView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/tipsTextView"
             android:layout_marginTop="2dip"
             android:text="领取代金券后可以再购买商品下单时使用"
             android:textColor="@color/white"

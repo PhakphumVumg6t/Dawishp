@@ -9,9 +9,10 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
 import androidx.exifinterface.media.ExifInterface;
-import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
@@ -36,8 +37,8 @@ import top.yokey.shopwt.R;
 @SuppressWarnings("ALL")
 public class BaseImageLoader {
 
-    private Context context;
     private static volatile BaseImageLoader instance;
+    private Context context;
 
     public static BaseImageLoader get() {
         if (instance == null) {

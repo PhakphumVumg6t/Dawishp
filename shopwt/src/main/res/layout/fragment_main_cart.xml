@@ -48,8 +48,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tipsTextView"
             style="@style/TextView.Normal"
-            android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
             android:text="您尚未登录！"
             tools:ignore="HardcodedText" />
 

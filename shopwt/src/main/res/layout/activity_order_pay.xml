@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:gravity="center"
-            android:paddingBottom="24dip"
-            android:paddingTop="8dip" />
+            android:paddingTop="8dip"
+            android:paddingBottom="24dip" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:id="@+id/ownLinearLayout"
@@ -143,8 +143,8 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
-                    android:drawableLeft="@mipmap/ic_classic_alipay"
                     android:drawableStart="@mipmap/ic_classic_alipay"
+                    android:drawableLeft="@mipmap/ic_classic_alipay"
                     android:text="支付宝"
                     tools:ignore="HardcodedText" />
 
@@ -163,8 +163,8 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
-                    android:drawableLeft="@mipmap/ic_classic_wechat"
                     android:drawableStart="@mipmap/ic_classic_wechat"
+                    android:drawableLeft="@mipmap/ic_classic_wechat"
                     android:text="微信支付"
                     tools:ignore="HardcodedText" />
 

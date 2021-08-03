@@ -1,14 +1,15 @@
 package top.yokey.shopwt.activity.seller;
 
 import android.content.Intent;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
@@ -19,18 +20,18 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Objects;
 
-import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.base.base.BaseFileClient;
 import top.yokey.base.base.BaseHttpListener;
-import top.yokey.shopwt.base.BaseImageLoader;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.activity.choose.CateActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
 import top.yokey.base.model.SellerAlbumModel;
 import top.yokey.base.model.SellerGoodsModel;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.activity.choose.CateActivity;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseImageLoader;
 
 /**
  * @author MapleStory

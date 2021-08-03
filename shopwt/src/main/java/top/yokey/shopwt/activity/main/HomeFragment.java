@@ -2,38 +2,18 @@ package top.yokey.shopwt.activity.main;
 
 import android.graphics.Color;
 import android.os.Handler;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import android.view.View;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.View;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.sunfusheng.marqueeview.MarqueeView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
-
-import io.github.xudaojie.qrcodelib.CaptureActivity;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.activity.home.ChatListActivity;
-import top.yokey.shopwt.activity.home.NoticeActivity;
-import top.yokey.shopwt.adapter.HomeListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseBusClient;
-import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.base.BaseCountTime;
-import top.yokey.shopwt.base.BaseFragment;
-import top.yokey.base.base.BaseHttpListener;
-import top.yokey.shopwt.base.BaseImageLoader;
-import top.yokey.base.base.BaseToast;
-import top.yokey.shopwt.base.UBLImageLoader;
-import top.yokey.base.bean.ArticleBean;
-import top.yokey.base.bean.BaseBean;
-import top.yokey.base.bean.HomeBean;
-import top.yokey.base.event.MainPositionEvent;
-import top.yokey.base.model.IndexModel;
-import top.yokey.base.util.JsonUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -43,6 +23,27 @@ import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.github.xudaojie.qrcodelib.CaptureActivity;
+import top.yokey.base.base.BaseCountTime;
+import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.base.BaseToast;
+import top.yokey.base.bean.ArticleBean;
+import top.yokey.base.bean.BaseBean;
+import top.yokey.base.bean.HomeBean;
+import top.yokey.base.event.MainPositionEvent;
+import top.yokey.base.model.IndexModel;
+import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.activity.home.ChatListActivity;
+import top.yokey.shopwt.activity.home.NoticeActivity;
+import top.yokey.shopwt.adapter.HomeListAdapter;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseBusClient;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseFragment;
+import top.yokey.shopwt.base.BaseImageLoader;
+import top.yokey.shopwt.base.UBLImageLoader;
 
 /**
  * @author MapleStory

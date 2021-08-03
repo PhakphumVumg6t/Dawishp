@@ -18,9 +18,9 @@
             style="@style/TextView.ToolTitle"
             android:layout_height="40dip"
             android:layout_weight="1"
+            android:drawableStart="@mipmap/ic_store_goods"
             android:drawableLeft="@mipmap/ic_store_goods"
-            android:drawablePadding="4dip"
-            android:drawableStart="@mipmap/ic_store_goods" />
+            android:drawablePadding="4dip" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/storeDescTextView"

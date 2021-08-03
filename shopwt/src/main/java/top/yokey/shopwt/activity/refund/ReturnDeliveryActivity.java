@@ -1,18 +1,19 @@
 package top.yokey.shopwt.activity.refund;
 
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.AppCompatSpinner;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.Toolbar;
+
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Vector;
+
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -20,10 +21,10 @@ import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.ExpressBean;
 import top.yokey.base.model.MemberReturnModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Vector;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
 
 /**
  * @author MapleStory

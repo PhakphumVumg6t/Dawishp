@@ -28,7 +28,7 @@
         android:id="@+id/timeTextView"
         style="@style/TextView.Time"
         android:layout_alignBottom="@+id/mainImageView"
-        android:paddingBottom="8dip"
-        android:paddingTop="8dip" />
+        android:paddingTop="8dip"
+        android:paddingBottom="8dip" />
 
 </RelativeLayout>

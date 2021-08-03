@@ -1,23 +1,24 @@
 package top.yokey.shopwt.activity.mine;
 
 import android.content.Intent;
+
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.Toolbar;
 
-import top.yokey.base.base.BaseToast;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.AddressListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import java.util.ArrayList;
+
 import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.AddressBean;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.model.MemberAddressModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.AddressListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

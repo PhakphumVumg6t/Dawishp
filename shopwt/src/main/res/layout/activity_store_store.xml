@@ -142,17 +142,17 @@
             android:id="@+id/voucherStoreNameTextView"
             style="@style/TextView.ToolTitle"
             android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_store_goods"
             android:drawableLeft="@mipmap/ic_store_goods"
             android:drawablePadding="4dip"
-            android:drawableStart="@mipmap/ic_store_goods"
             android:text="领取店铺代金券"
             android:textSize="12sp"
             tools:ignore="HardcodedText" />
 
         <View
             style="@style/View.Line"
-            android:layout_marginBottom="8dip"
-            android:layout_marginTop="12dip" />
+            android:layout_marginTop="12dip"
+            android:layout_marginBottom="8dip" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/voucherRecyclerView"

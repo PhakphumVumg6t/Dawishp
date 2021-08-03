@@ -4,10 +4,10 @@
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Item"
     android:orientation="horizontal"
-    android:paddingEnd="8dip"
+    android:paddingStart="16dip"
     android:paddingLeft="16dip"
-    android:paddingRight="8dip"
-    android:paddingStart="16dip">
+    android:paddingEnd="8dip"
+    android:paddingRight="8dip">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/titleTextView"

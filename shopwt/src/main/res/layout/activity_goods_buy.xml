@@ -62,8 +62,8 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressMobileTextView"
                     style="@style/TextView.Normal"
-                    android:layout_alignBottom="@+id/addressNameTextView"
                     android:layout_alignTop="@+id/addressNameTextView"
+                    android:layout_alignBottom="@+id/addressNameTextView"
                     android:layout_toEndOf="@+id/addressNameTextView"
                     android:layout_toRightOf="@+id/addressNameTextView"
                     android:paddingLeft="8dip"
@@ -73,8 +73,8 @@
                     android:id="@+id/addressAreaTextView"
                     style="@style/TextView.Normal"
                     android:layout_below="@+id/addressNameTextView"
-                    android:layout_marginBottom="12dip"
-                    android:layout_marginTop="4dip" />
+                    android:layout_marginTop="4dip"
+                    android:layout_marginBottom="12dip" />
 
             </RelativeLayout>
 
@@ -98,8 +98,8 @@
                     android:id="@+id/payOnlineTextView"
                     style="@style/TextView.ChooseType"
                     android:layout_below="@+id/payTitleTextView"
-                    android:layout_marginBottom="12dip"
                     android:layout_marginTop="12dip"
+                    android:layout_marginBottom="12dip"
                     android:text="在线支付"
                     tools:ignore="HardcodedText" />
 
@@ -107,8 +107,8 @@
                     android:id="@+id/payOfflineTextView"
                     style="@style/TextView.ChooseType"
                     android:layout_below="@+id/payTitleTextView"
-                    android:layout_marginBottom="12dip"
                     android:layout_marginTop="12dip"
+                    android:layout_marginBottom="12dip"
                     android:layout_toEndOf="@+id/payOnlineTextView"
                     android:layout_toRightOf="@+id/payOnlineTextView"
                     android:background="@drawable/selector_border_grey_add"
@@ -139,8 +139,8 @@
                     android:id="@+id/invoiceNoTextView"
                     style="@style/TextView.ChooseType"
                     android:layout_below="@+id/invoiceTitleTextView"
-                    android:layout_marginBottom="12dip"
                     android:layout_marginTop="12dip"
+                    android:layout_marginBottom="12dip"
                     android:text="不需要发票"
                     tools:ignore="HardcodedText" />
 
@@ -148,8 +148,8 @@
                     android:id="@+id/invoiceYesTextView"
                     style="@style/TextView.ChooseType"
                     android:layout_below="@+id/invoiceTitleTextView"
-                    android:layout_marginBottom="12dip"
                     android:layout_marginTop="12dip"
+                    android:layout_marginBottom="12dip"
                     android:layout_toEndOf="@+id/invoiceNoTextView"
                     android:layout_toRightOf="@+id/invoiceNoTextView"
                     android:background="@drawable/selector_border_grey_add"

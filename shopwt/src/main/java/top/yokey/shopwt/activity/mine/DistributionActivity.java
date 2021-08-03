@@ -1,24 +1,26 @@
 package top.yokey.shopwt.activity.mine;
 
-import com.google.android.material.tabs.TabLayout;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.bean.BaseBean;
+import top.yokey.base.bean.MemberDistributionBean;
+import top.yokey.base.model.MemberInviteModel;
 import top.yokey.base.util.JsonUtil;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.adapter.BaseViewPagerAdapter;
 import top.yokey.shopwt.adapter.DistributionListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.base.bean.MemberDistributionBean;
-import top.yokey.base.model.MemberInviteModel;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

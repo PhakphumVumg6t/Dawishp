@@ -16,15 +16,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
-import androidx.annotation.NonNull;
-import com.google.android.material.tabs.TabLayout;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.core.graphics.drawable.DrawableCompat;
-import androidx.viewpager.widget.ViewPager;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.View;
@@ -34,6 +25,30 @@ import android.webkit.CookieManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.core.graphics.drawable.DrawableCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
+import com.jiagu.sdk.BaseProtected;
+import com.lzy.imagepicker.ImagePicker;
+import com.lzy.imagepicker.ui.ImageGridActivity;
+import com.lzy.imagepicker.view.CropImageView;
+import com.mob.MobSDK;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
+
+import org.xutils.x;
+
+import java.io.File;
+import java.util.List;
+
+import cn.jpush.android.api.JPushInterface;
 import top.yokey.base.base.BaseAnimClient;
 import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseFileClient;
@@ -50,38 +65,23 @@ import top.yokey.shopwt.R;
 import top.yokey.shopwt.activity.base.BrowserActivity;
 import top.yokey.shopwt.activity.base.LoginActivity;
 import top.yokey.shopwt.activity.goods.BuyActivity;
-import top.yokey.shopwt.activity.home.RedPacketActivity;
-import top.yokey.shopwt.activity.home.RobBuyActivity;
-import top.yokey.shopwt.activity.home.SpecialActivity;
-import top.yokey.shopwt.activity.home.VoucherActivity;
-import top.yokey.shopwt.activity.mine.SignActivity;
-import top.yokey.shopwt.activity.order.PayActivity;
 import top.yokey.shopwt.activity.goods.GoodsActivity;
 import top.yokey.shopwt.activity.goods.ListActivity;
 import top.yokey.shopwt.activity.home.ChatOnlyActivity;
 import top.yokey.shopwt.activity.home.NoticeShowActivity;
+import top.yokey.shopwt.activity.home.RedPacketActivity;
+import top.yokey.shopwt.activity.home.RobBuyActivity;
+import top.yokey.shopwt.activity.home.SpecialActivity;
+import top.yokey.shopwt.activity.home.VoucherActivity;
 import top.yokey.shopwt.activity.mine.BindMobileActivity;
 import top.yokey.shopwt.activity.mine.FavoritesActivity;
+import top.yokey.shopwt.activity.mine.SignActivity;
 import top.yokey.shopwt.activity.order.OrderActivity;
+import top.yokey.shopwt.activity.order.PayActivity;
 import top.yokey.shopwt.activity.store.GoodsListActivity;
 import top.yokey.shopwt.activity.store.StoreActivity;
 import top.yokey.shopwt.activity.store.StreetActivity;
 import top.yokey.shopwt.adapter.BaseViewPagerAdapter;
-
-import com.jiagu.sdk.BaseProtected;
-import com.lzy.imagepicker.ImagePicker;
-import com.lzy.imagepicker.ui.ImageGridActivity;
-import com.lzy.imagepicker.view.CropImageView;
-import com.mob.MobSDK;
-import com.tencent.mm.sdk.openapi.IWXAPI;
-import com.tencent.mm.sdk.openapi.WXAPIFactory;
-
-import org.xutils.x;
-
-import java.io.File;
-import java.util.List;
-
-import cn.jpush.android.api.JPushInterface;
 
 /**
  * 全局Applicaiton
@@ -94,16 +94,15 @@ import cn.jpush.android.api.JPushInterface;
 @SuppressWarnings("ALL")
 public class BaseApplication extends Application {
 
+    private static BaseApplication instance;
     public IWXAPI iwxapi;
     private boolean isPush;
     private boolean isImage;
     private boolean isWxPay;
     private boolean isSuccess;
-
     private MemberBean memberBean;
     private CookieManager cookieManager;
     private MemberAssetBean memberAssetBean;
-    private static BaseApplication instance;
 
     public static BaseApplication get() {
 
@@ -161,9 +160,21 @@ public class BaseApplication extends Application {
 
     }
 
+    public void setPush(boolean push) {
+
+        isPush = push;
+
+    }
+
     public boolean isImage() {
 
         return isImage;
+
+    }
+
+    public void setImage(boolean image) {
+
+        isImage = image;
 
     }
 
@@ -185,21 +196,21 @@ public class BaseApplication extends Application {
 
     }
 
+    public void setIwxapi(IWXAPI iwxapi) {
+
+        this.iwxapi = iwxapi;
+
+    }
+
     public MemberBean getMemberBean() {
 
         return memberBean;
 
     }
 
-    public void setPush(boolean push) {
+    public void setMemberBean(MemberBean memberBean) {
 
-        isPush = push;
-
-    }
-
-    public void setImage(boolean image) {
-
-        isImage = image;
+        this.memberBean = memberBean;
 
     }
 
@@ -215,21 +226,9 @@ public class BaseApplication extends Application {
 
     }
 
-    public void setMemberBean(MemberBean memberBean) {
-
-        this.memberBean = memberBean;
-
-    }
-
     public void setMemberAssetBean(MemberAssetBean memberAssetBean) {
 
         this.memberAssetBean = memberAssetBean;
-
-    }
-
-    public void setIwxapi(IWXAPI iwxapi) {
-
-        this.iwxapi = iwxapi;
 
     }
 

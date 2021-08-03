@@ -8,17 +8,18 @@ import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import androidx.core.view.AccessibilityDelegateCompat;
-import androidx.core.view.MotionEventCompat;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
-import androidx.customview.widget.ViewDragHelper;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.accessibility.AccessibilityEvent;
+
+import androidx.core.view.AccessibilityDelegateCompat;
+import androidx.core.view.MotionEventCompat;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat;
+import androidx.customview.widget.ViewDragHelper;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -36,23 +37,6 @@ import java.util.ArrayList;
 public class SlideFrameLayout extends ViewGroup {
 
     private static final int MIN_FLING_VELOCITY = 400;
-    private Drawable mShadowDrawable;
-    private boolean mCanSlide = true;
-    private View mSlideableView;
-    private float mSlideOffset;
-    private int mSlideRange;
-    private boolean mIsUnableToDrag;
-    private float mInitialMotionX;
-    private float mInitialMotionY;
-    private float mEdgeSize;
-    private SlidingListener mSlidingListener;
-    private final ViewDragHelper mDragHelper;
-    private boolean mPreservedOpenState;
-    private boolean mFirstLayout = true;
-    private final Rect mTmpRect = new Rect();
-    private final PreviewView mPreviousSnapshotView;
-    private final ArrayList<DisableLayerRunnable> mPostedRunnables = new ArrayList<>();
-    private boolean mDrawShadow = false;
     private static final SlidingPanelLayoutImpl IMPL;
 
     static {
@@ -65,6 +49,24 @@ public class SlideFrameLayout extends ViewGroup {
             IMPL = new SlidingPanelLayoutImplBase();
         }
     }
+
+    private final ViewDragHelper mDragHelper;
+    private final Rect mTmpRect = new Rect();
+    private final PreviewView mPreviousSnapshotView;
+    private final ArrayList<DisableLayerRunnable> mPostedRunnables = new ArrayList<>();
+    private Drawable mShadowDrawable;
+    private boolean mCanSlide = true;
+    private View mSlideableView;
+    private float mSlideOffset;
+    private int mSlideRange;
+    private boolean mIsUnableToDrag;
+    private float mInitialMotionX;
+    private float mInitialMotionY;
+    private float mEdgeSize;
+    private SlidingListener mSlidingListener;
+    private boolean mPreservedOpenState;
+    private boolean mFirstLayout = true;
+    private boolean mDrawShadow = false;
 
     public SlideFrameLayout(Context context) {
         this(context, null);
@@ -84,6 +86,20 @@ public class SlideFrameLayout extends ViewGroup {
         setEdgeSize(dip2px(20));
         mPreviousSnapshotView = new PreviewView(context);
         addView(mPreviousSnapshotView, new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+    }
+
+    private static boolean viewIsOpaque(View v) {
+        if (ViewCompat.isOpaque(v)) {
+            return true;
+        }
+        if (Build.VERSION.SDK_INT >= 18) {
+            return false;
+        }
+        final Drawable bg = v.getBackground();
+        if (bg != null) {
+            return bg.getOpacity() == PixelFormat.OPAQUE;
+        }
+        return false;
     }
 
     public void setSlidingListener(SlidingListener listener) {
@@ -166,20 +182,6 @@ public class SlideFrameLayout extends ViewGroup {
     private int dip2px(float dpValue) {
         final float scale = getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale);
-    }
-
-    private static boolean viewIsOpaque(View v) {
-        if (ViewCompat.isOpaque(v)) {
-            return true;
-        }
-        if (Build.VERSION.SDK_INT >= 18) {
-            return false;
-        }
-        final Drawable bg = v.getBackground();
-        if (bg != null) {
-            return bg.getOpacity() == PixelFormat.OPAQUE;
-        }
-        return false;
     }
 
     @Override
@@ -628,6 +630,146 @@ public class SlideFrameLayout extends ViewGroup {
         return new LayoutParams(getContext(), attrs);
     }
 
+    public void offsetPreviousSnapshot(View snapshotView, float translateX) {
+        if (null != mPreviousSnapshotView) {
+            mPreviousSnapshotView.setHostView(snapshotView);
+            mPreviousSnapshotView.invalidate();
+            mPreviousSnapshotView.setTranslationX(translateX);
+        }
+    }
+
+    interface SlidingPanelLayoutImpl {
+        void invalidateChildRegion(SlideFrameLayout parent, View child);
+    }
+
+    public interface SlidingListener {
+
+        void onPanelSlide(View panel, float slideOffset);
+
+        void continueSettling(View panel, boolean settling);
+
+    }
+
+    public static class LayoutParams extends MarginLayoutParams {
+
+        private static final int[] ATTRS = new int[]{
+                android.R.attr.layout_weight
+        };
+
+        public float weight = 0;
+        boolean slideable;
+        boolean dimWhenOffset;
+        Paint dimPaint;
+
+        public LayoutParams() {
+            super(FILL_PARENT, FILL_PARENT);
+        }
+
+        public LayoutParams(int width, int height) {
+            super(width, height);
+        }
+
+        public LayoutParams(ViewGroup.LayoutParams source) {
+            super(source);
+        }
+
+        public LayoutParams(MarginLayoutParams source) {
+            super(source);
+        }
+
+        public LayoutParams(LayoutParams source) {
+            super(source);
+            this.weight = source.weight;
+        }
+
+        public LayoutParams(Context c, AttributeSet attrs) {
+            super(c, attrs);
+            final TypedArray a = c.obtainStyledAttributes(attrs, ATTRS);
+            this.weight = a.getFloat(0, 0);
+            a.recycle();
+        }
+
+    }
+
+    static class SlidingPanelLayoutImplBase implements SlidingPanelLayoutImpl {
+        public void invalidateChildRegion(SlideFrameLayout parent, View child) {
+            ViewCompat.postInvalidateOnAnimation(parent, child.getLeft(), child.getTop(),
+                    child.getRight(), child.getBottom());
+        }
+    }
+
+    static class SlidingPanelLayoutImplJB extends SlidingPanelLayoutImplBase {
+
+        private Method mGetDisplayList;
+        private Field mRecreateDisplayList;
+
+        SlidingPanelLayoutImplJB() {
+            try {
+                mGetDisplayList = View.class.getDeclaredMethod("getDisplayList", (Class[]) null);
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            }
+            try {
+                mRecreateDisplayList = View.class.getDeclaredField("mRecreateDisplayList");
+                mRecreateDisplayList.setAccessible(true);
+            } catch (NoSuchFieldException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void invalidateChildRegion(SlideFrameLayout parent, View child) {
+            if (mGetDisplayList != null && mRecreateDisplayList != null) {
+                try {
+                    mRecreateDisplayList.setBoolean(child, true);
+                    mGetDisplayList.invoke(child, (Object[]) null);
+                } catch (Exception e) {
+                }
+            } else {
+                child.invalidate();
+                return;
+            }
+            super.invalidateChildRegion(parent, child);
+        }
+
+    }
+
+    static class SlidingPanelLayoutImplJBMR1 extends SlidingPanelLayoutImplBase {
+        @Override
+        public void invalidateChildRegion(SlideFrameLayout parent, View child) {
+            ViewCompat.setLayerPaint(child, ((LayoutParams) child.getLayoutParams()).dimPaint);
+        }
+    }
+
+    private static class PreviewView extends View {
+
+        private View mHostView;
+
+        public PreviewView(Context context) {
+            super(context);
+        }
+
+        public void setHostView(View view) {
+            mHostView = view;
+        }
+
+        @Override
+        public void draw(Canvas canvas) {
+            super.draw(canvas);
+
+            if (mHostView != null) {
+                mHostView.draw(canvas);
+            }
+        }
+
+        @Override
+        protected void onDetachedFromWindow() {
+            super.onDetachedFromWindow();
+            mHostView = null;
+        }
+
+    }
+
     private class DragHelperCallback extends ViewDragHelper.Callback {
 
         @Override
@@ -696,101 +838,6 @@ public class SlideFrameLayout extends ViewGroup {
             mDragHelper.captureChildView(mSlideableView, pointerId);
         }
 
-    }
-
-    public static class LayoutParams extends MarginLayoutParams {
-
-        private static final int[] ATTRS = new int[]{
-                android.R.attr.layout_weight
-        };
-
-        public float weight = 0;
-        boolean slideable;
-        boolean dimWhenOffset;
-        Paint dimPaint;
-
-        public LayoutParams() {
-            super(FILL_PARENT, FILL_PARENT);
-        }
-
-        public LayoutParams(int width, int height) {
-            super(width, height);
-        }
-
-        public LayoutParams(ViewGroup.LayoutParams source) {
-            super(source);
-        }
-
-        public LayoutParams(MarginLayoutParams source) {
-            super(source);
-        }
-
-        public LayoutParams(LayoutParams source) {
-            super(source);
-            this.weight = source.weight;
-        }
-
-        public LayoutParams(Context c, AttributeSet attrs) {
-            super(c, attrs);
-            final TypedArray a = c.obtainStyledAttributes(attrs, ATTRS);
-            this.weight = a.getFloat(0, 0);
-            a.recycle();
-        }
-
-    }
-
-    interface SlidingPanelLayoutImpl {
-        void invalidateChildRegion(SlideFrameLayout parent, View child);
-    }
-
-    static class SlidingPanelLayoutImplBase implements SlidingPanelLayoutImpl {
-        public void invalidateChildRegion(SlideFrameLayout parent, View child) {
-            ViewCompat.postInvalidateOnAnimation(parent, child.getLeft(), child.getTop(),
-                    child.getRight(), child.getBottom());
-        }
-    }
-
-    static class SlidingPanelLayoutImplJB extends SlidingPanelLayoutImplBase {
-
-        private Method mGetDisplayList;
-        private Field mRecreateDisplayList;
-
-        SlidingPanelLayoutImplJB() {
-            try {
-                mGetDisplayList = View.class.getDeclaredMethod("getDisplayList", (Class[]) null);
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();
-            }
-            try {
-                mRecreateDisplayList = View.class.getDeclaredField("mRecreateDisplayList");
-                mRecreateDisplayList.setAccessible(true);
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        public void invalidateChildRegion(SlideFrameLayout parent, View child) {
-            if (mGetDisplayList != null && mRecreateDisplayList != null) {
-                try {
-                    mRecreateDisplayList.setBoolean(child, true);
-                    mGetDisplayList.invoke(child, (Object[]) null);
-                } catch (Exception e) {
-                }
-            } else {
-                child.invalidate();
-                return;
-            }
-            super.invalidateChildRegion(parent, child);
-        }
-
-    }
-
-    static class SlidingPanelLayoutImplJBMR1 extends SlidingPanelLayoutImplBase {
-        @Override
-        public void invalidateChildRegion(SlideFrameLayout parent, View child) {
-            ViewCompat.setLayerPaint(child, ((LayoutParams) child.getLayoutParams()).dimPaint);
-        }
     }
 
     class AccessibilityDelegate extends AccessibilityDelegateCompat {
@@ -876,51 +923,6 @@ public class SlideFrameLayout extends ViewGroup {
             }
             mPostedRunnables.remove(this);
         }
-
-    }
-
-    public void offsetPreviousSnapshot(View snapshotView, float translateX) {
-        if (null != mPreviousSnapshotView) {
-            mPreviousSnapshotView.setHostView(snapshotView);
-            mPreviousSnapshotView.invalidate();
-            mPreviousSnapshotView.setTranslationX(translateX);
-        }
-    }
-
-    private static class PreviewView extends View {
-
-        private View mHostView;
-
-        public PreviewView(Context context) {
-            super(context);
-        }
-
-        public void setHostView(View view) {
-            mHostView = view;
-        }
-
-        @Override
-        public void draw(Canvas canvas) {
-            super.draw(canvas);
-
-            if (mHostView != null) {
-                mHostView.draw(canvas);
-            }
-        }
-
-        @Override
-        protected void onDetachedFromWindow() {
-            super.onDetachedFromWindow();
-            mHostView = null;
-        }
-
-    }
-
-    public interface SlidingListener {
-
-        void onPanelSlide(View panel, float slideOffset);
-
-        void continueSettling(View panel, boolean settling);
 
     }
 

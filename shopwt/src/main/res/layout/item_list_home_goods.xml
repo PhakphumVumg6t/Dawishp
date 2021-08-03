@@ -12,8 +12,8 @@
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_below="@+id/mainImageView"
-        android:paddingBottom="4dip"
         android:paddingTop="4dip"
+        android:paddingBottom="4dip"
         android:textSize="12sp" />
 
     <View
@@ -25,9 +25,9 @@
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_below="@+id/lineView"
+        android:layout_marginTop="4dip"
         android:layout_marginEnd="8dip"
         android:layout_marginRight="8dip"
-        android:layout_marginTop="4dip"
         android:textSize="14sp" />
 
 </RelativeLayout>

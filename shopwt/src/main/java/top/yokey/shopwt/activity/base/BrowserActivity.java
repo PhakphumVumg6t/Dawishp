@@ -1,13 +1,14 @@
 package top.yokey.shopwt.activity.base;
 
-import androidx.core.widget.ContentLoadingProgressBar;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.ContentLoadingProgressBar;
 
 import top.yokey.base.base.BaseAnimClient;
 import top.yokey.shopwt.R;

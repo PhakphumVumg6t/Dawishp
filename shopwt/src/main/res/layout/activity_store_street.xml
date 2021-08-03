@@ -29,8 +29,8 @@
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/searchEditText"
             style="@style/EditText.Search"
-            android:layout_marginLeft="16dip"
-            android:layout_marginStart="16dip" />
+            android:layout_marginStart="16dip"
+            android:layout_marginLeft="16dip" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/searchImageView"

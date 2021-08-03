@@ -1,22 +1,20 @@
 package top.yokey.shopwt.activity.goods;
 
 import android.content.Intent;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
+
 import com.squareup.otto.Subscribe;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.activity.main.MainActivity;
-import top.yokey.shopwt.adapter.BaseFragmentAdapter;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseBusClient;
-import top.yokey.shopwt.base.BaseConstant;
+import java.util.ArrayList;
+import java.util.List;
+
+import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
@@ -24,13 +22,16 @@ import top.yokey.base.event.GoodsAreaEvent;
 import top.yokey.base.event.GoodsBeanEvent;
 import top.yokey.base.event.GoodsEvaluateEvent;
 import top.yokey.base.event.GoodsGoneEvent;
-import top.yokey.base.event.GoodsShowEvent;
 import top.yokey.base.event.GoodsIdEvent;
+import top.yokey.base.event.GoodsShowEvent;
 import top.yokey.base.model.GoodsModel;
-import top.yokey.base.base.BaseCountTime;
-
-import java.util.ArrayList;
-import java.util.List;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.activity.main.MainActivity;
+import top.yokey.shopwt.adapter.BaseFragmentAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseBusClient;
+import top.yokey.shopwt.base.BaseConstant;
 
 /**
  * @author MapleStory

@@ -5,10 +5,11 @@ import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.KeyEvent;
+
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.widget.AppCompatTextView;
-import android.view.KeyEvent;
 
 import com.squareup.otto.Subscribe;
 
@@ -16,10 +17,16 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
 import top.yokey.base.base.BaseDialog;
+import top.yokey.base.base.BaseFileClient;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
+import top.yokey.base.event.MainPositionEvent;
 import top.yokey.base.model.IndexModel;
 import top.yokey.base.util.JsonUtil;
 import top.yokey.base.util.TextUtil;
@@ -28,12 +35,6 @@ import top.yokey.shopwt.adapter.BaseFragmentAdapter;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.event.MainPositionEvent;
-import top.yokey.base.base.BaseFileClient;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author MapleStory

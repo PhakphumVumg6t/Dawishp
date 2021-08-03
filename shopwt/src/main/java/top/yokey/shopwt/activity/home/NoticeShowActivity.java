@@ -3,12 +3,12 @@ package top.yokey.shopwt.activity.home;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 
+import top.yokey.base.base.BaseToast;
+import top.yokey.base.bean.ArticleBean;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.base.BaseToast;
-import top.yokey.base.bean.ArticleBean;
 
 /**
  * @author MapleStory

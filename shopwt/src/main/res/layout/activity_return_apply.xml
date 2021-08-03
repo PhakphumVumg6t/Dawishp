@@ -29,9 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:background="@drawable/selector_color_white"
+                android:drawableStart="@mipmap/ic_store_goods"
                 android:drawableLeft="@mipmap/ic_store_goods"
                 android:drawablePadding="4dip"
-                android:drawableStart="@mipmap/ic_store_goods"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
                 android:textColor="@color/blackSub" />
@@ -52,10 +52,10 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/goodsNameTextView"
                     style="@style/TextView.Name"
-                    android:layout_toEndOf="@+id/goodsImageView"
-                    android:layout_toLeftOf="@+id/goodsMoneyTextView"
-                    android:layout_toRightOf="@+id/goodsImageView"
                     android:layout_toStartOf="@+id/goodsMoneyTextView"
+                    android:layout_toLeftOf="@+id/goodsMoneyTextView"
+                    android:layout_toEndOf="@+id/goodsImageView"
+                    android:layout_toRightOf="@+id/goodsImageView"
                     android:textSize="12sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -76,9 +76,9 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/goodsNumberTextView"
                     style="@style/TextView.Small"
+                    android:layout_below="@+id/goodsMoneyTextView"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/goodsMoneyTextView" />
+                    android:layout_alignParentRight="true" />
 
             </RelativeLayout>
 
@@ -164,11 +164,11 @@
                     android:id="@+id/zeroImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="4dip"
                     android:layout_marginStart="4dip"
+                    android:layout_marginLeft="4dip"
                     android:layout_marginTop="8dip"
-                    android:layout_toLeftOf="@+id/oneImageView"
                     android:layout_toStartOf="@+id/oneImageView"
+                    android:layout_toLeftOf="@+id/oneImageView"
                     android:scaleType="fitXY"
                     android:src="@mipmap/ic_add_img" />
 
@@ -176,11 +176,11 @@
                     android:id="@+id/oneImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="4dip"
                     android:layout_marginStart="4dip"
+                    android:layout_marginLeft="4dip"
                     android:layout_marginTop="8dip"
-                    android:layout_toLeftOf="@+id/twoImageView"
                     android:layout_toStartOf="@+id/twoImageView"
+                    android:layout_toLeftOf="@+id/twoImageView"
                     android:scaleType="fitXY"
                     android:src="@mipmap/ic_add_img" />
 
@@ -190,8 +190,8 @@
                     android:layout_height="48dip"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:layout_marginTop="8dip"
                     android:scaleType="fitXY"
                     android:src="@mipmap/ic_add_img" />

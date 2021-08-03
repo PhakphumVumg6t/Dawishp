@@ -2,19 +2,21 @@ package top.yokey.shopwt.activity.points;
 
 import android.annotation.SuppressLint;
 import android.graphics.Paint;
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.webkit.WebView;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.Toolbar;
+
 import java.util.Objects;
 
+import top.yokey.base.base.BaseAnimClient;
 import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -27,7 +29,6 @@ import top.yokey.base.util.TextUtil;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.activity.base.LoginActivity;
 import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.base.base.BaseAnimClient;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
 import top.yokey.shopwt.base.BaseImageLoader;

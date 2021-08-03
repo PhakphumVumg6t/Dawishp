@@ -23,8 +23,8 @@
             android:id="@+id/contentEditText"
             style="@style/EditText.Area"
             android:layout_marginLeft="16dip"
-            android:layout_marginRight="16dip"
             android:layout_marginTop="16dip"
+            android:layout_marginRight="16dip"
             android:background="@drawable/border_white"
             android:hint="您在使用中遇到的问题..."
             tools:ignore="HardcodedText" />

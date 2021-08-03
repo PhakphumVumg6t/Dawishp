@@ -43,8 +43,8 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Main"
-            android:layout_marginLeft="1px"
             android:layout_marginStart="1px"
+            android:layout_marginLeft="1px"
             android:layout_weight="1">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -55,8 +55,8 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/home23ImageView"
                 style="@style/ImageView.Main"
-                android:layout_marginBottom="1px"
                 android:layout_marginTop="1px"
+                android:layout_marginBottom="1px"
                 android:layout_weight="1" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -84,8 +84,8 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/home43ImageView"
                 style="@style/ImageView.Main"
-                android:layout_marginBottom="1px"
                 android:layout_marginTop="1px"
+                android:layout_marginBottom="1px"
                 android:layout_weight="1" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -111,8 +111,8 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             style="@style/Layout.Main"
-            android:layout_marginLeft="1px"
             android:layout_marginStart="1px"
+            android:layout_marginLeft="1px"
             android:layout_weight="1">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -128,15 +128,15 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/home53ImageView"
                     style="@style/ImageView.Main"
-                    android:layout_marginBottom="1px"
                     android:layout_marginTop="1px"
+                    android:layout_marginBottom="1px"
                     android:layout_weight="1" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/home54ImageView"
                     style="@style/ImageView.Main"
-                    android:layout_marginBottom="1px"
                     android:layout_marginTop="1px"
+                    android:layout_marginBottom="1px"
                     android:layout_weight="1" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>

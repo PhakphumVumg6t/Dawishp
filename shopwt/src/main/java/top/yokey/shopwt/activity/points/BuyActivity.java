@@ -1,14 +1,15 @@
 package top.yokey.shopwt.activity.points;
 
 import android.content.Intent;
+import android.text.Html;
+import android.text.TextUtils;
+import android.widget.RelativeLayout;
+
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-import android.text.Html;
-import android.text.TextUtils;
-import android.widget.RelativeLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -1,22 +1,23 @@
 package top.yokey.shopwt.activity.mine;
 
+import android.text.TextUtils;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-import android.text.TextUtils;
 
 import java.util.Objects;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.model.MemberAccountModel;
 import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
 
 /**
  * @author MapleStory
@@ -108,7 +109,7 @@ public class PayPassActivity extends BaseActivity {
             public void onFailure(String reason) {
                 getTextView.setEnabled(true);
                 getTextView.setText("获取验证码");
-                BaseToast.get().show( reason);
+                BaseToast.get().show(reason);
             }
         });
 
@@ -123,17 +124,17 @@ public class PayPassActivity extends BaseActivity {
         String confirm = Objects.requireNonNull(confirmEditText.getText()).toString();
 
         if (TextUtils.isEmpty(code)) {
-            BaseToast.get().show( "请输入验证码！");
+            BaseToast.get().show("请输入验证码！");
             return;
         }
 
         if (TextUtils.isEmpty(password) || TextUtils.isEmpty(confirm)) {
-            BaseToast.get().show( "请输入密码！");
+            BaseToast.get().show("请输入密码！");
             return;
         }
 
         if (!password.equals(confirm)) {
-            BaseToast.get().show( "两次输入的密码不一致！");
+            BaseToast.get().show("两次输入的密码不一致！");
             return;
         }
 
@@ -156,7 +157,7 @@ public class PayPassActivity extends BaseActivity {
             public void onFailure(String reason) {
                 submitTextView.setEnabled(true);
                 submitTextView.setText("提 交");
-                BaseToast.get().show( reason);
+                BaseToast.get().show(reason);
             }
         });
 
@@ -180,7 +181,7 @@ public class PayPassActivity extends BaseActivity {
             public void onFailure(String reason) {
                 submitTextView.setEnabled(true);
                 submitTextView.setText("提 交");
-                BaseToast.get().show( reason);
+                BaseToast.get().show(reason);
             }
         });
 
@@ -205,7 +206,7 @@ public class PayPassActivity extends BaseActivity {
             public void onFailure(String reason) {
                 submitTextView.setEnabled(true);
                 submitTextView.setText("提 交");
-                BaseToast.get().show( reason);
+                BaseToast.get().show(reason);
             }
         });
 

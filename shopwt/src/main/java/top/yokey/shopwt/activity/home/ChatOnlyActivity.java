@@ -1,31 +1,32 @@
 package top.yokey.shopwt.activity.home;
 
 import android.content.Intent;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.RelativeLayout;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.RelativeLayout;
 
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
 import com.squareup.otto.Subscribe;
 
-import top.yokey.shopwt.base.BaseActivity;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
+
 import top.yokey.base.base.BaseAnimClient;
-import top.yokey.base.base.BaseFileClient;
-import top.yokey.shopwt.base.BaseImageLoader;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.ChatOnlyListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
 import top.yokey.base.base.BaseCountTime;
+import top.yokey.base.base.BaseFileClient;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
@@ -34,13 +35,13 @@ import top.yokey.base.bean.GoodsBean;
 import top.yokey.base.event.MessageCountEvent;
 import top.yokey.base.model.MemberChatModel;
 import top.yokey.base.util.JsonUtil;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Objects;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.ChatOnlyListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseImageLoader;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

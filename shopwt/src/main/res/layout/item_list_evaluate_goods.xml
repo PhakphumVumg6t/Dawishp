@@ -31,8 +31,8 @@
 
     <View
         style="@style/View.Line"
-        android:layout_marginBottom="8dip"
-        android:layout_marginTop="8dip" />
+        android:layout_marginTop="8dip"
+        android:layout_marginBottom="8dip" />
 
     <androidx.appcompat.widget.AppCompatRatingBar
         android:id="@+id/scoreRatingBar"

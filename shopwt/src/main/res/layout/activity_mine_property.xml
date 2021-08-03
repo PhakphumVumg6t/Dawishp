@@ -23,14 +23,14 @@
             android:id="@+id/preDepositRelativeLayout"
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/preDepositTextView"
                 style="@style/TextView.Normal"
-                android:drawableLeft="@mipmap/ic_mine_property_pre_deposit"
                 android:drawableStart="@mipmap/ic_mine_property_pre_deposit"
+                android:drawableLeft="@mipmap/ic_mine_property_pre_deposit"
                 android:text="账户余额"
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
@@ -55,14 +55,14 @@
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
             android:layout_marginTop="1px"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/rechargeCardTextView"
                 style="@style/TextView.Normal"
-                android:drawableLeft="@mipmap/ic_mine_property_recharge_card"
                 android:drawableStart="@mipmap/ic_mine_property_recharge_card"
+                android:drawableLeft="@mipmap/ic_mine_property_recharge_card"
                 android:text="充值卡余额"
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
@@ -87,14 +87,14 @@
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
             android:layout_marginTop="1px"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/voucherTextView"
                 style="@style/TextView.Normal"
-                android:drawableLeft="@mipmap/ic_mine_property_voucher"
                 android:drawableStart="@mipmap/ic_mine_property_voucher"
+                android:drawableLeft="@mipmap/ic_mine_property_voucher"
                 android:text="店铺代金券"
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
@@ -119,14 +119,14 @@
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
             android:layout_marginTop="1px"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/redPacketTextView"
                 style="@style/TextView.Normal"
-                android:drawableLeft="@mipmap/ic_mine_property_red_packet"
                 android:drawableStart="@mipmap/ic_mine_property_red_packet"
+                android:drawableLeft="@mipmap/ic_mine_property_red_packet"
                 android:text="平台红包"
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />
@@ -151,14 +151,14 @@
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
             android:layout_marginTop="1px"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/pointsTextView"
                 style="@style/TextView.Normal"
-                android:drawableLeft="@mipmap/ic_mine_property_points"
                 android:drawableStart="@mipmap/ic_mine_property_points"
+                android:drawableLeft="@mipmap/ic_mine_property_points"
                 android:text="会员积分"
                 android:textColor="@color/title"
                 tools:ignore="HardcodedText" />

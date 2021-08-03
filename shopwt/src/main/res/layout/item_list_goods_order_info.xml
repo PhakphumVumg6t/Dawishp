@@ -16,10 +16,10 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
-        android:layout_toEndOf="@+id/mainImageView"
-        android:layout_toLeftOf="@+id/moneyTextView"
-        android:layout_toRightOf="@+id/mainImageView"
         android:layout_toStartOf="@+id/moneyTextView"
+        android:layout_toLeftOf="@+id/moneyTextView"
+        android:layout_toEndOf="@+id/mainImageView"
+        android:layout_toRightOf="@+id/mainImageView"
         android:textSize="12sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -40,9 +40,9 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/numberTextView"
         style="@style/TextView.Small"
+        android:layout_below="@+id/moneyTextView"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/moneyTextView" />
+        android:layout_alignParentRight="true" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/refundTextView"
@@ -50,13 +50,13 @@
         android:layout_below="@+id/mainImageView"
         android:layout_marginEnd="8dip"
         android:layout_marginRight="8dip"
-        android:layout_toLeftOf="@+id/returnTextView"
         android:layout_toStartOf="@+id/returnTextView"
+        android:layout_toLeftOf="@+id/returnTextView"
         android:background="@drawable/selector_border_selector"
-        android:paddingBottom="4dip"
         android:paddingLeft="8dip"
-        android:paddingRight="8dip"
         android:paddingTop="4dip"
+        android:paddingRight="8dip"
+        android:paddingBottom="4dip"
         android:text="退款"
         android:visibility="gone"
         tools:ignore="HardcodedText" />
@@ -64,14 +64,14 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/returnTextView"
         style="@style/TextView.Small"
+        android:layout_below="@+id/mainImageView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/mainImageView"
         android:background="@drawable/selector_border_selector"
-        android:paddingBottom="4dip"
         android:paddingLeft="8dip"
-        android:paddingRight="8dip"
         android:paddingTop="4dip"
+        android:paddingRight="8dip"
+        android:paddingBottom="4dip"
         android:text="退货"
         android:visibility="gone"
         tools:ignore="HardcodedText" />

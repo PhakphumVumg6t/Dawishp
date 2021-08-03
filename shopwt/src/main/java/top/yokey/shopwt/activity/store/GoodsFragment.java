@@ -1,22 +1,24 @@
 package top.yokey.shopwt.activity.store;
 
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.squareup.otto.Subscribe;
 
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.GoodsListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseFragment;
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
@@ -26,12 +28,11 @@ import top.yokey.base.event.StoreBeanEvent;
 import top.yokey.base.model.MemberCartModel;
 import top.yokey.base.model.StoreModel;
 import top.yokey.base.util.JsonUtil;
-
-import org.xutils.view.annotation.ContentView;
-import org.xutils.view.annotation.ViewInject;
-
-import java.util.ArrayList;
-import java.util.Objects;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.GoodsListAdapter;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseFragment;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

@@ -7,8 +7,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mainTextView"
         style="@style/TextView.Normal"
-        android:layout_alignBottom="@+id/pointsTextView"
         android:layout_alignTop="@+id/pointsTextView"
+        android:layout_alignBottom="@+id/pointsTextView"
         android:textColor="@color/blackSub" />
 
     <androidx.appcompat.widget.AppCompatTextView

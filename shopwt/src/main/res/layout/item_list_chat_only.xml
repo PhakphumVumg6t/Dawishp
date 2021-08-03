@@ -3,10 +3,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Wrap"
-    android:paddingBottom="4dip"
     android:paddingLeft="10dip"
+    android:paddingTop="4dip"
     android:paddingRight="10dip"
-    android:paddingTop="4dip">
+    android:paddingBottom="4dip">
 
     <RelativeLayout
         android:id="@+id/friendRelativeLayout"
@@ -44,8 +44,8 @@
     <RelativeLayout
         android:id="@+id/mineRelativeLayout"
         style="@style/Layout.Wrap"
-        android:layout_marginLeft="56dip"
-        android:layout_marginStart="56dip">
+        android:layout_marginStart="56dip"
+        android:layout_marginLeft="56dip">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/mineImageView"
@@ -53,24 +53,24 @@
             android:layout_height="48dip"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginLeft="8dip"
             android:layout_marginStart="8dip"
+            android:layout_marginLeft="8dip"
             android:scaleType="fitXY"
             android:src="@mipmap/ic_default_avatar" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/mineContentTextView"
             style="@style/TextView.Chat"
-            android:layout_toLeftOf="@+id/mineImageView"
             android:layout_toStartOf="@+id/mineImageView"
+            android:layout_toLeftOf="@+id/mineImageView"
             android:background="@drawable/bg_chat_mine" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/mineContentImageView"
             android:layout_width="128dip"
             android:layout_height="128dip"
-            android:layout_toLeftOf="@+id/mineImageView"
             android:layout_toStartOf="@+id/mineImageView"
+            android:layout_toLeftOf="@+id/mineImageView"
             android:background="@drawable/bg_chat_mine"
             android:scaleType="centerCrop" />
 

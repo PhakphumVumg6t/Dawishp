@@ -1,18 +1,15 @@
 package top.yokey.shopwt.activity.mine;
 
+import android.text.TextUtils;
+import android.view.View;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.appcompat.widget.Toolbar;
-import android.text.TextUtils;
-import android.view.View;
 
 import java.util.Objects;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
 import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -20,6 +17,10 @@ import top.yokey.base.bean.BaseBean;
 import top.yokey.base.model.MemberAccountModel;
 import top.yokey.base.model.SeccodeModel;
 import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
 
 /**
  * @author MapleStory

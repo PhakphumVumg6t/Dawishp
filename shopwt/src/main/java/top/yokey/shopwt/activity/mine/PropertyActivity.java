@@ -1,8 +1,9 @@
 package top.yokey.shopwt.activity.mine;
 
+import android.widget.RelativeLayout;
+
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-import android.widget.RelativeLayout;
 
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;

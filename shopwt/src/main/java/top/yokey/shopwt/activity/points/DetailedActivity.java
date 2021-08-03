@@ -1,13 +1,15 @@
 package top.yokey.shopwt.activity.points;
 
 import android.content.Intent;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.Toolbar;
+
+import top.yokey.base.base.BaseCountTime;
 import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
@@ -19,7 +21,6 @@ import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.base.BaseCountTime;
 import top.yokey.shopwt.base.BaseImageLoader;
 
 /**

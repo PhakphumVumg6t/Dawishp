@@ -3,8 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainRelativeLayout"
     style="@style/Layout.Wrap"
-    android:paddingBottom="4dip"
-    android:paddingTop="4dip">
+    android:paddingTop="4dip"
+    android:paddingBottom="4dip">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"

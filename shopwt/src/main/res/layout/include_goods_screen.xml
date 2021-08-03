@@ -126,8 +126,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moneyTextView"
             style="@style/TextView.Line"
-            android:layout_marginBottom="8dip"
             android:layout_marginTop="8dip"
+            android:layout_marginBottom="8dip"
             android:paddingLeft="16dip"
             android:paddingRight="16dip"
             android:text="价格区间"
@@ -145,8 +145,8 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/lineTextView"
             style="@style/TextView.Normal"
-            android:layout_alignBottom="@+id/priceFromEditText"
             android:layout_alignTop="@+id/priceFromEditText"
+            android:layout_alignBottom="@+id/priceFromEditText"
             android:layout_toEndOf="@+id/priceFromEditText"
             android:layout_toRightOf="@+id/priceFromEditText"
             android:text="-"

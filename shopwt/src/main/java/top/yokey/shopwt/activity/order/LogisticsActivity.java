@@ -1,19 +1,20 @@
 package top.yokey.shopwt.activity.order;
 
 import android.annotation.SuppressLint;
-import androidx.core.widget.ContentLoadingProgressBar;
-import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.ContentLoadingProgressBar;
+
+import top.yokey.base.base.BaseToast;
 import top.yokey.shopwt.R;
 import top.yokey.shopwt.base.BaseActivity;
 import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.base.base.BaseToast;
 
 /**
  * @author MapleStory

@@ -23,8 +23,8 @@
             android:id="@+id/passwordRelativeLayout"
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/passwordTextView"
@@ -55,8 +55,8 @@
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
             android:layout_marginTop="1px"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/mobileTextView"
@@ -87,8 +87,8 @@
             style="@style/Layout.Tool"
             android:layout_height="wrap_content"
             android:layout_marginTop="1px"
-            android:paddingBottom="12dip"
-            android:paddingTop="12dip">
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/payPassTextView"

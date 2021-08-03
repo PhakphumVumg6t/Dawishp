@@ -35,9 +35,9 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/rechargeCardValueTextView"
             style="@style/TextView.Normal"
+            android:layout_below="@+id/rechargeCardTextView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/rechargeCardTextView"
             android:textColor="@color/white"
             android:textSize="18sp" />
 

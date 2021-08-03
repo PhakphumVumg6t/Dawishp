@@ -1,8 +1,9 @@
 package top.yokey.shopwt.activity.seller;
 
+import android.text.TextUtils;
+
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
-import android.text.TextUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -13,14 +14,14 @@ import java.util.Iterator;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
-import top.yokey.base.util.JsonUtil;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.ExpressSellerListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
 import top.yokey.base.bean.ExpressSellerBean;
 import top.yokey.base.model.SellerExpressModel;
+import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.ExpressSellerListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

@@ -141,10 +141,10 @@
                 style="@style/Layout.Tool"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1px"
-                android:paddingBottom="8dip"
                 android:paddingLeft="16dip"
+                android:paddingTop="8dip"
                 android:paddingRight="16dip"
-                android:paddingTop="8dip">
+                android:paddingBottom="8dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.Title"
@@ -157,40 +157,40 @@
                     android:id="@+id/oneImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="12dip"
                     android:layout_marginStart="12dip"
+                    android:layout_marginLeft="12dip"
                     android:src="@mipmap/ic_add_img" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/twoImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:src="@mipmap/ic_add_img" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/thrImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:src="@mipmap/ic_add_img" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/fouImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:src="@mipmap/ic_add_img" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/fivImageView"
                     android:layout_width="48dip"
                     android:layout_height="48dip"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:src="@mipmap/ic_add_img" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -300,8 +300,8 @@
                     android:id="@+id/nowRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:checked="true"
                     android:hint="立即发布"
                     android:textColor="@color/blackSub"
@@ -311,8 +311,8 @@
                     android:id="@+id/wareRadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="8dip"
                     android:layout_marginStart="8dip"
+                    android:layout_marginLeft="8dip"
                     android:hint="放入仓库"
                     android:textColor="@color/blackSub"
                     tools:ignore="HardcodedText" />

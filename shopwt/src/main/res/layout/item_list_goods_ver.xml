@@ -9,12 +9,12 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.GoodsVer"
-        android:layout_marginBottom="8dip"
-        android:layout_marginEnd="12dip"
-        android:layout_marginLeft="16dip"
-        android:layout_marginRight="12dip"
         android:layout_marginStart="16dip"
-        android:layout_marginTop="8dip" />
+        android:layout_marginLeft="16dip"
+        android:layout_marginTop="8dip"
+        android:layout_marginEnd="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginBottom="8dip" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
@@ -48,8 +48,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mobileTextView"
         style="@style/TextView.ItemMobileHave"
-        android:layout_alignBottom="@id/moneyTextView"
         android:layout_alignTop="@+id/moneyTextView"
+        android:layout_alignBottom="@id/moneyTextView"
         android:layout_toEndOf="@+id/moneyTextView"
         android:layout_toRightOf="@+id/moneyTextView" />
 
@@ -73,12 +73,12 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/ownShopTextView"
         style="@style/TextView.Small"
-        android:layout_alignBottom="@+id/moreImageView"
         android:layout_alignTop="@+id/moreImageView"
+        android:layout_alignBottom="@+id/moreImageView"
         android:layout_marginEnd="4dip"
         android:layout_marginRight="4dip"
-        android:layout_toLeftOf="@+id/moreImageView"
         android:layout_toStartOf="@+id/moreImageView"
+        android:layout_toLeftOf="@+id/moreImageView"
         android:text="自营"
         android:textColor="@color/primary"
         tools:ignore="HardcodedText" />
@@ -97,9 +97,9 @@
         android:id="@+id/favoritesTextView"
         style="@style/TextView.ItemFavorites"
         android:layout_height="112dip"
-        android:layout_toLeftOf="@+id/moreImageView"
         android:layout_toStartOf="@+id/moreImageView"
-        android:paddingBottom="24dip"
-        android:paddingTop="24dip" />
+        android:layout_toLeftOf="@+id/moreImageView"
+        android:paddingTop="24dip"
+        android:paddingBottom="24dip" />
 
 </RelativeLayout>

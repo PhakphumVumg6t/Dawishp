@@ -13,8 +13,8 @@
         android:id="@+id/nameTextView"
         style="@style/TextView.Name"
         android:layout_below="@+id/mainImageView"
-        android:paddingBottom="4dip"
         android:paddingTop="4dip"
+        android:paddingBottom="4dip"
         android:textSize="12sp" />
 
     <View
@@ -26,25 +26,25 @@
         android:id="@+id/moneyTextView"
         style="@style/TextView.Money"
         android:layout_below="@+id/lineView"
+        android:layout_marginTop="4dip"
         android:layout_marginEnd="8dip"
         android:layout_marginRight="8dip"
-        android:layout_marginTop="4dip"
         android:textSize="14sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mobileTextView"
         style="@style/TextView.ItemMobileHave"
-        android:layout_alignBottom="@id/moneyTextView"
         android:layout_alignTop="@+id/moneyTextView"
+        android:layout_alignBottom="@id/moneyTextView"
         android:layout_toEndOf="@+id/moneyTextView"
         android:layout_toRightOf="@+id/moneyTextView" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/cartImageView"
         style="@style/ImageView.Item"
+        android:layout_below="@+id/lineView"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/lineView"
         android:layout_marginTop="4dip"
         android:src="@mipmap/ic_item_cart" />
 
@@ -57,18 +57,18 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/saleTextView"
         style="@style/TextView.Small"
-        android:layout_alignBottom="@+id/moreImageView"
-        android:layout_alignTop="@+id/moreImageView" />
+        android:layout_alignTop="@+id/moreImageView"
+        android:layout_alignBottom="@+id/moreImageView" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/ownShopTextView"
         style="@style/TextView.Small"
-        android:layout_alignBottom="@+id/moreImageView"
         android:layout_alignTop="@+id/moreImageView"
+        android:layout_alignBottom="@+id/moreImageView"
         android:layout_marginEnd="4dip"
         android:layout_marginRight="4dip"
-        android:layout_toLeftOf="@+id/moreImageView"
         android:layout_toStartOf="@+id/moreImageView"
+        android:layout_toLeftOf="@+id/moreImageView"
         android:text="自营"
         android:textColor="@color/primary"
         tools:ignore="HardcodedText" />
@@ -76,17 +76,17 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/moreImageView"
         style="@style/ImageView.Item"
+        android:layout_below="@+id/line1View"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/line1View"
         android:layout_marginTop="4dip"
         android:src="@drawable/ic_more_horiz" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/favoritesTextView"
         style="@style/TextView.ItemFavorites"
-        android:layout_alignBottom="@+id/line1View"
-        android:layout_alignTop="@+id/mainImageView" />
+        android:layout_alignTop="@+id/mainImageView"
+        android:layout_alignBottom="@+id/line1View" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/descTextView"

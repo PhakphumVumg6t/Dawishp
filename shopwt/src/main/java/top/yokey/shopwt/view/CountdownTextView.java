@@ -2,9 +2,10 @@ package top.yokey.shopwt.view;
 
 import android.content.Context;
 import android.os.Handler;
-import androidx.appcompat.widget.AppCompatTextView;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -16,12 +17,27 @@ import java.util.TimerTask;
 @SuppressWarnings("ALL")
 public class CountdownTextView extends AppCompatTextView {
 
+    private final int what_count_down_tick = 1;
     private long mSeconds;
     private String first, end;
     private String mStrFormat;
     private TimerTask mTimerTask;
     private Map<Integer, Timer> mTimerMap;
-    private final int what_count_down_tick = 1;
+    private Handler mHandler = new Handler() {
+        public void handleMessage(android.os.Message msg) {
+            switch (msg.what) {
+                case what_count_down_tick:
+                    setText(first);
+                    if (mSeconds <= 0) {
+                        append(String.format(mStrFormat, "00:00:00"));
+                    } else {
+                        append(mStrFormat == null ? second2TimeSecond(mSeconds) : String.format(mStrFormat, second2TimeSecond(mSeconds)));
+                    }
+                    append(end);
+                    break;
+            }
+        }
+    };
 
     public CountdownTextView(Context context) {
         super(context);
@@ -61,22 +77,6 @@ public class CountdownTextView extends AppCompatTextView {
             mTimerMap.get(position).schedule(mTimerTask, 0, 1000);
         }
     }
-
-    private Handler mHandler = new Handler() {
-        public void handleMessage(android.os.Message msg) {
-            switch (msg.what) {
-                case what_count_down_tick:
-                    setText(first);
-                    if (mSeconds <= 0) {
-                        append(String.format(mStrFormat, "00:00:00"));
-                    } else {
-                        append(mStrFormat == null ? second2TimeSecond(mSeconds) : String.format(mStrFormat, second2TimeSecond(mSeconds)));
-                    }
-                    append(end);
-                    break;
-            }
-        }
-    };
 
     @Override
     public void removeOnLayoutChangeListener(OnLayoutChangeListener listener) {

@@ -1,57 +1,22 @@
 package top.yokey.shopwt.activity.goods;
 
 import android.graphics.Paint;
-import androidx.appcompat.widget.AppCompatEditText;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.squareup.otto.Subscribe;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
-
-import cn.sharesdk.onekeyshare.OnekeyShare;
-import top.yokey.base.base.BaseToast;
-import top.yokey.base.bean.BaseBean;
-import top.yokey.base.base.BaseHttpListener;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.activity.base.LoginActivity;
-import top.yokey.shopwt.activity.choose.AreaActivity;
-import top.yokey.shopwt.activity.main.CartActivity;
-import top.yokey.shopwt.adapter.EvaluateGoodsSimpleListAdapter;
-import top.yokey.shopwt.adapter.GoodsCommendListAdapter;
-import top.yokey.shopwt.adapter.SpecListAdapter;
-import top.yokey.shopwt.adapter.VoucherGoodsListAdapter;
-import top.yokey.base.base.BaseAnimClient;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseBusClient;
-import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.shopwt.base.BaseFragment;
-import top.yokey.shopwt.base.BaseImageLoader;
-import top.yokey.shopwt.base.UBLImageLoader;
-import top.yokey.base.bean.EvaluateGoodsBean;
-import top.yokey.base.bean.GoodsCommendBean;
-import top.yokey.base.bean.VoucherGoodsBean;
-import top.yokey.base.event.GoodsAreaEvent;
-import top.yokey.base.event.GoodsBeanEvent;
-import top.yokey.base.event.GoodsEvaluateEvent;
-import top.yokey.base.event.GoodsGoneEvent;
-import top.yokey.base.event.GoodsShowEvent;
-import top.yokey.base.event.GoodsIdEvent;
-import top.yokey.base.model.GoodsModel;
-import top.yokey.base.model.MemberCartModel;
-import top.yokey.base.model.MemberFavoritesModel;
-import top.yokey.base.model.MemberVoucherModel;
-import top.yokey.base.util.JsonUtil;
-import top.yokey.shopwt.view.CenterTextView;
-import top.yokey.shopwt.view.CountdownTextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -64,6 +29,42 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Objects;
+
+import cn.sharesdk.onekeyshare.OnekeyShare;
+import top.yokey.base.base.BaseAnimClient;
+import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.base.BaseToast;
+import top.yokey.base.bean.BaseBean;
+import top.yokey.base.bean.EvaluateGoodsBean;
+import top.yokey.base.bean.GoodsCommendBean;
+import top.yokey.base.bean.VoucherGoodsBean;
+import top.yokey.base.event.GoodsAreaEvent;
+import top.yokey.base.event.GoodsBeanEvent;
+import top.yokey.base.event.GoodsEvaluateEvent;
+import top.yokey.base.event.GoodsGoneEvent;
+import top.yokey.base.event.GoodsIdEvent;
+import top.yokey.base.event.GoodsShowEvent;
+import top.yokey.base.model.GoodsModel;
+import top.yokey.base.model.MemberCartModel;
+import top.yokey.base.model.MemberFavoritesModel;
+import top.yokey.base.model.MemberVoucherModel;
+import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.activity.base.LoginActivity;
+import top.yokey.shopwt.activity.choose.AreaActivity;
+import top.yokey.shopwt.activity.main.CartActivity;
+import top.yokey.shopwt.adapter.EvaluateGoodsSimpleListAdapter;
+import top.yokey.shopwt.adapter.GoodsCommendListAdapter;
+import top.yokey.shopwt.adapter.SpecListAdapter;
+import top.yokey.shopwt.adapter.VoucherGoodsListAdapter;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseBusClient;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseFragment;
+import top.yokey.shopwt.base.BaseImageLoader;
+import top.yokey.shopwt.base.UBLImageLoader;
+import top.yokey.shopwt.view.CenterTextView;
+import top.yokey.shopwt.view.CountdownTextView;
 
 /**
  * @author MapleStory

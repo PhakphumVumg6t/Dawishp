@@ -23,9 +23,9 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextView.Small"
+            android:layout_below="@+id/tipsTextView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/tipsTextView"
             android:layout_marginTop="2dip"
             android:text="确认生效后可在购物车使用抵扣订单金额"
             android:textColor="@color/white"

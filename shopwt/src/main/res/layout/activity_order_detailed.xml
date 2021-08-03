@@ -28,8 +28,8 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.ToolTitle"
-                    android:drawableLeft="@mipmap/ic_mine_order"
                     android:drawableStart="@mipmap/ic_mine_order"
+                    android:drawableLeft="@mipmap/ic_mine_order"
                     android:text="交易状态"
                     tools:ignore="HardcodedText" />
 
@@ -46,22 +46,22 @@
                 style="@style/Layout.Tool"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dip"
-                android:paddingBottom="12dip"
-                android:paddingTop="12dip">
+                android:paddingTop="12dip"
+                android:paddingBottom="12dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressNameTextView"
                     style="@style/TextView.Max"
-                    android:drawableLeft="@mipmap/ic_mine_address"
                     android:drawableStart="@mipmap/ic_mine_address"
+                    android:drawableLeft="@mipmap/ic_mine_address"
                     android:textColor="@color/blackSub"
                     android:textSize="14sp" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressMobileTextView"
                     style="@style/TextView.Normal"
-                    android:layout_alignBottom="@+id/addressNameTextView"
                     android:layout_alignTop="@+id/addressNameTextView"
+                    android:layout_alignBottom="@+id/addressNameTextView"
                     android:layout_toEndOf="@+id/addressNameTextView"
                     android:layout_toRightOf="@+id/addressNameTextView"
                     android:paddingLeft="8dip"
@@ -82,14 +82,14 @@
                 style="@style/Layout.Tool"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1px"
-                android:paddingBottom="12dip"
-                android:paddingTop="12dip">
+                android:paddingTop="12dip"
+                android:paddingBottom="12dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/invoiceNameTextView"
                     style="@style/TextView.Max"
-                    android:drawableLeft="@mipmap/ic_mine_property"
                     android:drawableStart="@mipmap/ic_mine_property"
+                    android:drawableLeft="@mipmap/ic_mine_property"
                     android:text="发票信息"
                     android:textColor="@color/blackSub"
                     android:textSize="14sp"
@@ -110,14 +110,14 @@
                 style="@style/Layout.Tool"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1px"
-                android:paddingBottom="12dip"
-                android:paddingTop="12dip">
+                android:paddingTop="12dip"
+                android:paddingBottom="12dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/messageNameTextView"
                     style="@style/TextView.Max"
-                    android:drawableLeft="@mipmap/ic_mine_setting"
                     android:drawableStart="@mipmap/ic_mine_setting"
+                    android:drawableLeft="@mipmap/ic_mine_setting"
                     android:text="订单留言"
                     android:textColor="@color/blackSub"
                     android:textSize="14sp"
@@ -137,14 +137,14 @@
                 style="@style/Layout.Tool"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1px"
-                android:paddingBottom="12dip"
-                android:paddingTop="12dip">
+                android:paddingTop="12dip"
+                android:paddingBottom="12dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/paymentNameTextView"
                     style="@style/TextView.Max"
-                    android:drawableLeft="@mipmap/ic_mine_invite"
                     android:drawableStart="@mipmap/ic_mine_invite"
+                    android:drawableLeft="@mipmap/ic_mine_invite"
                     android:text="付款方式"
                     android:textColor="@color/blackSub"
                     android:textSize="14sp"
@@ -167,9 +167,9 @@
                 android:layout_height="40dip"
                 android:layout_marginTop="16dip"
                 android:background="@drawable/selector_color_white"
+                android:drawableStart="@mipmap/ic_store_goods"
                 android:drawableLeft="@mipmap/ic_store_goods"
                 android:drawablePadding="4dip"
-                android:drawableStart="@mipmap/ic_store_goods"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
                 android:textColor="@color/blackSub" />
@@ -186,16 +186,16 @@
                 android:layout_height="40dip"
                 android:layout_marginTop="1px"
                 android:background="@color/white"
-                android:paddingBottom="8dip"
                 android:paddingLeft="16dip"
+                android:paddingTop="8dip"
                 android:paddingRight="16dip"
-                android:paddingTop="8dip">
+                android:paddingBottom="8dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/TextView.GoodsActivity"
                     android:layout_height="match_parent"
-                    android:layout_alignBottom="@+id/specChooseTextView"
                     android:layout_alignTop="@+id/specChooseTextView"
+                    android:layout_alignBottom="@+id/specChooseTextView"
                     android:layout_toEndOf="@+id/specChooseTextView"
                     android:layout_toRightOf="@+id/specChooseTextView"
                     android:text="赠品"
@@ -284,10 +284,10 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 style="@style/Layout.Item"
-                android:layout_marginBottom="16dip"
                 android:layout_marginTop="16dip"
-                android:paddingBottom="12dip"
-                android:paddingTop="12dip">
+                android:layout_marginBottom="16dip"
+                android:paddingTop="12dip"
+                android:paddingBottom="12dip">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/snTextView"
@@ -320,9 +320,9 @@
             android:layout_height="48dip"
             android:layout_weight="1"
             android:background="@drawable/selector_color_white"
+            android:drawableStart="@mipmap/ic_goods_message"
             android:drawableLeft="@mipmap/ic_goods_message"
             android:drawablePadding="4dip"
-            android:drawableStart="@mipmap/ic_goods_message"
             android:text="客服"
             tools:ignore="HardcodedText" />
 
@@ -334,9 +334,9 @@
             android:layout_height="48dip"
             android:layout_weight="1"
             android:background="@drawable/selector_color_white"
+            android:drawableStart="@mipmap/ic_goods_cart"
             android:drawableLeft="@mipmap/ic_goods_cart"
             android:drawablePadding="4dip"
-            android:drawableStart="@mipmap/ic_goods_cart"
             android:text="电话"
             tools:ignore="HardcodedText" />
 

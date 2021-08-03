@@ -8,8 +8,8 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mainTextView"
         style="@style/TextView.Normal"
-        android:layout_alignBottom="@+id/moneyTextView"
         android:layout_alignTop="@+id/moneyTextView"
+        android:layout_alignBottom="@+id/moneyTextView"
         android:textColor="@color/blackSub" />
 
     <androidx.appcompat.widget.AppCompatTextView

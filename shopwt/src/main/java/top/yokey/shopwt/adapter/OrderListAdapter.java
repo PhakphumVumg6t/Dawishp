@@ -1,21 +1,22 @@
 package top.yokey.shopwt.adapter;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.base.base.BaseViewHolder;
-import top.yokey.base.bean.OrderBean;
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
+
+import top.yokey.base.base.BaseViewHolder;
+import top.yokey.base.bean.OrderBean;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseApplication;
 
 /**
  * 适配器

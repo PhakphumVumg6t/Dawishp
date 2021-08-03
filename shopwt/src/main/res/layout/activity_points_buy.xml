@@ -62,8 +62,8 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/addressMobileTextView"
                     style="@style/TextView.Normal"
-                    android:layout_alignBottom="@+id/addressNameTextView"
                     android:layout_alignTop="@+id/addressNameTextView"
+                    android:layout_alignBottom="@+id/addressNameTextView"
                     android:layout_toEndOf="@+id/addressNameTextView"
                     android:layout_toRightOf="@+id/addressNameTextView"
                     android:paddingLeft="8dip"
@@ -73,8 +73,8 @@
                     android:id="@+id/addressAreaTextView"
                     style="@style/TextView.Normal"
                     android:layout_below="@+id/addressNameTextView"
-                    android:layout_marginBottom="12dip"
-                    android:layout_marginTop="4dip" />
+                    android:layout_marginTop="4dip"
+                    android:layout_marginBottom="12dip" />
 
             </RelativeLayout>
 
@@ -84,9 +84,9 @@
                 android:layout_height="40dip"
                 android:layout_marginTop="16dip"
                 android:background="@color/white"
+                android:drawableStart="@mipmap/ic_store_goods"
                 android:drawableLeft="@mipmap/ic_store_goods"
                 android:drawablePadding="8dip"
-                android:drawableStart="@mipmap/ic_store_goods"
                 android:paddingLeft="16dip"
                 android:paddingRight="16dip"
                 android:text="平台兑换"

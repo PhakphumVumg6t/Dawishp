@@ -2,6 +2,7 @@ package top.yokey.shopwt.view.slide;
 
 import android.app.Application;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /**

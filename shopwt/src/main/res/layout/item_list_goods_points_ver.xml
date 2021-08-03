@@ -8,12 +8,12 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"
         style="@style/ImageView.GoodsVer"
-        android:layout_marginBottom="8dip"
-        android:layout_marginEnd="12dip"
-        android:layout_marginLeft="16dip"
-        android:layout_marginRight="12dip"
         android:layout_marginStart="16dip"
-        android:layout_marginTop="8dip" />
+        android:layout_marginLeft="16dip"
+        android:layout_marginTop="8dip"
+        android:layout_marginEnd="12dip"
+        android:layout_marginRight="12dip"
+        android:layout_marginBottom="8dip" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"

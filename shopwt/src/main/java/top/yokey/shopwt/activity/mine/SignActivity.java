@@ -5,18 +5,18 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.scrollablelayout.ScrollableLayout;
 
-import top.yokey.base.base.BaseToast;
-import top.yokey.shopwt.base.BaseActivity;
-import top.yokey.shopwt.view.PullRefreshView;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.SignLogListAdapter;
+import java.util.ArrayList;
+
 import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.base.BaseToast;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.SignLogBean;
 import top.yokey.base.model.MemberSigninModel;
 import top.yokey.base.util.JsonUtil;
-
-import java.util.ArrayList;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.SignLogListAdapter;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.view.PullRefreshView;
 
 /**
  * @author MapleStory

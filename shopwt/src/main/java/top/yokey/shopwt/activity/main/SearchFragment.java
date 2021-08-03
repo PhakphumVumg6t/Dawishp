@@ -1,22 +1,11 @@
 package top.yokey.shopwt.activity.main;
 
+import android.view.inputmethod.EditorInfo;
+
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.inputmethod.EditorInfo;
-
-import io.github.xudaojie.qrcodelib.CaptureActivity;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.adapter.SearchHistoryListAdapter;
-import top.yokey.shopwt.adapter.SearchKeyListAdapter;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
-import top.yokey.shopwt.base.BaseFragment;
-import top.yokey.base.base.BaseHttpListener;
-import top.yokey.base.bean.BaseBean;
-import top.yokey.base.model.IndexModel;
-import top.yokey.base.util.JsonUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -25,6 +14,18 @@ import org.xutils.view.annotation.ViewInject;
 
 import java.util.ArrayList;
 import java.util.Objects;
+
+import io.github.xudaojie.qrcodelib.CaptureActivity;
+import top.yokey.base.base.BaseHttpListener;
+import top.yokey.base.bean.BaseBean;
+import top.yokey.base.model.IndexModel;
+import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.adapter.SearchHistoryListAdapter;
+import top.yokey.shopwt.adapter.SearchKeyListAdapter;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseFragment;
 
 /**
  * @author MapleStory

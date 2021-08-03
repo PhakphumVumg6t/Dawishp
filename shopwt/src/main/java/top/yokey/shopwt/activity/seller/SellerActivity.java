@@ -1,25 +1,26 @@
 package top.yokey.shopwt.activity.seller;
 
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import top.yokey.base.base.BaseDialog;
-import top.yokey.base.base.SellerHttpClient;
-import top.yokey.shopwt.base.BaseActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+
 import top.yokey.base.base.BaseCountTime;
-import top.yokey.shopwt.base.BaseImageLoader;
-import top.yokey.base.base.BaseToast;
-import top.yokey.base.util.JsonUtil;
-import top.yokey.shopwt.R;
-import top.yokey.shopwt.base.BaseApplication;
-import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.base.base.BaseDialog;
 import top.yokey.base.base.BaseHttpListener;
 import top.yokey.base.base.BaseShared;
+import top.yokey.base.base.BaseToast;
+import top.yokey.base.base.SellerHttpClient;
 import top.yokey.base.bean.BaseBean;
 import top.yokey.base.bean.SellerIndexBean;
 import top.yokey.base.model.SellerIndexModel;
+import top.yokey.base.util.JsonUtil;
+import top.yokey.shopwt.R;
+import top.yokey.shopwt.base.BaseActivity;
+import top.yokey.shopwt.base.BaseApplication;
+import top.yokey.shopwt.base.BaseConstant;
+import top.yokey.shopwt.base.BaseImageLoader;
 
 /**
  * @author MapleStory

@@ -1,6 +1,7 @@
 package top.yokey.shopwt.activity.points;
 
 import android.content.Intent;
+
 import androidx.appcompat.widget.Toolbar;
 
 import java.util.ArrayList;

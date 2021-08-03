@@ -124,8 +124,8 @@
                     android:layout_width="56dip"
                     android:layout_height="56dip"
                     android:layout_below="@+id/thirdTextView"
-                    android:layout_toLeftOf="@+id/wxImageView"
                     android:layout_toStartOf="@+id/wxImageView"
+                    android:layout_toLeftOf="@+id/wxImageView"
                     android:background="@drawable/border_login_third"
                     android:scaleType="center"
                     android:src="@mipmap/ic_classic_qq" />

@@ -3,8 +3,8 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/mainLinearLayout"
     style="@style/Layout.Wrap"
-    android:paddingBottom="8dip"
-    android:paddingTop="8dip">
+    android:paddingTop="8dip"
+    android:paddingBottom="8dip">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/mainImageView"

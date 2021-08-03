@@ -68,8 +68,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_order"
                 android:drawableStart="@mipmap/ic_mine_order"
+                android:drawableLeft="@mipmap/ic_mine_order"
                 android:text="订单管理"
                 tools:ignore="HardcodedText" />
 
@@ -187,8 +187,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_order"
                 android:drawableStart="@mipmap/ic_mine_order"
+                android:drawableLeft="@mipmap/ic_mine_order"
                 android:text="虚拟订单管理"
                 tools:ignore="HardcodedText" />
 
@@ -241,8 +241,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_property"
                 android:drawableStart="@mipmap/ic_mine_property"
+                android:drawableLeft="@mipmap/ic_mine_property"
                 android:text="商品管理"
                 tools:ignore="HardcodedText" />
 
@@ -299,8 +299,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_address"
                 android:drawableStart="@mipmap/ic_mine_address"
+                android:drawableLeft="@mipmap/ic_mine_address"
                 android:text="发货地址管理"
                 tools:ignore="HardcodedText" />
 
@@ -319,8 +319,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_order_wait_receipt"
                 android:drawableStart="@mipmap/ic_mine_order_wait_receipt"
+                android:drawableLeft="@mipmap/ic_mine_order_wait_receipt"
                 android:text="物流公司管理"
                 tools:ignore="HardcodedText" />
 
@@ -339,8 +339,8 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/TextView.ToolTitle"
-                android:drawableLeft="@mipmap/ic_mine_setting"
                 android:drawableStart="@mipmap/ic_mine_setting"
+                android:drawableLeft="@mipmap/ic_mine_setting"
                 android:text="店铺设置"
                 tools:ignore="HardcodedText" />
 

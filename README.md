@@ -1,4 +1,4 @@
-# Shopwt Android
+# ShopAI B2B2C Android
 
 **警告：禁止任何未授权商用！**  
 
@@ -11,31 +11,31 @@
 **本开源程序作者：MapStory，联系QQ：1002285057(如需要商业授权，定制开发，请联系。PS:闲聊勿扰。)**
 
 
-Shopwt 系统简介：[ShopWT官网-专业开发B2B2C多用户商城系统_微信商城_手机商城系统_网店源码](https://shopai.yokey.top/)
+ShopAI B2B2C 系统简介：[ShopAI B2B2C官网-专业开发B2B2C多用户商城系统_微信商城_手机商城系统_网店源码](https://shopai.yokey.top/)
 
-Shopwt PC演示站：[ShopWT多用户商城系统 - Powered by shopwt.com](https://shopai.yokey.top/)
+ShopAI B2B2C PC演示站：[ShopAI B2B2C多用户商城系统 - Powered by shopai.yokey.top](https://shopai.yokey.top/)
 
-Shopwt Wap演示站：[ShopWT多用户商城系统 - Powered by shopwt.com](https://shopai.yokey.top/mobile/)
+ShopAI B2B2C Wap演示站：[ShopAI B2B2C多用户商城系统 - Powered by shopai.yokey.top](https://shopai.yokey.top/mobile/)
 
-基于好商城Shopwt的原生Android客户端，简单修改两行代码即可适配到自己的商城系统。目前实现的功能：二维码扫描，支付宝微信支付，商家后台，热更新等（一个完整的购物APP均已实现）
+基于好商城ShopAI B2B2C的原生Android客户端，简单修改两行代码即可适配到自己的商城系统。目前实现的功能：二维码扫描，支付宝微信支付，商家后台，热更新等（一个完整的购物APP均已实现）
 
 特别感谢以下开源项目：[xUtils](https://github.com/wyouflf/xUtils3),[Otto](https://github.com/square/otto),[Banner](https://github.com/youth5201314/banner),[Marqueeview](https://github.com/sfsheng0322/MarqueeView),[Glide](https://github.com/bumptech/glide),[QRCode-Android](https://github.com/XuDaojie/QRCode-Android),[Pulltorefresh](https://github.com/823546371/PullToRefresh),[ScrollableLayout](https://github.com/w446108264/ScrollableLayout),[SlideBack](https://github.com/leehong2005/SlideBack)
 
 #快速体验
 
-安装包位于：shopwt\release\shopwt-release.apk
+安装包位于：shopai\release\shopai-release.apk
 
 #快速开始
 
-1.修改：shopwt\src\main\java\top\yokey\shopwt\base\BaseConstant.java
+1.修改：shopai\src\main\java\top\yokey\shopai\base\BaseConstant.java
 ```
-public static final String SHARED_NAME = "yokey_shopwt"; //修改成为你的ShareName
-public static final String URL = "http://33hao.yokey.top/"; //修改成为你的网站
+public static final String SHARED_NAME = "yokey_shopai"; //修改成为你的ShareName
+public static final String URL = "http://shopai.yokey.top/"; //修改成为你的网站
 ```
 
-2.如果修改了包名，为了兼容Android7.0,需要修改：shopwt\src\main\AndroidManifest.xml，shopwt\src\main\res\xml\path.xml，
+2.如果修改了包名，为了兼容Android7.0,需要修改：shopai\src\main\AndroidManifest.xml，shopai\src\main\res\xml\path.xml，
 ```
-将代码：top.yokey.shopwt 替换成自己的包名
+将代码：top.yokey.shopai 替换成自己的包名
 ```
 
 3.支付宝支付
